@@ -2,23 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kaisteelkitchen.com/</loc>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://kaisteelkitchen.com/compliance-dossier.html</loc>
+    <lastmod>2026-08-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url><loc>https://kaisteelkitchen.com/resources.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-supplier-due-diligence.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-supply-paths.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/technical-freeze-outdoor-kitchen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-pre-shipment-qc.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/pro-vs-max-outdoor-kitchen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/modular-vs-assembled-outdoor-kitchen-shipping.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-rfq-checklist.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-material-evidence-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-appliance-certificate-verification.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-utility-interface-drawing.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaisteelkitchen.com/resources.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-supplier-due-diligence.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-supply-paths.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/technical-freeze-outdoor-kitchen.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-pre-shipment-qc.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/pro-vs-max-outdoor-kitchen.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/modular-vs-assembled-outdoor-kitchen-shipping.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-rfq-checklist.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-material-evidence-guide.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-appliance-certificate-verification.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://kaisteelkitchen.com/outdoor-kitchen-utility-interface-drawing.html</loc><lastmod>2026-08-31</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
