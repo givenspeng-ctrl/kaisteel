@@ -96,6 +96,14 @@
     .compare-table td:first-child{font-weight:700;color:var(--navy);width:22%}
     .compare-note{margin:14px 0 0;color:var(--muted);font-size:12px;max-width:820px}
 
+    .faq{background:var(--paper)}
+    .faq-list{display:grid;gap:22px;margin-top:36px}
+    .faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px}
+    .faq-item h3{margin:0 0 12px;font:600 20px "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--navy)}
+    .faq-item p{margin:0 0 12px;font-size:14px;line-height:1.6;color:var(--muted)}
+    .faq-item p:last-child{margin-bottom:0}
+    .faq-item strong{color:var(--ink)}
+
     .states{background:#fff}
     .states .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
     .state-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -237,6 +245,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAISTEEL","legalName":"KAISTEEL LIMITED","url":"https://kaisteelkitchen.com/","email":"sales@kaisteelkitchen.com","foundingDate":"2025-08-08","foundingLocation":"Hong Kong","identifier":"78595271","address":{"@type":"PostalAddress","streetAddress":"Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street","addressLocality":"Kowloon","addressRegion":"Hong Kong","addressCountry":"HK"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO (KS-P2300)","description":"Modular outdoor kitchen system, 2300mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX (KS-P2900)","description":"Modular outdoor kitchen system, 2900mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does KAISTEEL help international buyers manage CE, UL and SAA appliance certification?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import. We supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with openings and interfaces prepared for buyer-selected, locally certified appliances. Cooking, refrigeration and other regulated equipment can be sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system. Appliance certificates, where applicable, are provided by the component manufacturer and checked against model, scope and destination requirements for each order."}},{"@type":"Question","name":"How does modular (flat-pack) delivery improve container utilisation?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and are confirmed on the final approved packing plan for each configuration. Higher loading density can reduce per-unit ocean freight compared with shipping fully assembled units. Exact savings depend on configuration, packaging method, weight distribution and freight conditions at shipment."}}]}</script>
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io mailto:; connect-src 'self' https://formspree.io;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
 </head>
@@ -302,6 +311,26 @@
       <p class="compare-note">*Overall height is measured with the canopy raised/open; closed height is lower and confirmed on the approved drawing. Net weight is per unit and is confirmed on the approved BOM. &dagger;Assembled and modular loading quantities are preliminary, based on the current configuration and packing engineering, and are confirmed in the final approved packing plan. Target lead time applies after configuration approval and Technical Freeze; final production and shipment timing is confirmed in the quotation and order documents. Full configuration scope for any order is set out in the approved BOM and Technical Freeze Sheet.</p>
     </div>
   </div></section>
+
+  <section class="faq reveal" id="faq">
+    <div class="wrap">
+      <div class="eyebrow">Buyer FAQ</div>
+      <h2 class="section-title">Compliance &amp; container loading</h2>
+      <p class="lead">Short answers aligned with our published supply paths and packing references.</p>
+      <div class="faq-list">
+        <article class="faq-item">
+          <h3>How does KAISTEEL help international buyers manage CE, UL and SAA appliance certification?</h3>
+          <p>KAISTEEL offers a <strong>System Shell</strong> supply path designed to reduce certification complexity at import. We supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with openings and interfaces prepared for buyer-selected, locally certified appliances. Cooking, refrigeration and other regulated equipment can be sourced in the destination market.</p>
+          <p>Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system. Appliance certificates, where applicable, are provided by the component manufacturer and checked against model, scope and destination requirements for each order.</p>
+        </article>
+        <article class="faq-item">
+          <h3>How does modular (flat-pack) delivery improve container utilisation?</h3>
+          <p>Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately <strong>13 fully assembled PRO units</strong> or up to <strong>26 modular PRO units</strong> (MAX: 8 assembled / 16 modular).</p>
+          <p>These figures are <strong>preliminary</strong> and are confirmed on the final approved packing plan for each configuration. Higher loading density can reduce per-unit ocean freight compared with shipping fully assembled units. Exact savings depend on configuration, packaging method, weight distribution and freight conditions at shipment.</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
   <section class="states reveal"><div class="wrap">
     <div><div class="eyebrow">Open / closed</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">A real-site installation shown in both operating states. Exact mechanism, finishes and equipment are confirmed in the approved project scope.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
