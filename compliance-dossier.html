@@ -3,6 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; base-uri 'self'; form-action 'self' mailto:; connect-src 'self' https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com;">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBQM9Z095"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CWBQM9Z095');
+  </script>
   <title>Compliance &amp; Manufacturing Dossier | KAISTEEL</title>
   <meta name="description" content="Component-by-component material table, certification policy and production evidence for KAISTEEL outdoor kitchen systems.">
   <meta name="robots" content="index,follow">
@@ -96,14 +104,30 @@
     @media(max-width:560px){.wrap{width:min(100% - 32px,1080px)}.mfg-gallery,.dossier-list,.doc-grid{grid-template-columns:1fr}.mfg-stats{grid-template-columns:1fr 1fr}.final-cta .wrap{flex-direction:column;align-items:flex-start}}
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Compliance & Manufacturing Dossier","dateModified":"2026-09-01","author":{"@type":"Organization","name":"KAISTEEL LIMITED"},"publisher":{"@type":"Organization","name":"KAISTEEL LIMITED"},"mainEntityOfPage":"https://kaisteelkitchen.com/compliance-dossier.html"}</script>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; base-uri 'self'; form-action 'self' mailto:; connect-src 'self';">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script>
+    document.addEventListener('click',function(event){
+      var link=event.target.closest('a');
+      if(!link) return;
+      var href=link.getAttribute('href')||'';
+      var text=(link.textContent||'').trim().slice(0,100);
+      if(href.indexOf('mailto:')===0){
+        gtag('event','email_click',{link_url:href,link_text:text});
+      }else if(href.indexOf('wa.me')>-1){
+        gtag('event','whatsapp_click',{link_url:href,link_text:text});
+      }else if(link.hasAttribute('download')){
+        var isTradeGuide=href.indexOf('PRO-MAX-B2B-Guide')>-1;
+        gtag('event',isTradeGuide?'trade_guide_download':'document_download',{file_name:href.split('/').pop(),link_text:text});
+      }
+    });
+  </script>
+  <script>gtag('event','compliance_dossier_view',{});</script>
 </head>
 <body>
   <nav><div class="wrap">
     <div style="display:flex;align-items:center;gap:16px">
       <a class="brand" href="index.html"><span class="kai">KAI</span>STEEL</a>
-      <a class="back" href="index.html">← Back to overview</a>
+      <a class="back" href="index.html#documents" onclick="if(document.referrer.indexOf(location.host)>-1){history.back();return false}">← Back to overview</a>
     </div>
     <div class="nav-actions">
       <a class="nav-action" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20B2B%20Enquiry">Request a Quote</a>
@@ -160,12 +184,12 @@
     <h2 class="section-title">The full manufacturing evidence set.</h2>
     <p class="lead">Production is coordinated through an approved manufacturing partner in Foshan, Guangdong, under KAISTEEL's order-specific specification, QC and documentation controls. Supplier history and facility qualifications are verified through controlled due diligence before being used for an order.</p>
     <div class="mfg-gallery" aria-label="Production facility photographs">
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-assembly.webp" type="image/webp"><img src="assets/manufacturing-assembly.jpg" alt="Production fit-out and configuration review" width="1588" height="1400" loading="lazy"></picture><span>Fit-out &amp; configuration review</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-welding.webp" type="image/webp"><img src="assets/manufacturing-welding.jpg" alt="Structural frame fabrication" width="1920" height="1080" loading="lazy"></picture><span>Structural frame fabrication</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-fitout.webp" type="image/webp"><img src="assets/manufacturing-fitout.jpg" alt="Profile inventory and material preparation" width="1920" height="955" loading="lazy"></picture><span>Profile inventory &amp; material prep</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-material-rack.webp" type="image/webp"><img src="assets/manufacturing-material-rack.jpg" alt="Aluminum profile and raw material inventory" width="1920" height="1080" loading="lazy"></picture><span>Profile &amp; material inventory</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-frame-welding.webp" type="image/webp"><img src="assets/manufacturing-frame-welding.jpg" alt="Structural frame welding" width="1920" height="1080" loading="lazy"></picture><span>Structural frame fabrication</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-canopy-assembly.webp" type="image/webp"><img src="assets/manufacturing-canopy-assembly.jpg" alt="Canopy and panel assembly" width="1280" height="1707" loading="lazy"></picture><span>Canopy &amp; panel assembly</span></figure>
       <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-finished.webp" type="image/webp"><img src="assets/manufacturing-finished.jpg" alt="Finished outdoor kitchen units in production" width="2000" height="1318" loading="lazy"></picture><span>Finished-unit review</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-function-check.webp" type="image/webp"><img src="assets/manufacturing-function-check.jpg" alt="Outdoor kitchen functional and lighting check" width="1640" height="1280" loading="lazy"></picture><span>Functional &amp; lighting check</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-configuration-showcase.webp" type="image/webp"><img src="assets/manufacturing-configuration-showcase.jpg" alt="Outdoor kitchen configuration and lighting presentation" width="1086" height="1448" loading="lazy"></picture><span>Configuration presentation</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-appliance-fitout.webp" type="image/webp"><img src="assets/manufacturing-appliance-fitout.jpg" alt="Appliance and cabinet fit-out" width="1920" height="1440" loading="lazy"></picture><span>Appliance &amp; cabinet fit-out</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-export-crating.webp" type="image/webp"><img src="assets/manufacturing-export-crating.jpg" alt="Export packing and crating" width="1920" height="1080" loading="lazy"></picture><span>Export packing &amp; crating</span></figure>
     </div>
     <ul class="mfg-list">
       <li><b>—</b><span>Product engineering, metal fabrication, surface finishing, assembly, inspection and export packing support.</span></li>
@@ -212,7 +236,7 @@
     <div><h2>Ready to move to an RFQ?</h2><p>Include destination market, buyer type, model, quantity and target delivery date for the fastest response.</p></div>
     <div style="display:flex;gap:10px;flex-wrap:wrap">
       <a class="btn dark" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20B2B%20RFQ">Email Your RFQ</a>
-      <a class="btn dark" href="index.html">Back to overview</a>
+      <a class="btn dark" href="index.html#documents" onclick="if(document.referrer.indexOf(location.host)>-1){history.back();return false}">Back to overview</a>
     </div>
   </div></section>
 
