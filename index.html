@@ -3,6 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io mailto:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com;">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBQM9Z095"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CWBQM9Z095');
+  </script>
   <title>KAISTEEL Outdoor Kitchens | PRO, MAX &amp; Custom B2B Programs</title>
   <meta name="description" content="Modular outdoor kitchen systems for international B2B buyers. PRO 2300mm, MAX 2900mm and CUSTOM programs, with order-specific materials and compliance documents.">
   <meta name="robots" content="index,follow">
@@ -97,12 +107,19 @@
     .compare-note{margin:14px 0 0;color:var(--muted);font-size:12px;max-width:820px}
 
     .faq{background:var(--paper)}
-    .faq-list{display:grid;gap:22px;margin-top:36px}
-    .faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 32px}
-    .faq-item h3{margin:0 0 12px;font:600 20px "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--navy)}
-    .faq-item p{margin:0 0 12px;font-size:14px;line-height:1.6;color:var(--muted)}
-    .faq-item p:last-child{margin-bottom:0}
-    .faq-item strong{color:var(--ink)}
+    .faq-list{display:grid;gap:14px;margin-top:36px}
+    .faq-item{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:border-color .2s,box-shadow .2s}
+    .faq-item:hover,.faq-item[open]{border-color:rgba(184,146,74,.65);box-shadow:0 12px 30px rgba(13,38,59,.07)}
+    .faq-item summary{position:relative;cursor:pointer;list-style:none;-webkit-tap-highlight-color:transparent;padding:22px 64px 22px 28px;font:600 20px "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.01em;color:var(--navy)}
+    .faq-item summary::-webkit-details-marker{display:none}
+    .faq-item summary::after{content:"+";position:absolute;right:28px;top:50%;transform:translateY(-50%);font:400 28px/1 "Barlow Condensed",sans-serif;color:var(--gold)}
+    .faq-item[open] summary::after{content:"\2212"}
+    .faq-item summary:focus-visible{outline:3px solid rgba(184,146,74,.45);outline-offset:-3px}
+    .faq-answer{padding:0 28px 24px;border-top:1px solid var(--line)}
+    .faq-answer p{margin:18px 0 0;font-size:14px;line-height:1.65;color:var(--muted)}
+    .faq-answer p:first-child{margin-top:18px}
+    .faq-answer strong{color:var(--ink)}
+    .faq-answer a{color:var(--navy);text-decoration:underline}
 
     .states{background:#fff}
     .states .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
@@ -240,14 +257,15 @@
       .steps,.doc-grid,.mfg-gallery,.mfg-stats{grid-template-columns:1fr}
       .econ-num{font-size:52px}
       .sample-credit{font-size:32px}
+      .faq-item summary{padding:19px 52px 19px 20px;font-size:18px}
+      .faq-item summary::after{right:20px}
+      .faq-answer{padding:0 20px 20px}
     }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAISTEEL","legalName":"KAISTEEL LIMITED","url":"https://kaisteelkitchen.com/","email":"sales@kaisteelkitchen.com","foundingDate":"2025-08-08","foundingLocation":"Hong Kong","identifier":"78595271","address":{"@type":"PostalAddress","streetAddress":"Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street","addressLocality":"Kowloon","addressRegion":"Hong Kong","addressCountry":"HK"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO (KS-P2300)","description":"Modular outdoor kitchen system, 2300mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX (KS-P2900)","description":"Modular outdoor kitchen system, 2900mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How does KAISTEEL help international buyers manage CE, UL and SAA appliance certification?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import. We supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with openings and interfaces prepared for buyer-selected, locally certified appliances. Cooking, refrigeration and other regulated equipment can be sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system. Appliance certificates, where applicable, are provided by the component manufacturer and checked against model, scope and destination requirements for each order."}},{"@type":"Question","name":"How does modular (flat-pack) delivery improve container utilisation?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and are confirmed on the final approved packing plan for each configuration. Higher loading density can reduce per-unit ocean freight compared with shipping fully assembled units. Exact savings depend on configuration, packaging method, weight distribution and freight conditions at shipment."}}]}</script>
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io mailto:; connect-src 'self' https://formspree.io;">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO","description":"Modular outdoor kitchen system, 2300mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","image":"https://kaisteelkitchen.com/assets/pro-2300.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX","description":"Modular outdoor kitchen system, 2900mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","image":"https://kaisteelkitchen.com/assets/max-2900.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can KAISTEEL provide certification and compliance documents?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import: we supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with interfaces prepared for buyer-selected, locally certified appliances sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system — see the full certification disclaimer and System Shell vs. Full Package comparison."}},{"@type":"Question","name":"How many PRO or MAX units fit in a 40'HQ container?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and confirmed on the final approved packing plan for each configuration. See the full PRO/MAX comparison table or our modular vs. assembled shipping guide for loading and freight detail."}}]}</script>
 </head>
 <body>
   <nav><div class="wrap">
@@ -312,26 +330,6 @@
     </div>
   </div></section>
 
-  <section class="faq reveal" id="faq">
-    <div class="wrap">
-      <div class="eyebrow">Buyer FAQ</div>
-      <h2 class="section-title">Compliance &amp; container loading</h2>
-      <p class="lead">Short answers aligned with our published supply paths and packing references.</p>
-      <div class="faq-list">
-        <article class="faq-item">
-          <h3>How does KAISTEEL help international buyers manage CE, UL and SAA appliance certification?</h3>
-          <p>KAISTEEL offers a <strong>System Shell</strong> supply path designed to reduce certification complexity at import. We supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with openings and interfaces prepared for buyer-selected, locally certified appliances. Cooking, refrigeration and other regulated equipment can be sourced in the destination market.</p>
-          <p>Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system. Appliance certificates, where applicable, are provided by the component manufacturer and checked against model, scope and destination requirements for each order.</p>
-        </article>
-        <article class="faq-item">
-          <h3>How does modular (flat-pack) delivery improve container utilisation?</h3>
-          <p>Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately <strong>13 fully assembled PRO units</strong> or up to <strong>26 modular PRO units</strong> (MAX: 8 assembled / 16 modular).</p>
-          <p>These figures are <strong>preliminary</strong> and are confirmed on the final approved packing plan for each configuration. Higher loading density can reduce per-unit ocean freight compared with shipping fully assembled units. Exact savings depend on configuration, packaging method, weight distribution and freight conditions at shipment.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
   <section class="states reveal"><div class="wrap">
     <div><div class="eyebrow">Open / closed</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">A real-site installation shown in both operating states. Exact mechanism, finishes and equipment are confirmed in the approved project scope.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
     <div class="state-imgs">
@@ -356,7 +354,7 @@
     </div>
   </div></section>
 
-  <section class="paths reveal"><div class="wrap">
+  <section class="paths reveal" id="paths"><div class="wrap">
     <div class="kicker"><div><div class="eyebrow">Risk-reduced purchasing</div><h2 class="section-title">Three supply paths, matched to your compliance needs.</h2></div><p class="lead">Select the scope that fits local certification, installation capability and project risk. First orders in standard PRO or MAX format start at a single unit — a full-container quantity is not required to place your first order. CUSTOM projects and modular-delivery configurations remain full-container only.</p></div>
     <div class="path-grid">
       <div class="path-card"><span class="path-label">Lowest certification complexity</span><strong>System Shell</strong><p>Structural enclosure, cabinetry and worktop. Cooking, refrigeration and other regulated equipment are sourced locally.</p></div>
@@ -372,9 +370,9 @@
     <h2 class="section-title">Manufacturing behind every unit.</h2>
     <p class="lead">Production is coordinated through an approved manufacturing partner in Foshan, Guangdong, under KAISTEEL's order-specific specification, QC and documentation controls. Quotations, technical coordination and after-sales are handled directly by KAISTEEL LIMITED. Supplier history and facility qualifications are verified through controlled due diligence before being used for an order.</p>
     <div class="mfg-gallery" aria-label="Production facility photographs">
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-assembly.webp" type="image/webp"><img src="assets/manufacturing-assembly.jpg" alt="Production fit-out in Foshan" width="1588" height="1400" loading="lazy"></picture><span>Fit-out &amp; review</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-welding.webp" type="image/webp"><img src="assets/manufacturing-welding.jpg" alt="Structural frame fabrication" width="1920" height="1080" loading="lazy"></picture><span>Frame fabrication</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-fitout.webp" type="image/webp"><img src="assets/manufacturing-fitout.jpg" alt="Profile inventory and material preparation" width="1920" height="955" loading="lazy"></picture><span>Material prep</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-material-rack.webp" type="image/webp"><img src="assets/manufacturing-material-rack.jpg" alt="Aluminum profile and raw material inventory" width="1920" height="1080" loading="lazy"></picture><span>Profile &amp; material inventory</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-frame-welding.webp" type="image/webp"><img src="assets/manufacturing-frame-welding.jpg" alt="Structural frame welding" width="1920" height="1080" loading="lazy"></picture><span>Frame fabrication</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-canopy-assembly.webp" type="image/webp"><img src="assets/manufacturing-canopy-assembly.jpg" alt="Canopy and panel assembly" width="1280" height="1707" loading="lazy"></picture><span>Canopy &amp; panel assembly</span></figure>
       <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-finished.webp" type="image/webp"><img src="assets/manufacturing-finished.jpg" alt="Finished outdoor kitchen units in production" width="2000" height="1318" loading="lazy"></picture><span>Final inspection</span></figure>
     </div>
     <div class="mfg-stats">
@@ -432,6 +430,30 @@
     </dl><div class="transparency">Corporate and order-specific technical documents are available to qualified buyers on request.</div></aside>
   </div></section>
 
+  <section class="faq reveal" id="faq">
+    <div class="wrap">
+      <div class="eyebrow">Buyer questions</div>
+      <h2 class="section-title">Before requesting a quotation.</h2>
+      <p class="lead">Two points buyers commonly confirm before moving to configuration review.</p>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Can KAISTEEL provide certification and compliance documents?</summary>
+          <div class="faq-answer">
+            <p>KAISTEEL offers a <strong>System Shell</strong> supply path designed to reduce certification complexity at import: we supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with interfaces prepared for buyer-selected, locally certified appliances sourced in the destination market.</p>
+            <p>Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system — see the full <a href="#documents">certification disclaimer</a> and <a href="#paths">System Shell vs. Full Package</a> comparison.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How many PRO or MAX units fit in a 40'HQ container?</summary>
+          <div class="faq-answer">
+            <p>Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately <strong>13 fully assembled PRO units</strong> or up to <strong>26 modular PRO units</strong> (MAX: 8 assembled / 16 modular).</p>
+            <p>These figures are <strong>preliminary</strong> and confirmed on the final approved packing plan for each configuration. See the full <a href="#models">PRO/MAX comparison table</a> or our <a href="modular-vs-assembled-outdoor-kitchen-shipping.html">modular vs. assembled shipping guide</a> for loading and freight detail.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="contact reveal" id="contact"><div class="wrap contact-grid">
     <div>
       <div class="eyebrow">Start an enquiry</div><h2 class="section-title">Request a configuration review.</h2>
@@ -450,6 +472,16 @@
           <label>Target delivery date<input type="text" name="targetDate" placeholder="e.g. Q2 2027"></label>
         </div>
         <label class="rfq-full">Project notes<textarea name="notes" rows="4" placeholder="Anything else we should know — project type, site conditions, quantity range, etc."></textarea></label>
+        <input type="hidden" name="landing_page" value="">
+        <input type="hidden" name="page_path" value="">
+        <input type="hidden" name="referrer" value="">
+        <input type="hidden" name="utm_source" value="">
+        <input type="hidden" name="utm_medium" value="">
+        <input type="hidden" name="utm_campaign" value="">
+        <input type="hidden" name="utm_content" value="">
+        <input type="hidden" name="utm_term" value="">
+        <input type="hidden" name="lead_intent" value="">
+        <input type="hidden" name="last_action" value="">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden" aria-hidden="true">
         <p class="rfq-file-note">Have a project CAD drawing? Email it to <a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> referencing your company name — this form does not upload files itself.</p>
         <label class="rfq-consent"><input type="checkbox" name="consent" required><span>I agree that the details above are sent to KAISTEEL LIMITED for the purpose of preparing this enquiry response — see our <a href="privacy-policy.html">Privacy Policy</a>.</span></label>
@@ -468,7 +500,7 @@
     </ul>
     <p><strong>Email</strong><br><a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a></p>
     <p><strong>WhatsApp</strong><br><a href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">Message us directly</a></p>
-    <p style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)"><strong>Legal Entity</strong><br><span style="color:var(--muted);font-size:13px">KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · Production coordinated through an approved partner in Foshan, Guangdong<br><a href="https://www.e-services.cr.gov.hk/" target="_blank" rel="noopener">Corporate details independently verifiable →</a></span></p>
+    <p style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)"><strong>Legal Entity</strong><br><span style="color:var(--muted);font-size:13px">KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="#about">Full corporate details ↑</a></span></p>
     </aside>
   </div></section>
 
@@ -487,6 +519,75 @@
     const rfqForm=document.getElementById('rfq-form');
     const rfqStatus=document.getElementById('rfq-status');
     const rfqSubmit=document.getElementById('rfq-submit');
+    const attributionFields=['landing_page','page_path','referrer','utm_source','utm_medium','utm_campaign','utm_content','utm_term','lead_intent','last_action'];
+    const query=new URLSearchParams(window.location.search);
+    const currentAttribution={
+      landing_page:window.location.href,
+      page_path:window.location.pathname,
+      referrer:document.referrer||'direct',
+      utm_source:query.get('utm_source')||'',
+      utm_medium:query.get('utm_medium')||'',
+      utm_campaign:query.get('utm_campaign')||'',
+      utm_content:query.get('utm_content')||'',
+      utm_term:query.get('utm_term')||'',
+      lead_intent:query.get('intent')||'',
+      last_action:''
+    };
+    let attribution=currentAttribution;
+    try{
+      const saved=JSON.parse(sessionStorage.getItem('kaisteel_attribution')||'null');
+      // Lock first-touch acquisition data for the browser session. Only the
+      // submission page and last action are allowed to change afterwards.
+      attribution=saved?{
+        ...currentAttribution,
+        ...saved,
+        page_path:currentAttribution.page_path,
+        last_action:saved.last_action||''
+      }:currentAttribution;
+      sessionStorage.setItem('kaisteel_attribution',JSON.stringify(attribution));
+    }catch(_err){}
+    const syncAttribution=()=>{
+      if(!rfqForm) return;
+      attributionFields.forEach(name=>{
+        const input=rfqForm.elements.namedItem(name);
+        if(input) input.value=(name==='last_action'?(sessionStorage.getItem('kaisteel_last_action')||attribution[name]||''):attribution[name]||'');
+      });
+    };
+    const gaEvent=(name,params)=>{ try{ if(typeof gtag==='function') gtag('event',name,params||{}); }catch(_err){} };
+    document.addEventListener('click',event=>{
+      const link=event.target.closest('a');
+      if(!link) return;
+      const href=link.getAttribute('href')||'';
+      const action=link.hasAttribute('download')?'document_download':href.startsWith('mailto:')?'email_click':href.includes('wa.me')?'whatsapp_click':href.startsWith('#')?'section_click':'page_click';
+      try{sessionStorage.setItem('kaisteel_last_action',`${action}:${href.slice(0,180)}`)}catch(_err){}
+      const linkText=(link.textContent||'').trim().slice(0,100);
+      if(action==='document_download'){
+        const isTradeGuide=href.includes('PRO-MAX-B2B-Guide');
+        gaEvent(isTradeGuide?'trade_guide_download':'document_download',{file_name:href.split('/').pop(),link_text:linkText});
+      }else if(action==='email_click'){
+        gaEvent('email_click',{link_url:href,link_text:linkText});
+      }else if(action==='whatsapp_click'){
+        gaEvent('whatsapp_click',{link_url:href,link_text:linkText});
+      }
+    });
+    document.querySelectorAll('a[href="compliance-dossier.html"], a[href^="compliance-dossier.html#"]').forEach(a=>{
+      a.addEventListener('click',()=>gaEvent('compliance_dossier_view',{link_text:(a.textContent||'').trim().slice(0,100)}));
+    });
+    const modelSelect=rfqForm?rfqForm.elements.namedItem('model'):null;
+    if(modelSelect){
+      modelSelect.addEventListener('change',()=>{
+        const v=modelSelect.value;
+        if(v.startsWith('PRO')) gaEvent('pro_interest',{source:'rfq_form_model_select'});
+        else if(v.startsWith('MAX')) gaEvent('max_interest',{source:'rfq_form_model_select'});
+      });
+    }
+    let rfqStartFired=false;
+    if(rfqForm){
+      rfqForm.addEventListener('focusin',()=>{
+        if(!rfqStartFired){ rfqStartFired=true; gaEvent('rfq_start',{}); }
+      });
+    }
+    syncAttribution();
     const showStatus=(kind,message)=>{rfqStatus.className='rfq-status '+kind;rfqStatus.textContent=message};
     const mailtoFallback=f=>{
       const get=k=>(f.get(k)||'').toString().trim();
@@ -505,6 +606,18 @@
         `Project notes:`,
         get('notes'),
         '',
+        'Enquiry attribution:',
+        `Landing page: ${get('landing_page')}`,
+        `Submission page: ${get('page_path')}`,
+        `Referrer: ${get('referrer')}`,
+        `UTM source: ${get('utm_source')}`,
+        `UTM medium: ${get('utm_medium')}`,
+        `UTM campaign: ${get('utm_campaign')}`,
+        `UTM content: ${get('utm_content')}`,
+        `UTM term: ${get('utm_term')}`,
+        `Lead intent: ${get('lead_intent')}`,
+        `Last action: ${get('last_action')}`,
+        '',
         '(If you have a CAD drawing, please attach it to this email before sending.)'
       ];
       const subject=encodeURIComponent(`KAISTEEL Configuration Review Request — ${get('company')}`);
@@ -514,6 +627,7 @@
     if(rfqForm){
       rfqForm.addEventListener('submit',async function(e){
         e.preventDefault();
+        syncAttribution();
         if(!rfqForm.checkValidity()){ rfqForm.reportValidity(); return; }
         const f=new FormData(rfqForm);
         const get=k=>(f.get(k)||'').toString().trim();
@@ -527,6 +641,7 @@
         try{
           const res=await fetch(FORM_ENDPOINT,{method:'POST',body:f,headers:{Accept:'application/json'}});
           if(!res.ok) throw new Error('submit failed');
+          gaEvent('rfq_submit',{buyer_type:get('buyerType'),model:get('model'),utm_source:get('utm_source'),utm_medium:get('utm_medium'),utm_campaign:get('utm_campaign')});
           rfqForm.reset();
           showStatus('ok','Thank you — your enquiry has been received. We will reply with the next-step checklist within 1–2 business days.');
         }catch(err){

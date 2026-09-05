@@ -30,6 +30,29 @@
     footer{background:var(--navy2);color:#8fa0b0;padding:28px 0;font-size:12px}
     footer a{color:#c3cdd6}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBQM9Z095"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CWBQM9Z095');
+  </script>
+  <script>
+    document.addEventListener('click',function(event){
+      var link=event.target.closest('a');
+      if(!link) return;
+      var href=link.getAttribute('href')||'';
+      var text=(link.textContent||'').trim().slice(0,100);
+      if(href.indexOf('mailto:')===0){
+        gtag('event','email_click',{link_url:href,link_text:text});
+      }else if(href.indexOf('wa.me')>-1){
+        gtag('event','whatsapp_click',{link_url:href,link_text:text});
+      }else if(link.hasAttribute('download')){
+        var isTradeGuide=href.indexOf('PRO-MAX-B2B-Guide')>-1;
+        gtag('event',isTradeGuide?'trade_guide_download':'document_download',{file_name:href.split('/').pop(),link_text:text});
+      }
+    });
+  </script>
 </head>
 <body>
   <nav><div class="wrap"><a class="brand" href="index.html"><span class="kai">KAI</span>STEEL</a></div></nav>
@@ -46,13 +69,14 @@
     <h2>1. What we collect</h2>
     <p>The Site is a static informational and enquiry site. We do not operate a checkout, account system, or payment collection. Information we may receive includes:</p>
     <ul>
-      <li><strong>RFQ form submissions:</strong> when you use the "Request a Configuration Review" form, your browser opens a pre-filled email to sales@kaisteelkitchen.com containing the details you entered (name, company, business email, website, destination market, buyer type, model interest, estimated quantity, appliance certification market, target delivery date and project notes). The form does not transmit this data directly to a server — it is sent only if and when you send the resulting email.</li>
+      <li><strong>RFQ form submissions:</strong> when you use the "Request a Configuration Review" form, the details you enter are transmitted securely to our form-processing provider, Formspree, and delivered to KAISTEEL. The fields may include your name, company, business email, website, destination market, buyer type, model interest, estimated quantity, appliance certification market, target delivery date and project notes.</li>
+      <li><strong>Enquiry attribution:</strong> the RFQ may also include the landing page, referring page, campaign parameters supplied in the link and the most recent contact or document action in that browser session. We use this only to understand which buyer resource led to the enquiry and to respond in context.</li>
       <li><strong>Direct correspondence:</strong> information you send us by email or WhatsApp, including any CAD drawings, project documents or photographs you choose to attach.</li>
       <li><strong>Basic technical data:</strong> standard web server or hosting-platform logs (e.g. IP address, browser type, pages requested) that our hosting provider may generate as part of normal operation.</li>
     </ul>
 
     <h2>2. Cookies and tracking</h2>
-    <p>The Site does not currently set non-essential cookies or run third-party advertising or analytics trackers. If we later add privacy-compliant analytics (for example, to understand which pages or documents are useful to buyers) or any cookie-based tool, we will update this policy and, where required by applicable law, request consent before non-essential cookies are set.</p>
+    <p>The Site does not currently run third-party advertising trackers or set advertising cookies. It may use browser session storage to retain first-touch campaign and enquiry-intent information until the browser session ends, so that an RFQ can be attributed to the relevant buyer resource. If we later add cookie-based analytics or advertising tools, we will update this policy and request consent where required.</p>
 
     <h2>3. How we use information</h2>
     <ul>
@@ -63,7 +87,7 @@
     </ul>
 
     <h2>4. Sharing</h2>
-    <p>We do not share enquiry or project information with third parties except: (a) our manufacturing partner, to the extent needed to prepare a quotation, technical drawing or production order; (b) service providers who help us operate the Site or hosting infrastructure, bound by confidentiality; or (c) where required by law or to protect KAISTEEL's legal rights.</p>
+    <p>We do not sell enquiry or project information. We share it only with: (a) our approved manufacturing partner, to the extent needed to prepare a quotation, technical drawing or production order; (b) service providers that operate the Site, hosting infrastructure or RFQ form processing, including Formspree, subject to their applicable terms and safeguards; or (c) authorities or advisers where required by law or necessary to protect KAISTEEL's legal rights.</p>
 
     <h2>5. Retention</h2>
     <p>We retain enquiry and order-related information for as long as reasonably necessary for the purposes above, including applicable commercial, warranty and tax record-keeping periods, after which it is deleted or anonymized where practicable.</p>
@@ -82,7 +106,7 @@
     KAISTEEL LIMITED · Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street, Kowloon, Hong Kong</p>
   </div></main>
   <footer><div class="wrap">
-    <span>© 2026 KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="index.html">Home</a> · <a href="terms.html">Website Terms</a></span>
+    <span>© 2026 KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="index.html" onclick="if(document.referrer.indexOf(location.host)>-1){history.back();return false}">Home</a> · <a href="terms.html">Website Terms</a></span>
   </div></footer>
 </body>
 </html>

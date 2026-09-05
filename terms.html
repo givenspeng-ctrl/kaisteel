@@ -30,6 +30,29 @@
     footer{background:var(--navy2);color:#8fa0b0;padding:28px 0;font-size:12px}
     footer a{color:#c3cdd6}
   </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CWBQM9Z095"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CWBQM9Z095');
+  </script>
+  <script>
+    document.addEventListener('click',function(event){
+      var link=event.target.closest('a');
+      if(!link) return;
+      var href=link.getAttribute('href')||'';
+      var text=(link.textContent||'').trim().slice(0,100);
+      if(href.indexOf('mailto:')===0){
+        gtag('event','email_click',{link_url:href,link_text:text});
+      }else if(href.indexOf('wa.me')>-1){
+        gtag('event','whatsapp_click',{link_url:href,link_text:text});
+      }else if(link.hasAttribute('download')){
+        var isTradeGuide=href.indexOf('PRO-MAX-B2B-Guide')>-1;
+        gtag('event',isTradeGuide?'trade_guide_download':'document_download',{file_name:href.split('/').pop(),link_text:text});
+      }
+    });
+  </script>
 </head>
 <body>
   <nav><div class="wrap"><a class="brand" href="index.html"><span class="kai">KAI</span>STEEL</a></div></nav>
@@ -72,7 +95,7 @@
     <p><a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> · See also our <a href="privacy-policy.html">Privacy Policy</a>.</p>
   </div></main>
   <footer><div class="wrap">
-    <span>© 2026 KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="index.html">Home</a> · <a href="privacy-policy.html">Privacy Policy</a></span>
+    <span>© 2026 KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="index.html" onclick="if(document.referrer.indexOf(location.host)>-1){history.back();return false}">Home</a> · <a href="privacy-policy.html">Privacy Policy</a></span>
   </div></footer>
 </body>
 </html>
