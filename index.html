@@ -117,6 +117,7 @@
     .states{background:#fff}
     .states .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
     .state-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .state-imgs figure{margin:0}
     .state-imgs img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
     .state-imgs figcaption{margin-top:8px;font-size:12px;color:var(--muted);text-align:center}
 
@@ -158,7 +159,7 @@
 
     .manufacturing{background:#fff}
     .mfg-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0}
-    .mfg-photo{position:relative;aspect-ratio:3/4;border-radius:14px;overflow:hidden;background:#d9dde1}
+    .mfg-photo{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#d9dde1;margin:0}
     .mfg-photo img{width:100%;height:100%;object-fit:cover;display:block}
     .mfg-photo span{position:absolute;left:0;right:0;bottom:0;padding:32px 14px 14px;background:linear-gradient(transparent,rgba(8,21,38,.85));color:#fff;font:600 13px "Barlow Condensed",sans-serif;letter-spacing:.02em}
     .mfg-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 28px}
@@ -248,6 +249,9 @@
       .wrap{width:min(100% - 32px,1180px)}
       .proofgrid{grid-template-columns:1fr 1fr}
       .steps,.doc-grid,.mfg-gallery,.mfg-stats{grid-template-columns:1fr}
+      .state-imgs{grid-template-columns:1fr;gap:24px}
+      .state-imgs img{aspect-ratio:4/5}
+      .mfg-photo{aspect-ratio:16/9}
       .econ-num{font-size:52px}
       .sample-credit{font-size:32px}
       .faq-item summary{padding:19px 52px 19px 20px;font-size:18px}
@@ -363,10 +367,10 @@
     <h2 class="section-title">Manufacturing behind every unit.</h2>
     <p class="lead">Production is coordinated through an approved manufacturing partner in Foshan, Guangdong, under KAISTEEL's order-specific specification, QC and documentation controls. Quotations, technical coordination and after-sales are handled directly by KAISTEEL LIMITED. Supplier history and facility qualifications are verified through controlled due diligence before being used for an order.</p>
     <div class="mfg-gallery" aria-label="Production facility photographs">
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-material-rack.webp" type="image/webp"><img src="assets/manufacturing-material-rack.jpg" alt="Aluminum profile and raw material inventory" width="1920" height="1080" loading="lazy"></picture><span>Profile &amp; material inventory</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-function-check.webp" type="image/webp"><img src="assets/manufacturing-function-check.jpg" alt="Completed outdoor kitchen undergoing a factory function check" width="1640" height="1280" loading="lazy"></picture><span>Function check</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-configuration-showcase.webp" type="image/webp"><img src="assets/manufacturing-configuration-showcase.jpg" alt="Completed outdoor kitchen configuration under factory lighting review" width="1086" height="1448" loading="lazy"></picture><span>Configuration review</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-finished.webp" type="image/webp"><img src="assets/manufacturing-finished.jpg" alt="Finished outdoor kitchen units in production" width="2000" height="1318" loading="lazy"></picture><span>Final inspection</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-1-materials.webp" type="image/webp"><img src="assets/manufacturing-step-1-materials.jpg" alt="Organized metal profiles and production materials in the manufacturing facility" width="1600" height="900" loading="lazy"></picture><span>01 · Material preparation</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-2-frame-fabrication.webp" type="image/webp"><img src="assets/manufacturing-step-2-frame-fabrication.jpg" alt="Outdoor kitchen structural frames being fabricated in the welding area" width="1600" height="900" loading="lazy"></picture><span>02 · Frame fabrication</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-3-fitout-inspection.webp" type="image/webp"><img src="assets/manufacturing-step-3-fitout-inspection.jpg" alt="Production team checking cabinetry and equipment fit-out on an outdoor kitchen" width="1600" height="900" loading="lazy"></picture><span>03 · Fit-out &amp; function check</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-4-export-packing.webp" type="image/webp"><img src="assets/manufacturing-step-4-export-packing.jpg" alt="Completed outdoor kitchen units protected for export shipment" width="1600" height="900" loading="lazy"></picture><span>04 · Export packing</span></figure>
     </div>
     <div class="mfg-stats">
       <div class="mfg-stat"><strong>15</strong><span>Years of founder-led experience in the outdoor product sector</span></div>
@@ -391,7 +395,7 @@
   </div></section>
 
   <section class="docs reveal" id="documents"><div class="wrap">
-    <div class="kicker"><div><div class="eyebrow">Buyer due diligence</div><h2 class="section-title">Trade documents, on request.</h2></div><p class="lead">Controlled documents for qualified buyers. Each shipment ships with an order-specific Compliance Dossier matched to the approved BOM and destination market.</p></div>
+    <div class="kicker"><div><div class="eyebrow">Buyer due diligence</div><h2 class="section-title">Trade documents &amp; controlled evidence.</h2></div><p class="lead">Public reference documents are available below, while controlled technical templates are available to qualified buyers on request. Each shipment is supported by an order-specific Compliance Dossier matched to the approved BOM and destination market.</p></div>
     <a class="dossier-cta" href="compliance-dossier.html"><div><span class="tag">For technical due diligence</span><strong>Full Compliance &amp; Manufacturing Dossier</strong><span>Component-by-component material table, the complete certification &amp; compliance policy, evidence chips and the full production photo set — one page, built for buyers who need to verify before they commit.</span></div><span class="arrow">Open Dossier →</span></a>
     <div class="doc-grid">
       <a class="doc-card" href="mailto:sales@kaisteelkitchen.com?subject=Request%20for%20KAISTEEL%20Technical%20Specification"><b>01</b><strong>Technical Spec</strong><span>Scope, materials, interfaces, freeze controls.</span><em>Request PDF</em></a>
@@ -400,7 +404,7 @@
       <a class="doc-card" href="assets/KAISTEEL-MANUFACTURING-CAPABILITY-EN.pdf" download><b>04</b><strong>Manufacturing Capability</strong><span>Capability &amp; compliance framework.</span><em>Download PDF</em></a>
       <a class="doc-card" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download><b>05</b><strong>PRO / MAX Trade Guide</strong><span>Configurations, dimensions, packing data.</span><em>Download PDF</em></a>
     </div>
-    <p class="docs-note">Materials, tests and certificates are matched to the exact configuration, batch, model and destination. Required evidence is defined at Technical Freeze, completed during the production cycle and indexed in the order-specific Compliance Dossier before shipment release. Documents above are shared with qualified buyers on request and are not published in full on this site.</p>
+    <p class="docs-note">Reference documents marked “Download PDF” are published in full on this site. The Technical Specification and Pre-Shipment QC Checklist are controlled request-only documents. Order-specific materials, tests and certificates are matched to the exact configuration, batch, model and destination; required evidence is defined at Technical Freeze, completed during production and indexed in the order-specific Compliance Dossier before shipment release. That shipment dossier is provided to the contracting buyer and is not published publicly.</p>
     <p class="docs-note">We do not make claims about certifications, test results or factory qualifications that cannot be supported by documents available to qualified buyers. KAISTEEL does not itself hold CE, UL, SAA or CSA marks. These marks apply to the relevant buyer-selected or project-specified appliances and components, subject to the certificate scope, exact model, voltage, gas type and destination market; see <a href="#models">System Shell vs. Full Package</a> for how appliance certification is handled on each path.</p>
   </div></section>
 
