@@ -120,6 +120,11 @@
     .state-imgs figure{margin:0}
     .state-imgs img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
     .state-imgs figcaption{margin-top:8px;font-size:12px;color:var(--muted);text-align:center}
+    .evidence-video{margin:30px 0 0;background:var(--navy);border-radius:16px;overflow:hidden;box-shadow:0 22px 58px rgba(8,21,38,.18)}
+    .evidence-video video{display:block;width:100%;background:#050e17}
+    .evidence-video figcaption{padding:14px 18px;color:#d9e0e6;text-align:left}
+    .evidence-video figcaption strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}
+    .evidence-video figcaption span{font-size:12px;line-height:1.5}
 
     .economics{background:var(--navy);color:#fff}
     .economics .lead{color:#c3cdd6}
@@ -162,6 +167,12 @@
     .mfg-photo{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#d9dde1;margin:0}
     .mfg-photo img{width:100%;height:100%;object-fit:cover;display:block}
     .mfg-photo span{position:absolute;left:0;right:0;bottom:0;padding:32px 14px 14px;background:linear-gradient(transparent,rgba(8,21,38,.85));color:#fff;font:600 13px "Barlow Condensed",sans-serif;letter-spacing:.02em}
+    .qa-proof{display:grid;grid-template-columns:minmax(240px,.58fr) 1fr;gap:28px;align-items:center;margin:38px 0}
+    .qa-proof .evidence-video{width:min(100%,340px);margin:0;justify-self:center}
+    .qa-proof-list{display:grid;gap:16px}
+    .qa-proof-item{padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:#fff}
+    .qa-proof-item strong{display:block;color:var(--navy);margin-bottom:5px}
+    .qa-proof-item span{font-size:13px;color:var(--muted)}
     .mfg-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:8px 0 28px}
     .mfg-stat{border:1px solid var(--line);border-radius:14px;padding:18px 16px}
     .mfg-stat strong{display:block;font:600 30px/1 "Barlow Condensed",sans-serif;color:var(--navy)}
@@ -177,7 +188,7 @@
     .step h3{margin:8px 0;font-size:15px}.step p{font-size:13px;color:var(--muted);margin:0}
 
     .docs{background:#fff}
-    .doc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+    .doc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}.doc-grid.lean-doc-grid{grid-template-columns:repeat(3,1fr)}
     .doc-card{display:flex;flex-direction:column;min-height:190px;background:var(--paper);border-radius:15px;padding:22px;text-decoration:none;transition:.2s}
     .doc-card:hover{background:#f0ece3;transform:translateY(-2px)}
     .doc-card b{color:var(--gold);font:600 22px "Barlow Condensed",sans-serif}
@@ -240,6 +251,7 @@
       .path-grid{grid-template-columns:1fr}
       .sample{grid-template-columns:1fr}.sample .btn{justify-self:start}
       .mfg-gallery{grid-template-columns:1fr 1fr}
+      .qa-proof{grid-template-columns:1fr}
       .mfg-stats{grid-template-columns:1fr 1fr}
       .doc-grid{grid-template-columns:1fr 1fr}
       .steps{grid-template-columns:1fr 1fr}
@@ -262,14 +274,14 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAISTEEL","legalName":"KAISTEEL LIMITED","url":"https://kaisteelkitchen.com/","email":"sales@kaisteelkitchen.com","foundingDate":"2025-08-08","foundingLocation":"Hong Kong","identifier":"78595271","address":{"@type":"PostalAddress","streetAddress":"Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street","addressLocality":"Kowloon","addressRegion":"Hong Kong","addressCountry":"HK"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO","description":"Modular outdoor kitchen system, 2300mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","image":"https://kaisteelkitchen.com/assets/pro-2300.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX","description":"Modular outdoor kitchen system, 2900mm, 304/316 stainless steel cabinet body and doors with aluminum honeycomb-filled core, solid 304/316 stainless steel sink, faucet and worktop.","image":"https://kaisteelkitchen.com/assets/max-2900.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can KAISTEEL provide certification and compliance documents?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import: we supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with interfaces prepared for buyer-selected, locally certified appliances sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system — see the full certification disclaimer and System Shell vs. Full Package comparison."}},{"@type":"Question","name":"How many PRO or MAX units fit in a 40'HQ container?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and confirmed on the final approved packing plan for each configuration. See the full PRO/MAX comparison table or our modular vs. assembled shipping guide for loading and freight detail."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can KAISTEEL provide certification and compliance documents?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import: we supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with interfaces prepared for buyer-selected, locally certified appliances sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system — see the full certification disclaimer and System Shell vs. Full Package comparison."}},{"@type":"Question","name":"How many PRO or MAX units fit in a 40'HQ container?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and confirmed on the final approved packing plan for each configuration. See the dedicated PRO vs MAX buyer page or modular vs. assembled shipping guide for loading and freight detail."}}]}</script>
 </head>
 <body>
   <nav><div class="wrap">
     <a class="brand" href="#top"><span class="kai">KAI</span>STEEL</a>
     <div class="navlinks"><a href="#models">Models</a><a href="#shipping">Shipping</a><a href="#manufacturing">Manufacturing</a><a href="#documents">Trade Docs</a><a href="resources.html">Buyer Resources</a><a href="#about">About</a></div>
     <div class="nav-actions">
-      <a class="nav-action" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20B2B%20Enquiry">Request a Quote</a>
+      <a class="nav-action" href="#contact">Request a Quote</a>
       <a class="nav-action wa" href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">WhatsApp</a>
     </div>
     <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="const menu=document.querySelector('.navlinks');const open=menu.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');">☰</button>
@@ -280,7 +292,7 @@
     <h1 class="title">Outdoor kitchens.<br>Engineered for trade.</h1>
     <p class="lead">Modular outdoor kitchen systems for international B2B projects, with project-selected stainless-steel grades, finishes and appliance packages supported by order-specific material, test and certification records.</p>
     <div class="btns">
-      <a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=Request%20for%20Quotation%20-%20KAISTEEL">Request an RFQ</a>
+      <a class="btn gold" href="#contact">Request an RFQ</a>
       <a class="btn outline" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download>Download Trade Guide</a>
     </div>
   </div></header>
@@ -297,42 +309,17 @@
   <section class="models reveal" id="models"><div class="wrap">
     <div class="kicker"><div><div class="eyebrow">Product range</div><h2 class="section-title">Two defined formats. One custom program.</h2></div><p class="lead">Fixed dimensions simplify quoting and specification. Full-container CUSTOM projects are engineered against an approved packing plan.</p></div>
     <div class="model-grid">
-      <article class="card"><div class="card-image"><picture><source srcset="assets/pro-2300.webp" type="image/webp"><img src="assets/pro-2300.jpg" alt="KAISTEEL PRO 2300 mm outdoor kitchen" width="1302" height="921" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">COMPACT FORMAT</span><h3>PRO</h3><p>Compact integrated kitchen for residential developments, hospitality terraces and dealer programs.</p><ul class="specs"><li><span>Length</span><b>2300 mm</b></li><li><span>Sink, faucet &amp; worktop</span><b>304 / 316 to order</b></li><li><span>Worktop</span><b>6 / 8 / 10 mm</b></li><li><span>Delivery</span><b>Assembled or modular (flat-pack)</b></li><li><span>Net weight</span><b>578 kg</b></li><li><span>Packaging</span><b>Pallet + protective wrap (full-container)</b></li><li><span>40HQ preliminary basis</span><b>13 assembled · 26 modular&dagger;</b></li></ul></div></article>
-      <article class="card"><div class="card-image"><picture><source srcset="assets/max-2900.webp" type="image/webp"><img src="assets/max-2900.jpg" alt="KAISTEEL MAX 2900 mm flip-cover outdoor kitchen" width="2079" height="1535" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">EXTENDED FORMAT</span><h3>MAX</h3><p>Wider flip-cover system with expanded work area and an architectural open-canopy presentation.</p><ul class="specs"><li><span>Length</span><b>2900 mm</b></li><li><span>Sink, faucet &amp; worktop</span><b>304 / 316 to order</b></li><li><span>Worktop</span><b>6 / 8 / 10 mm</b></li><li><span>Delivery</span><b>Assembled or modular (flat-pack)</b></li><li><span>Net weight</span><b>682 kg</b></li><li><span>Packaging</span><b>Pallet + protective wrap (full-container)</b></li><li><span>40HQ preliminary basis</span><b>8 assembled · 16 modular&dagger;</b></li></ul></div></article>
+      <article class="card"><div class="card-image"><picture><source srcset="assets/pro-2300.webp" type="image/webp"><img src="assets/pro-2300.jpg" alt="KAISTEEL PRO 2300 mm outdoor kitchen" width="1302" height="921" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">COMPACT FORMAT</span><h3>PRO</h3><p>Compact integrated kitchen for residential developments, hospitality terraces and dealer programs.</p><ul class="specs"><li><span>Length</span><b>2300 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>13 assembled · 26 modular&dagger;</b></li></ul></div></article>
+      <article class="card"><div class="card-image"><picture><source srcset="assets/max-2900.webp" type="image/webp"><img src="assets/max-2900.jpg" alt="KAISTEEL MAX 2900 mm flip-cover outdoor kitchen" width="2079" height="1535" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">EXTENDED FORMAT</span><h3>MAX</h3><p>Wider flip-cover system with expanded work area and an architectural open-canopy presentation.</p><ul class="specs"><li><span>Length</span><b>2900 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>8 assembled · 16 modular&dagger;</b></li></ul></div></article>
       <article class="card"><div class="card-image"><picture><source srcset="assets/custom-project.webp" type="image/webp"><img src="assets/custom-project.jpg" alt="KAISTEEL custom outdoor kitchen project" width="1448" height="1086" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">PROJECT PROGRAM</span><h3>CUSTOM</h3><p>Project-specific finishes and dimensions, engineered against approved drawings and full-container quantities.</p><ul class="specs"><li><span>Sink, faucet &amp; worktop</span><b>304 / 316 to order</b></li><li><span>Worktop</span><b>6 / 8 / 10 mm</b></li><li><span>Order basis</span><b>Full-container</b></li><li><span>Packing</span><b>Approved plan</b></li><li><span>Production</span><b>After spec approval</b></li></ul></div></article>
     </div>
 
-    <div class="compare-table">
-      <h3>PRO vs MAX, at a glance</h3>
-      <div class="compare-scroll"><table>
-        <thead><tr><th>Info</th><th>PRO</th><th>MAX</th></tr></thead>
-        <tbody>
-          <tr><td>Full dimensions (L×W×H)</td><td>2300 × 880 × 2400 mm*</td><td>2900 × 960 × 2400 mm*</td></tr>
-          <tr><td>Net weight per unit</td><td>578 kg</td><td>682 kg</td></tr>
-          <tr><td>Export packaging</td><td colspan="2">Full-container units: pallet base, edge/corner protection, inter-panel separator sheets and multi-layer wrap, sized per order. Loose/sample units: wooden export crate. See Shipping for the transit damage remedy.</td></tr>
-          <tr><td>Structural frame</td><td colspan="2">Q235 galvanized steel</td></tr>
-          <tr><td>Cabinet body &amp; doors</td><td colspan="2">304 / 316 stainless steel with aluminum honeycomb-filled core — 304 standard, 316 order-selected upgrade</td></tr>
-          <tr><td>Hinges &amp; door hardware</td><td colspan="2">Blum (Germany) soft-close hinges and cabinet hardware</td></tr>
-          <tr><td>Worktop thickness</td><td colspan="2">6 / 8 / 10 mm</td></tr>
-          <tr><td>Sink, faucet &amp; worktop grade</td><td colspan="2">Project-selected 304 or 316 stainless steel</td></tr>
-          <tr><td>Standard included</td><td colspan="2">Structural enclosure, cabinetry, worktop and sink (System Shell path); prepared appliance interfaces and full appliance packages available — see Supply Paths</td></tr>
-          <tr><td>Not automatically included</td><td colspan="2">Site foundations, local structural engineering, utility connection, gas commissioning, destination permits, local installation, import clearance and certification testing unless expressly listed in the order</td></tr>
-          <tr><td>Appliance certification path</td><td colspan="2">Buyer-selected, locally certified (System Shell) or KAISTEEL-sourced pre-certified equipment (Full Package) — UL / CE / SAA etc. confirmed per order</td></tr>
-          <tr><td>Packaging format</td><td>13 assembled · 26 modular per 40'HQ&dagger;</td><td>8 assembled · 16 modular per 40'HQ&dagger;</td></tr>
-          <tr><td>Order basis</td><td colspan="2">Standard format — single or multi-unit orders; CUSTOM and modular delivery are full-container only</td></tr>
-          <tr><td>Target lead time</td><td colspan="2">30 days*</td></tr>
-        </tbody>
-      </table></div>
-      <p class="compare-note">*Overall height is measured with the canopy raised/open; closed height is lower and confirmed on the approved drawing. Net weight is per unit and is confirmed on the approved BOM. &dagger;Assembled and modular loading quantities are preliminary, based on the current configuration and packing engineering, and are confirmed in the final approved packing plan. Target lead time applies after configuration approval and Technical Freeze; final production and shipment timing is confirmed in the quotation and order documents. Full configuration scope for any order is set out in the approved BOM and Technical Freeze Sheet.</p>
-    </div>
+    <div class="compare-table"><h3>Need the full specification comparison?</h3><p class="lead">Dimensions, weights, construction, appliance scope, exclusions and order basis are maintained on the dedicated PRO vs MAX buyer page.</p><div class="btns"><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html">Compare PRO and MAX</a><a class="btn gold" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download>Download Trade Guide</a></div><p class="compare-note">&dagger;Loading quantities are preliminary and confirmed for the approved configuration and packing plan.</p></div>
   </div></section>
 
   <section class="states reveal"><div class="wrap">
     <div><div class="eyebrow">Open / closed</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">A real-site installation shown in both operating states. Exact mechanism, finishes and equipment are confirmed in the approved project scope.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
-    <div class="state-imgs">
-      <figure><picture><source srcset="assets/custom-open-state.webp" type="image/webp"><img src="assets/custom-open-state.jpg" alt="KAISTEEL outdoor kitchen in its open operating configuration" width="808" height="1078" loading="lazy"></picture><figcaption>Open</figcaption></figure>
-      <figure><picture><source srcset="assets/custom-closed-state.webp" type="image/webp"><img src="assets/custom-closed-state.jpg" alt="KAISTEEL outdoor kitchen in its closed protective configuration" width="718" height="957" loading="lazy"></picture><figcaption>Closed</figcaption></figure>
-    </div>
+    <figure class="evidence-video"><video controls muted playsinline preload="metadata" poster="assets/video/kaisteel-outdoor-open-close-poster.jpg" aria-describedby="showroom-video-caption"><source src="assets/video/kaisteel-outdoor-open-close-demo.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="showroom-video-caption"><strong>Real outdoor open-and-close demonstration · 10 seconds</strong><span>See the enclosure move from its closed architectural profile to the working outdoor-kitchen configuration. Audio has been removed.</span></figcaption></figure>
   </div></section>
 
   <section class="economics reveal" id="shipping"><div class="wrap">
@@ -341,14 +328,10 @@
     <p class="lead">A fully assembled outdoor kitchen ships mostly as air. Current modular packing plans target up to approximately 2× the unit count of selected fully assembled configurations. Final loading quantity is confirmed after configuration and packaging approval.</p>
     <div class="econ-compare">
       <div class="econ-card"><span class="tag">Fully assembled</span><div class="econ-num">8–13</div><p>Preliminary units per 40'HQ. Zero on-site assembly — ideal for urgent orders and high-labor-cost markets.</p></div>
-      <div class="econ-card hi"><span class="tag">Modular assembly</span><div class="econ-num">16–26</div><p>Preliminary units per 40'HQ, subject to confirmed packing dimensions and an approved loading plan. On-site resources and assembly time are confirmed for the final configuration.</p><div class="econ-fine"><span>Higher loading target</span><span>Configuration-specific plan</span><span>Assembly guidance</span></div><p class="econ-subnote">Preliminary figures by model are shown in the PRO vs MAX table above.</p></div>
+      <div class="econ-card hi"><span class="tag">Modular assembly</span><div class="econ-num">16–26</div><p>Preliminary units per 40'HQ, subject to confirmed packing dimensions and an approved loading plan. On-site resources and assembly time are confirmed for the final configuration.</p><div class="econ-fine"><span>Higher loading target</span><span>Configuration-specific plan</span><span>Assembly guidance</span></div><p class="econ-subnote">Preliminary figures by model are maintained on the dedicated PRO vs MAX buyer page.</p></div>
     </div>
-    <p class="econ-note">Range covers MAX (low end) to PRO (high end); exact per-model assembled and modular figures are in the PRO vs MAX table above. Assembled and modular loading quantities are preliminary, based on the current configuration and packing engineering, and are confirmed in the final approved packing plan. Final loading quantities also depend on the approved configuration, dimensions, weight distribution, packaging method and destination requirements. CUSTOM and modular-delivery models are produced only for full-container-quantity orders.</p>
-    <div class="risk-block">
-      <h3>Shipping risk &amp; transit damage remedy</h3>
-      <p><strong>Risk transfer:</strong> Risk passes per the agreed Incoterm — FOB from a Pearl River Delta port (Nansha, Shekou or Yantian, as agreed) unless otherwise specified. CIF with marine cargo insurance can be arranged on request.</p>
-      <p><strong>Transit damage remedy:</strong> Report visible or concealed transit damage with photographs and supporting evidence within 7 days of container devanning. Once the claim is reviewed and accepted, replacement stainless panels, doors and worktops are supplied free of product charge, consolidated into your next shipment or dispatched separately on request. Freight, insurance, customs duties, import taxes, clearance charges and destination costs remain the buyer's responsibility unless otherwise agreed in writing; removal, reinstallation and on-site labour are not included. This remedy does not limit any claim available under the agreed Incoterm, carrier liability or cargo insurance.</p>
-    </div>
+    <p class="econ-note">Figures are preliminary and confirmed in the final approved packing plan. Configuration, dimensions, weight distribution, packing method and destination requirements can change the result.</p>
+    <div class="btns"><a class="btn dark" href="modular-vs-assembled-outdoor-kitchen-shipping.html">Review shipping economics</a><a class="btn outline" href="terms.html">Review risk &amp; transit terms</a></div>
   </div></section>
 
   <section class="paths reveal" id="paths"><div class="wrap">
@@ -359,18 +342,15 @@
       <div class="path-card"><span class="path-label">Project-specific package</span><strong>Full Package</strong><p>Appliances supplied only once exact model, certificate scope, voltage and gas type are confirmed.</p></div>
     </div>
     <div class="sample"><div class="sample-credit">SAMPLE CREDIT</div><div class="sample-copy"><strong>Pilot with one sample unit</strong><span>Eligible sample product value may be credited against a qualifying full-container order, subject to the written sample quotation. Freight, duties, taxes, custom engineering and installation are excluded unless expressly stated.</span></div><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Sample%20Credit%20Enquiry">Request Sample Terms</a></div>
-    <div class="sample"><div class="sample-credit">REGIONAL PRIORITY</div><div class="sample-copy"><strong>Territory priority after your first container</strong><span>Territory priority may be available following a qualifying first full-container order, subject to a separate written distribution agreement. Ask for terms.</span></div><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Territory%20Priority%20Enquiry">Ask About Territory Terms</a></div>
   </div></section>
 
   <section class="manufacturing reveal" id="manufacturing"><div class="wrap">
     <div class="eyebrow">Production capability</div>
     <h2 class="section-title">Manufacturing behind every unit.</h2>
     <p class="lead">Production is coordinated through an approved manufacturing partner in Foshan, Guangdong, under KAISTEEL's order-specific specification, QC and documentation controls. Quotations, technical coordination and after-sales are handled directly by KAISTEEL LIMITED. Supplier history and facility qualifications are verified through controlled due diligence before being used for an order.</p>
-    <div class="mfg-gallery" aria-label="Production facility photographs">
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-1-materials.webp" type="image/webp"><img src="assets/manufacturing-step-1-materials.jpg" alt="Organized metal profiles and production materials in the manufacturing facility" width="1600" height="900" loading="lazy"></picture><span>01 · Material preparation</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-2-frame-fabrication.webp" type="image/webp"><img src="assets/manufacturing-step-2-frame-fabrication.jpg" alt="Outdoor kitchen structural frames being fabricated in the welding area" width="1600" height="900" loading="lazy"></picture><span>02 · Frame fabrication</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-3-fitout-inspection.webp" type="image/webp"><img src="assets/manufacturing-step-3-fitout-inspection.jpg" alt="Production team checking cabinetry and equipment fit-out on an outdoor kitchen" width="1600" height="900" loading="lazy"></picture><span>03 · Fit-out &amp; function check</span></figure>
-      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-4-export-packing.webp" type="image/webp"><img src="assets/manufacturing-step-4-export-packing.jpg" alt="Completed outdoor kitchen units protected for export shipment" width="1600" height="900" loading="lazy"></picture><span>04 · Export packing</span></figure>
+    <div class="qa-proof">
+      <figure class="evidence-video"><video controls muted playsinline preload="metadata" poster="assets/video/kaisteel-factory-open-close-poster.jpg" aria-describedby="factory-video-caption"><source src="assets/video/kaisteel-factory-open-close-cycle.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="factory-video-caption"><strong>Factory open-and-close function check · 16 seconds</strong><span>A real operating cycle recorded during factory checking. No customer, order or shipment identifiers are shown. Audio has been removed.</span></figcaption></figure>
+      <div class="qa-proof-list"><div class="qa-proof-item"><strong>Specification control</strong><span>Production follows the approved drawings, BOM and order-specific configuration.</span></div><div class="qa-proof-item"><strong>Function checking</strong><span>Movement, fit-out and agreed interfaces are checked before packing.</span></div><div class="qa-proof-item"><strong>Order-linked evidence</strong><span>Inspection and packing records are matched to the approved order rather than presented as blanket claims.</span></div></div>
     </div>
     <div class="mfg-stats">
       <div class="mfg-stat"><strong>15</strong><span>Years of founder-led experience in the outdoor product sector</span></div>
@@ -378,9 +358,8 @@
       <div class="mfg-stat"><strong>Foshan</strong><span>Manufacturing base</span></div>
       <div class="mfg-stat"><strong>Tested</strong><span>Project-specific test and certification support</span></div>
     </div>
-    <p class="materials-note">304 or 316 stainless steel is available to order across the full PRO, MAX and CUSTOM range — not limited to CUSTOM projects. 304 is the standard grade; 316 can be specified as an order-selected upgrade for coastal or higher-corrosion environments. Coating requirements and destination-specific appliance packages can also be specified.</p>
-    <p class="compliance-note">Appliance certification sits with the component supplier. Cabinet and system integration is controlled at the manufacturing site. KAISTEEL issues the order-specific Compliance Dossier matched to the approved BOM and destination market — see <a href="#documents">Trade Documents</a> for the controlled set, or the full <a href="compliance-dossier.html">Compliance &amp; Manufacturing Dossier</a> for the complete material table and evidence policy.</p>
-    <p class="compliance-note">Facility-level detail beyond the published dossier — full audit access, additional process documentation — can be shared under a mutual NDA for qualified buyers evaluating a production-scale order. Third-party pre-shipment inspection (SGS, Bureau Veritas or a buyer-appointed inspector) is welcome on any order, at the buyer's cost, and can be arranged directly with the production site — shipment release can be agreed to follow a passed inspection.</p>
+    <p class="materials-note">304 is the standard stainless-steel grade; 316, coating requirements and destination-specific appliance packages can be selected per order. Material, appliance and inspection evidence is matched to the approved BOM rather than asserted as a blanket claim.</p>
+    <div class="btns"><a class="btn gold" href="compliance-dossier.html">Open Compliance Dossier</a><a class="btn dark" href="factory-assembly-validation.html">Review Factory Validation</a></div>
   </div></section>
 
   <section class="process reveal"><div class="wrap">
@@ -397,15 +376,13 @@
   <section class="docs reveal" id="documents"><div class="wrap">
     <div class="kicker"><div><div class="eyebrow">Buyer due diligence</div><h2 class="section-title">Trade documents &amp; controlled evidence.</h2></div><p class="lead">Public reference documents are available below, while controlled technical templates are available to qualified buyers on request. Each shipment is supported by an order-specific Compliance Dossier matched to the approved BOM and destination market.</p></div>
     <a class="dossier-cta" href="compliance-dossier.html"><div><span class="tag">For technical due diligence</span><strong>Full Compliance &amp; Manufacturing Dossier</strong><span>Component-by-component material table, the complete certification &amp; compliance policy, evidence chips and the full production photo set — one page, built for buyers who need to verify before they commit.</span></div><span class="arrow">Open Dossier →</span></a>
-    <div class="doc-grid">
-      <a class="doc-card" href="mailto:sales@kaisteelkitchen.com?subject=Request%20for%20KAISTEEL%20Technical%20Specification"><b>01</b><strong>Technical Spec</strong><span>Scope, materials, interfaces, freeze controls.</span><em>Request PDF</em></a>
-      <a class="doc-card" href="mailto:sales@kaisteelkitchen.com?subject=Request%20for%20KAISTEEL%20Pre-Shipment%20QC%20Checklist"><b>02</b><strong>Pre-Shipment QC</strong><span>Identity, materials, function, packing.</span><em>Request PDF</em></a>
-      <a class="doc-card" href="assets/KAISTEEL-LIMITED-WARRANTY-V1.4.pdf" download><b>03</b><strong>Limited Warranty</strong><span>15-year structural, 5-year surface-finish and 1-year functional-component limited coverage.</span><em>Download PDF</em></a>
-      <a class="doc-card" href="assets/KAISTEEL-MANUFACTURING-CAPABILITY-EN.pdf" download><b>04</b><strong>Manufacturing Capability</strong><span>Capability &amp; compliance framework.</span><em>Download PDF</em></a>
-      <a class="doc-card" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download><b>05</b><strong>PRO / MAX Trade Guide</strong><span>Configurations, dimensions, packing data.</span><em>Download PDF</em></a>
+    <div class="doc-grid lean-doc-grid">
+      <a class="doc-card" href="assets/KAISTEEL-LIMITED-WARRANTY-V1.4.pdf" download><b>01</b><strong>Limited Warranty</strong><span>15-year structural, 5-year surface-finish and 1-year functional-component limited coverage.</span><em>Download PDF</em></a>
+      <a class="doc-card" href="assets/KAISTEEL-MANUFACTURING-CAPABILITY-EN.pdf" download><b>02</b><strong>Manufacturing Capability</strong><span>Capability and compliance framework.</span><em>Download PDF</em></a>
+      <a class="doc-card" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download><b>03</b><strong>PRO / MAX Trade Guide</strong><span>Configurations, dimensions and packing data.</span><em>Download PDF</em></a>
     </div>
-    <p class="docs-note">Reference documents marked “Download PDF” are published in full on this site. The Technical Specification and Pre-Shipment QC Checklist are controlled request-only documents. Order-specific materials, tests and certificates are matched to the exact configuration, batch, model and destination; required evidence is defined at Technical Freeze, completed during production and indexed in the order-specific Compliance Dossier before shipment release. That shipment dossier is provided to the contracting buyer and is not published publicly.</p>
-    <p class="docs-note">We do not make claims about certifications, test results or factory qualifications that cannot be supported by documents available to qualified buyers. KAISTEEL does not itself hold CE, UL, SAA or CSA marks. These marks apply to the relevant buyer-selected or project-specified appliances and components, subject to the certificate scope, exact model, voltage, gas type and destination market; see <a href="#models">System Shell vs. Full Package</a> for how appliance certification is handled on each path.</p>
+    <p class="docs-note">Controlled specifications, QC templates and each shipment's order-specific dossier are supplied through the buyer workflow. Appliance or component certificates are matched to the exact model, rating and destination rather than presented as whole-system certification.</p>
+    <div class="btns"><a class="btn dark" href="resources.html">Browse all buyer resources</a><a class="btn gold" href="#contact">Request controlled documents</a></div>
   </div></section>
 
   <section class="about reveal" id="about"><div class="wrap about-grid">
@@ -444,7 +421,7 @@
           <summary>How many PRO or MAX units fit in a 40'HQ container?</summary>
           <div class="faq-answer">
             <p>Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately <strong>13 fully assembled PRO units</strong> or up to <strong>26 modular PRO units</strong> (MAX: 8 assembled / 16 modular).</p>
-            <p>These figures are <strong>preliminary</strong> and confirmed on the final approved packing plan for each configuration. See the full <a href="#models">PRO/MAX comparison table</a> or our <a href="modular-vs-assembled-outdoor-kitchen-shipping.html">modular vs. assembled shipping guide</a> for loading and freight detail.</p>
+            <p>These figures are <strong>preliminary</strong> and confirmed on the final approved packing plan for each configuration. See the dedicated <a href="pro-vs-max-outdoor-kitchen.html">PRO vs MAX buyer page</a> or our <a href="modular-vs-assembled-outdoor-kitchen-shipping.html">modular vs. assembled shipping guide</a> for loading and freight detail.</p>
           </div>
         </details>
       </div>

@@ -79,7 +79,7 @@
       '<div class="kaisteel-consent-copy">' +
         '<strong id="kaisteel-consent-title">Analytics choice</strong>' +
         '<p>We use Google Analytics only with your permission to understand site use and improve our B2B content. Necessary session attribution remains available for RFQ processing.</p>' +
-        '<a href="privacy-policy.html">Privacy Policy</a>' +
+        '<a href="/privacy-policy.html">Privacy Policy</a>' +
       '</div>' +
       '<div class="kaisteel-consent-actions">' +
         '<button type="button" data-consent="denied">Reject analytics</button>' +
