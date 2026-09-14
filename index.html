@@ -167,6 +167,10 @@
     .sample-credit{font:600 40px/1 "Barlow Condensed",sans-serif;color:var(--gold2);white-space:nowrap}
     .sample-copy strong{display:block;font:600 21px "Barlow Condensed",sans-serif;text-transform:uppercase;margin-bottom:4px}
     .sample-copy span{display:block;color:#c3cdd6;font-size:13px}
+    .oem-panel{margin-top:20px;border:1px solid rgba(184,146,74,.42);border-radius:18px;padding:28px 30px;background:linear-gradient(135deg,#fff,rgba(184,146,74,.10));display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+    .oem-mark{color:var(--gold);font:600 38px/1 "Barlow Condensed",sans-serif;letter-spacing:.04em}
+    .oem-panel h3{font:600 25px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;color:var(--navy);margin:0 0 8px}
+    .oem-panel p{margin:0;color:var(--muted);font-size:14px;max-width:820px}
 
     .manufacturing{background:#fff}
     .mfg-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0}
@@ -255,7 +259,7 @@
       .states .wrap{grid-template-columns:1fr}
       .econ-compare{grid-template-columns:1fr}
       .path-grid{grid-template-columns:1fr}
-      .sample{grid-template-columns:1fr}.sample .btn{justify-self:start}
+      .sample,.oem-panel{grid-template-columns:1fr}.sample .btn{justify-self:start}
       .mfg-gallery{grid-template-columns:1fr 1fr}
       .qa-proof{grid-template-columns:1fr}
       .mfg-stats{grid-template-columns:1fr 1fr}
@@ -344,10 +348,11 @@
     <div class="kicker"><div><div class="eyebrow">Risk-reduced purchasing</div><h2 class="section-title">Three supply paths, matched to your compliance needs.</h2></div><p class="lead">Select the scope that fits local certification, installation capability and project risk. First orders in standard PRO or MAX format start at a single unit — a full-container quantity is not required to place your first order. CUSTOM projects and modular-delivery configurations remain full-container only.</p></div>
     <div class="path-grid">
       <div class="path-card"><span class="path-label">Lowest certification complexity</span><strong>System Shell</strong><p>Structural enclosure, cabinetry and worktop. Cooking, refrigeration and other regulated equipment are sourced locally.</p></div>
-      <div class="path-card"><span class="path-label">Recommended for first orders</span><strong>Appliance-Ready</strong><p>Prepared openings and service interfaces for buyer-selected, locally certified appliances.</p></div>
+      <div class="path-card"><span class="path-label">Recommended for first orders</span><strong>Appliance-Ready</strong><p>Openings and service interfaces are engineered only against the buyer's exact appliance model, manufacturer installation instructions, local requirements and approved drawings; there is no universal fixed cut-out size.</p></div>
       <div class="path-card"><span class="path-label">Project-specific package</span><strong>Full Package</strong><p>Appliances supplied only once exact model, certificate scope, voltage and gas type are confirmed.</p></div>
     </div>
     <div class="sample"><div class="sample-credit">SAMPLE CREDIT</div><div class="sample-copy"><strong>Pilot with one sample unit</strong><span>Eligible sample product value may be credited against a qualifying full-container order, subject to the written sample quotation. Freight, duties, taxes, custom engineering and installation are excluded unless expressly stated.</span></div><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Sample%20Credit%20Enquiry">Request Sample Terms</a></div>
+    <div class="oem-panel"><div class="oem-mark">OEM</div><div><h3>OEM &amp; Private Label programs</h3><p>For qualified B2B projects, KAISTEEL can support product configuration, exterior finish, brand identification and packaging customization. All OEM or private-label scope is controlled by approved drawings, technical specifications and order documents before production.</p></div></div>
   </div></section>
 
   <section class="manufacturing reveal" id="manufacturing"><div class="wrap">
@@ -424,6 +429,19 @@
           </div>
         </details>
         <details class="faq-item">
+          <summary>Have you supplied customers in the United States?</summary>
+          <div class="faq-answer">
+            <p>Our manufacturing side has previously produced outdoor-kitchen products for US customers on an OEM/private-label basis. KAISTEEL has not yet shipped to the United States under its own brand. We also support OEM and private-label programs.</p>
+            <p>Customer identities are not disclosed without prior written consent. Relevant manufacturing, specification and quality-control information can be provided during qualified project due diligence.</p>
+          </div>
+        </details>
+        <details class="faq-item">
+          <summary>How are appliance openings and interfaces determined?</summary>
+          <div class="faq-answer">
+            <p>For Appliance-Ready supply, cut-outs, clearances, utility interfaces and fixing points are not standardized across all projects. They are determined from the buyer's exact appliance brand and model, the manufacturer's installation documentation, applicable local regulations and the approved order drawings.</p>
+          </div>
+        </details>
+        <details class="faq-item">
           <summary>How many PRO or MAX units fit in a 40'HQ container?</summary>
           <div class="faq-answer">
             <p>Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately <strong>13 fully assembled PRO units</strong> or up to <strong>26 modular PRO units</strong> (MAX: 8 assembled / 16 modular).</p>
@@ -445,10 +463,16 @@
           <label>Business email<span class="req">*</span><input type="email" name="email" required autocomplete="email"></label>
           <label>Company website<input type="text" name="website" autocomplete="url" placeholder="https:// (if you have one)"></label>
           <label>Country / destination port<span class="req">*</span><input type="text" name="destination" required></label>
+          <label>Destination market<input type="text" name="destinationMarket" placeholder="e.g. Australia / United States"></label>
           <label>Buyer type<span class="req">*</span><select name="buyerType" required><option value="">Select…</option><option>Distributor</option><option>Contractor / installer</option><option>Developer</option><option>Hospitality operator</option><option>Retailer</option><option>Other</option></select></label>
           <label>Model<select name="model"><option value="">Select…</option><option>PRO — 2300 mm</option><option>MAX — 2900 mm</option><option>CUSTOM</option><option>Not yet decided</option></select></label>
           <label>Estimated quantity<input type="text" name="quantity" placeholder="e.g. 1 unit / 20 units / full container"></label>
-          <label>Appliance certification market<input type="text" name="certMarket" placeholder="e.g. UL, CE, SAA…"></label>
+          <label>Appliance brand<input type="text" name="applianceBrand" placeholder="e.g. buyer-selected local brand"></label>
+          <label>Exact appliance model<input type="text" name="applianceModel" placeholder="Model number(s)"></label>
+          <label>Installation manual / link<input type="url" name="installationManual" placeholder="https:// (if available)"></label>
+          <label>Voltage / frequency<input type="text" name="voltageFrequency" placeholder="e.g. 230V / 50Hz"></label>
+          <label>Gas type<input type="text" name="gasType" placeholder="e.g. LPG / natural gas / none"></label>
+          <label>Certification requirements<input type="text" name="certMarket" placeholder="e.g. UL, CE, SAA, AGA"></label>
           <label>Target delivery date<input type="text" name="targetDate" placeholder="e.g. Q2 2027"></label>
         </div>
         <label class="rfq-full">Project notes<textarea name="notes" rows="4" placeholder="Anything else we should know — project type, site conditions, quantity range, etc."></textarea></label>
@@ -475,20 +499,22 @@
       <li>Distributor, contractor, developer or hospitality buyer</li>
       <li>PRO, MAX or CUSTOM</li>
       <li>Required quantity and delivery format</li>
-      <li>Appliance, gas and electrical requirements</li>
-      <li>Required Incoterm and target arrival date</li>
+      <li>Exact appliance brand/model, installation manual and certification requirements</li>
+      <li>Voltage/frequency, gas type and destination-market requirements</li>
+      <li>FOB Pearl River Delta port — Nansha, Shekou or Yantian, as confirmed in the quotation, Incoterms® 2020</li>
     </ul>
     <p><strong>Email</strong><br><a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a></p>
     <p><strong>WhatsApp</strong><br><a href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">Message us directly</a></p>
+    <p><strong>Telephone / WhatsApp</strong><br><a href="tel:+8613903030696">+86 139 0303 0696</a></p>
     <p style="margin-top:18px;padding-top:16px;border-top:1px solid var(--line)"><strong>Legal Entity</strong><br><span style="color:var(--muted);font-size:13px">KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="#about">Full corporate details ↑</a></span></p>
     </aside>
   </div></section>
 
   <footer><div class="wrap">
     <span>© 2026 KAISTEEL Outdoor Kitchen Systems · KAISTEEL LIMITED · Hong Kong SAR · BRN/UBI 78595271 · <a href="https://www.e-services.cr.gov.hk/" target="_blank" rel="noopener">verify at Hong Kong Companies Registry</a></span>
-    <span>International B2B Sales &amp; Brand Management · <a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> · <a href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">WhatsApp: Message Us</a></span>
+    <span>International B2B Sales &amp; Brand Management · <a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> · <a href="tel:+8613903030696">+86 139 0303 0696</a> · <a href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">WhatsApp: Message Us</a></span>
     <span>PRO 2300 mm · MAX 2900 mm · CUSTOM</span>
-    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Website Terms</a></span>
+    <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Website Terms</a> · <a href="commercial-terms.html">Commercial Terms</a></span>
   </div></footer>
 
   <script>
@@ -577,10 +603,16 @@
         `Business email: ${get('email')}`,
         `Company website: ${get('website')}`,
         `Country / destination port: ${get('destination')}`,
+        `Destination market: ${get('destinationMarket')}`,
         `Buyer type: ${get('buyerType')}`,
         `Model: ${get('model')}`,
         `Estimated quantity: ${get('quantity')}`,
-        `Appliance certification market: ${get('certMarket')}`,
+        `Appliance brand: ${get('applianceBrand')}`,
+        `Exact appliance model: ${get('applianceModel')}`,
+        `Installation manual / link: ${get('installationManual')}`,
+        `Voltage / frequency: ${get('voltageFrequency')}`,
+        `Gas type: ${get('gasType')}`,
+        `Certification requirements: ${get('certMarket')}`,
         `Target delivery date: ${get('targetDate')}`,
         '',
         `Project notes:`,

@@ -105,8 +105,18 @@
     document.head.appendChild(style);
   }
 
+  function ensureLegalFooterLinks() {
+    var footer = document.querySelector('footer .wrap') || document.querySelector('footer');
+    if (!footer || footer.querySelector('[data-kaisteel-commercial-terms],a[href$="commercial-terms.html"]')) return;
+    var links = document.createElement('span');
+    links.setAttribute('data-kaisteel-commercial-terms', 'true');
+    links.innerHTML = '<a href="/privacy-policy.html">Privacy Policy</a> · <a href="/terms.html">Website Terms</a> · <a href="/commercial-terms.html">Commercial Terms</a>';
+    footer.appendChild(links);
+  }
+
   function init() {
     addStyles();
+    ensureLegalFooterLinks();
     var choice = readChoice();
     if (choice === 'granted') loadAnalytics();
     if (choice === 'granted' || choice === 'denied') showSettingsButton();
