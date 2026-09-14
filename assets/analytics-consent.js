@@ -4,14 +4,58 @@
   var measurementId = 'G-CWBQM9Z095';
   var storageKey = 'kaisteel_analytics_consent';
   var analyticsActive = false;
+  var controls = new URLSearchParams(window.location.search);
+  var internal = controls.get('ks_internal') === '1';
+  var debug = controls.get('ks_debug') === '1';
+  try {
+    if (controls.has('ks_internal')) localStorage.setItem('kaisteel_internal', internal ? '1' : '0');
+    internal = localStorage.getItem('kaisteel_internal') === '1';
+  } catch (_error) {}
+  var production = /^(www\.)?kaisteelkitchen\.com$/.test(window.location.hostname);
+  var excluded = !production || (internal && !debug);
+  window['ga-disable-' + measurementId] = excluded;
 
   window.dataLayer = window.dataLayer || [];
+  function queueCommand() { window.dataLayer.push(arguments); }
+  function emit(name, params) {
+    if (!analyticsActive) return;
+    queueCommand('event', name, Object.assign({transport_type: 'beacon'}, params || {}));
+  }
   window.gtag = function () {
+    // Shared click tracking replaces legacy inline listeners without double counting.
+    if (arguments[0] === 'event') {
+      var name = arguments[1];
+      if (['email_click','whatsapp_click','trade_guide_download','document_download'].indexOf(name) !== -1) return;
+      if (name === 'rfq_submit' || name === 'dealer_pack_submit') {
+        emit('generate_lead', {form_id: name === 'rfq_submit' ? 'rfq-form' : 'dealer-form', method: 'contact_form'});
+        return;
+      }
+    }
     if (analyticsActive) window.dataLayer.push(arguments);
   };
 
+  document.addEventListener('click', function (event) {
+    var link = event.target && event.target.closest && event.target.closest('a');
+    if (!link) return;
+    var href = link.getAttribute('href') || '';
+    var url;
+    try { url = new URL(href, window.location.href); } catch (_error) { return; }
+    var label = (link.textContent || '').trim().slice(0,100);
+    // Never send mail subjects/bodies or WhatsApp prefilled messages to Analytics.
+    var params = {link_text: label, page_path: window.location.pathname};
+    if (url.protocol === 'mailto:') emit('email_click', params);
+    else if (/^(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)$/.test(url.hostname)) emit('whatsapp_click', params);
+    else if (url.origin === window.location.origin && /\.pdf$/i.test(url.pathname)) {
+      params.file_name = url.pathname.split('/').pop();
+      emit(/PRO-MAX-B2B-Guide|catalog/i.test(params.file_name) ? 'download_catalog' : 'document_download', params);
+    }
+    if (/\b(rfq|request (?:a )?quote|configuration review)\b/i.test(label)) {
+      emit('request_quote', {method: url.protocol === 'mailto:' ? 'email' : 'form_navigation', page_path: window.location.pathname});
+    }
+  });
+
   function loadAnalytics() {
-    if (analyticsActive) return;
+    if (analyticsActive || excluded) return;
     window['ga-disable-' + measurementId] = false;
     analyticsActive = true;
     var script = document.createElement('script');
@@ -20,7 +64,10 @@
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
     document.head.appendChild(script);
     window.gtag('js', new Date());
-    window.gtag('config', measurementId, { anonymize_ip: true });
+    var config = { anonymize_ip: true };
+    if (internal || debug) config.traffic_type = 'internal';
+    if (debug) config.debug_mode = true;
+    window.gtag('config', measurementId, config);
   }
 
   function saveChoice(value) {
