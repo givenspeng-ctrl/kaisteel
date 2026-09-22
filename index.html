@@ -6,21 +6,21 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; frame-ancestors 'self'; base-uri 'self'; form-action 'self' https://formspree.io mailto:; connect-src 'self' https://formspree.io https://www.google-analytics.com https://analytics.google.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com;">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <script src="assets/analytics-consent.js" defer></script>
-  <title>KAISTEEL Outdoor Kitchens | Outdoor Social Living Systems</title>
-  <meta name="description" content="Outdoor kitchens for cooking, gathering and entertaining. Explore KAISTEEL PRO, MAX and custom programs for dealers, contractors and hospitality projects.">
+  <title>KAISTEEL Movable Outdoor Kitchens | Cook · Gather · Entertain</title>
+  <meta name="description" content="Movable outdoor kitchens with integrated canopy for cooking, gathering and entertaining. Explore KAISTEEL PRO, MAX and CUSTOM programs — one-unit sample orders available for dealers, contractors and hospitality projects.">
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://kaisteelkitchen.com/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="KAISTEEL | Cook. Gather. Stay Outdoors.">
-  <meta property="og:description" content="Bring cooking and conversation into one outdoor setting. Explore KAISTEEL outdoor kitchen formats and dealer and project programs.">
+  <meta property="og:title" content="KAISTEEL | Movable Outdoor Kitchens">
+  <meta property="og:description" content="Cook, gather and entertain outdoors. Explore KAISTEEL PRO, MAX and CUSTOM outdoor kitchen formats, with one-unit sample orders available for dealers and project buyers.">
   <meta property="og:image" content="https://kaisteelkitchen.com/assets/og-cover.jpg">
   <meta property="og:url" content="https://kaisteelkitchen.com/">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="KAISTEEL | Cook. Gather. Stay Outdoors.">
-  <meta name="twitter:description" content="Outdoor cooking, gathering and entertaining with KAISTEEL. Discover PRO, MAX and custom outdoor kitchen programs for your market or project.">
+  <meta name="twitter:title" content="KAISTEEL | Movable Outdoor Kitchens">
+  <meta name="twitter:description" content="Cook, gather and entertain outdoors. Explore KAISTEEL PRO, MAX and CUSTOM outdoor kitchen formats, with one-unit sample orders available for dealers and project buyers.">
   <meta name="twitter:image" content="https://kaisteelkitchen.com/assets/og-cover.jpg">
   <link rel="icon" href="assets/favicon.png" type="image/png">
-  <link rel="preload" as="image" href="assets/hero-outdoor-kitchen.webp" type="image/webp">
+  <link rel="preload" as="image" href="assets/hero-movable-text-free.webp" type="image/webp">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -50,13 +50,10 @@
     .nav-action.wa{border-color:#25D366;color:#25D366}
     .hamburger{display:none;background:none;border:0;color:#fff;font-size:24px;line-height:1;cursor:pointer;padding:8px}
 
-    .hero{min-height:92vh;display:grid;align-items:end;position:relative;background:linear-gradient(100deg,rgba(8,21,38,.94) 0%,rgba(8,21,38,.62) 48%,rgba(8,21,38,.08) 82%),url('assets/hero-outdoor-kitchen.jpg') center/cover no-repeat;color:#fff;padding:160px 0 96px}
-    @supports (background:image-set(url('a.jpg') type('image/jpeg'))){
-      .hero{background:linear-gradient(100deg,rgba(8,21,38,.94) 0%,rgba(8,21,38,.62) 48%,rgba(8,21,38,.08) 82%),image-set(url('assets/hero-outdoor-kitchen.webp') type('image/webp'),url('assets/hero-outdoor-kitchen.jpg') type('image/jpeg')) center/cover no-repeat}
-    }
-    .hero-copy{max-width:700px}.hero .lead{color:#d8dfe6;font-size:18px}
-    .hero .eyebrow{color:var(--gold2)}
-
+    .hero{position:relative;min-height:calc(56.25vw + 76px);padding:0;background:var(--navy2) url('assets/hero-movable-text-free.jpg') center bottom/100% auto no-repeat;color:#fff}
+    @supports(background-image:image-set(url('a.webp') type('image/webp'))){.hero{background-image:image-set(url('assets/hero-movable-text-free.webp') type('image/webp'),url('assets/hero-movable-text-free.jpg') type('image/jpeg'))}}
+    .hero:before{content:"";position:absolute;inset:76px 0 0;background:linear-gradient(90deg,rgba(8,21,38,.68),rgba(8,21,38,.25) 43%,transparent 54%);pointer-events:none}
+    .hero-copy{position:absolute;left:6%;top:27%;width:39%;max-width:640px;margin:0;z-index:1}.hero .title{font-size:clamp(34px,4vw,68px);text-transform:none;line-height:1.02}.hero .eyebrow{color:#fff;letter-spacing:.38em;line-height:1.4}.hero-tagline{font-size:clamp(20px,2vw,32px);margin:16px 0;color:#fff}.hero-features{font-size:clamp(13px,1.1vw,17px);max-width:510px;color:#fff}.hero .btns{margin-top:24px}.finish-section{background:var(--paper)}
     .proofbar{background:var(--navy);color:#fff}
     .proofgrid{display:grid;grid-template-columns:repeat(6,1fr)}
     .proofgrid div{padding:26px 22px;border-right:1px solid rgba(255,255,255,.1)}.proofgrid div:last-child{border:0}
@@ -83,8 +80,24 @@
     .models{background:var(--paper)}
     .model-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
     .card{border-radius:var(--radius);overflow:hidden;background:#fff;box-shadow:var(--shadow)}
-    .card-image{aspect-ratio:4/3;overflow:hidden;background:#e9edf1}.card-image img{width:100%;height:100%;object-fit:cover}
+    .custom-states{display:grid;grid-template-columns:1fr 1fr;gap:3px;background:#e9edf1}.custom-states figure{position:relative;margin:0;min-width:0}.custom-states img{width:100%;height:auto;display:block}.custom-states figcaption{padding:8px 5px;font-size:10px;font-weight:600;text-align:center;color:var(--navy);background:#f7f5f1}
+    .card-image{aspect-ratio:16/9;overflow:hidden;background:#e9edf1}.card-image picture{display:block;width:100%;height:100%}.card-image img{width:100%;height:100%;object-fit:contain}
     .card-body{padding:28px}
+    /* Desktop: force PRO / MAX / CUSTOM columns to share identical image height and
+       identical label/heading/description height, so the divider above the spec
+       list lands on the same row across all three cards. */
+    @media(min-width:901px){
+      .card-image,.custom-states{aspect-ratio:16/9}
+      .custom-states{position:relative;overflow:hidden}
+      .custom-states figure{height:100%}
+      .custom-states picture{display:block;width:100%;height:100%}
+      .custom-states img{width:100%;height:100%;object-fit:cover}
+      .custom-states figcaption{position:absolute;left:0;right:0;bottom:0;margin:0;padding:22px 8px 10px;color:#fff;text-align:center;background:linear-gradient(transparent,rgba(8,21,38,.82))}
+      .model-grid{grid-template-rows:auto auto auto minmax(104px,auto) auto;row-gap:0}
+      .model-grid>.card{display:grid;grid-template-rows:subgrid;grid-row:span 5;row-gap:0}
+      .card-body{display:grid;grid-template-rows:subgrid;grid-row:span 4;row-gap:0}
+      .card-body .specs{align-self:start}
+    }
     .model-tag{display:inline-block;color:var(--gold);font-weight:800;font-size:11px;letter-spacing:.14em}
     .card h3{font:600 38px/1 "Barlow Condensed",sans-serif;margin:8px 0}
     .card p{color:var(--muted);font-size:14px;margin:0 0 4px}
@@ -239,7 +252,8 @@
     .rfq-status{display:none;margin-top:16px;padding:12px 14px;border-radius:10px;font-size:13px}
     .rfq-status.ok{display:block;background:#eef7ef;border:1px solid #bcd9c1;color:#1f5b2c}
     .rfq-status.err{display:block;background:#fdf1ec;border:1px solid #e6c3b4;color:#8a3b1c}
-    @media(max-width:560px){.rfq-grid{grid-template-columns:1fr}}
+    @media(max-width:560px){
+      .doc-card{min-width:0;overflow-wrap:anywhere}.hero .lead{font-size:15px}.hero .btns{gap:10px;margin-top:22px}.hero .btn{font-size:12px;padding:0 16px;min-height:44px}.rfq-grid{grid-template-columns:1fr}}
     .wa-block{margin-top:18px}
     .wa-card{display:inline-flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;text-decoration:none;transition:.2s}
     .wa-card:hover{border-color:#25D366;transform:translateY(-2px)}
@@ -255,7 +269,8 @@
       .nav-actions{margin-left:auto;margin-right:4px;gap:6px;order:2}.nav-action{padding:8px 10px;font-size:11px}
       .navlinks{display:none;position:absolute;top:76px;left:0;right:0;z-index:1;background:var(--navy2);flex-direction:column;align-items:stretch;padding:10px 24px;gap:0}
       .navlinks.open{display:flex}.navlinks a{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.08)}
-      .hero{min-height:82vh;padding:150px 0 70px}
+      .hero{min-height:520px;padding:112px 24px 42px;background-size:cover;background-position:65% center}.hero:before{display:block;inset:0;background:linear-gradient(90deg,rgba(8,21,38,.82),rgba(8,21,38,.48) 52%,rgba(8,21,38,.08))}.hero-copy{position:relative;left:auto;top:auto;width:58%;max-width:520px}.hero .title{font-size:clamp(34px,5.3vw,48px)}.hero-tagline{font-size:clamp(18px,2.8vw,25px)}.hero-features{font-size:14px}.hero-copy{text-shadow:0 2px 14px rgba(0,0,0,.45)}.hero .btn{text-shadow:none}
+      @media(max-width:560px){.hero{min-height:510px;padding:110px 20px 32px;background-position:62% center}.hero-copy{width:78%}.hero .title{font-size:36px}.hero .eyebrow{font-size:10px}.hero-tagline{font-size:19px;margin:14px 0}.hero-features{font-size:12px;max-width:260px}.hero .btns{gap:8px;margin-top:20px}.hero .btn{font-size:11px;padding:0 12px;min-height:40px}}
       .proofgrid{grid-template-columns:repeat(3,1fr)}
       .about-grid,.contact-grid{grid-template-columns:1fr}
       .model-grid{grid-template-columns:1fr}
@@ -285,8 +300,8 @@
     }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAISTEEL","legalName":"KAISTEEL LIMITED","url":"https://kaisteelkitchen.com/","email":"sales@kaisteelkitchen.com","foundingDate":"2025-08-08","foundingLocation":"Hong Kong","identifier":"78595271","address":{"@type":"PostalAddress","streetAddress":"Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street","addressLocality":"Kowloon","addressRegion":"Hong Kong","addressCountry":"HK"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO","description":"KAISTEEL PRO is a 2300 mm integrated outdoor kitchen format for outdoor cooking and gathering. Materials, appliances and delivery format are selected for the approved configuration.","image":"https://kaisteelkitchen.com/assets/pro-2300.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX","description":"KAISTEEL MAX is a 2900 mm flip-cover outdoor kitchen format with an expanded work area and an open-canopy presentation. Materials and equipment are confirmed for the approved configuration.","image":"https://kaisteelkitchen.com/assets/max-2900.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO","description":"KAISTEEL PRO is a 2300 mm integrated outdoor kitchen format for outdoor cooking and gathering. Materials, appliances and delivery format are selected for the approved configuration.","image":"https://kaisteelkitchen.com/assets/pro-courtyard-v2.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL MAX","description":"KAISTEEL MAX is a 2900 mm flip-cover outdoor kitchen format with an expanded work area and an open-canopy presentation. Materials and equipment are confirmed for the approved configuration.","image":"https://kaisteelkitchen.com/assets/max-social-living-20260922.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"manufacturer":{"@type":"Organization","name":"KAISTEEL LIMITED"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can KAISTEEL provide certification and compliance documents?","acceptedAnswer":{"@type":"Answer","text":"KAISTEEL offers a System Shell supply path designed to reduce certification complexity at import: we supply the structural enclosure, cabinetry, worktop and agreed non-appliance components, with interfaces prepared for buyer-selected, locally certified appliances sourced in the destination market. Final electrical, gas and plumbing connections remain the responsibility of licensed local tradespeople. KAISTEEL does not itself hold CE, UL, SAA or CSA marks for the complete system — see the full certification disclaimer and System Shell vs. Full Package comparison."}},{"@type":"Question","name":"How many PRO or MAX units fit in a 40'HQ container?","acceptedAnswer":{"@type":"Answer","text":"Fully assembled outdoor kitchens occupy significant volume with trapped air. On current packing engineering, a 40'HQ can carry approximately 13 fully assembled PRO units or up to 26 modular PRO units (MAX: 8 assembled / 16 modular). These figures are preliminary and confirmed on the final approved packing plan for each configuration. See the dedicated PRO vs MAX buyer page or modular vs. assembled shipping guide for loading and freight detail."}}]}</script>
 </head>
 <body>
@@ -300,14 +315,12 @@
     <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false" onclick="const menu=document.querySelector('.navlinks');const open=menu.classList.toggle('open');this.setAttribute('aria-expanded',open);this.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu');">☰</button>
   </div></nav>
 
-  <header class="hero" id="top"><div class="wrap hero-copy">
-    <div class="eyebrow">KAISTEEL · Outdoor Social Living Systems</div>
-    <h1 class="title">Cook. Gather.<br>Stay outdoors.</h1>
-    <p class="lead">Make outdoor cooking part of the gathering. KAISTEEL outdoor kitchen systems bring preparation, serving and conversation into one setting — from private terraces to hospitality and residential projects.</p>
-    <div class="btns">
-      <a class="btn gold" href="#experience">Explore the experience</a>
-      <a class="btn outline" href="#contact">Request a Quote</a>
-    </div>
+  <header class="hero" id="top"><div class="hero-copy">
+    <div class="eyebrow">KAISTEEL</div>
+    <h1 class="title">Movable Outdoor<br>Kitchens</h1>
+    <p class="hero-tagline">Cook · Gather · Entertain</p>
+    <p class="hero-features">Integrated canopy · Bar-style social space · Flexible entertainment</p>
+    <div class="btns"><a class="btn gold" href="#models">Explore the range</a><a class="btn outline" href="#contact">Start with one sample</a></div>
   </div></header>
 
 
@@ -324,23 +337,32 @@
   </div></section>
 
   <section class="states reveal" id="difference"><div class="wrap">
-    <div><div class="eyebrow">See the product difference</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">Watch the opening canopy transform the demonstrated kitchen from a closed profile into an open cooking setting. Mechanism, equipment and layout depend on the selected model and approved project scope.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
-    <figure class="evidence-video"><video controls muted playsinline preload="metadata" poster="assets/video/kaisteel-outdoor-open-close-poster.jpg" aria-describedby="showroom-video-caption"><source src="assets/video/kaisteel-outdoor-open-close-demo.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="showroom-video-caption"><strong>Real outdoor open-and-close demonstration · 10 seconds</strong><span>See the enclosure move from its closed architectural profile to the working outdoor-kitchen configuration. Audio has been removed.</span></figcaption></figure>
+    <div><div class="eyebrow">See the product difference</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">Explore an animated concept of the transition between an open cooking setting and a closed profile. This visualization illustrates the idea; the mechanism, equipment and layout are confirmed for each project.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
+    <figure class="evidence-video"><video controls muted playsinline preload="metadata" poster="assets/video/social-living-start-frame-v2.jpg" aria-describedby="showroom-video-caption"><source src="assets/video/social-living-start-frame-v2.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="showroom-video-caption"><strong>Outdoor living concept animation · 5 seconds</strong><span>AI-generated scene animation, not footage of a physical mechanism test. Final operation and configuration are subject to approved specifications. No audio.</span></figcaption></figure>
   </div></section>
 
   <section class="models reveal" id="models"><div class="wrap">
-    <div class="kicker"><div><div class="eyebrow">Product range</div><h2 class="section-title">Two defined formats. One custom program.</h2></div><p class="lead">Fixed dimensions simplify quoting and specification. Full-container CUSTOM projects are engineered against an approved packing plan.</p></div>
+    <div class="kicker"><div><div class="eyebrow">Product range</div><h2 class="section-title">Two defined formats. One custom program.</h2></div><p class="lead">PRO, MAX and CUSTOM all support a one-unit sample or trial order. Choose a platform, validate the configuration, then scale at your pace.</p></div>
     <div class="model-grid">
-      <article class="card"><div class="card-image"><picture><source srcset="assets/pro-2300.webp" type="image/webp"><img src="assets/pro-2300.jpg" alt="KAISTEEL PRO 2300 mm outdoor kitchen" width="1302" height="921" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">COMPACT FORMAT</span><h3>PRO</h3><p>Compact integrated kitchen for residential developments, hospitality terraces and dealer programs.</p><ul class="specs"><li><span>Length</span><b>2300 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>13 assembled · 26 modular&dagger;</b></li></ul></div></article>
-      <article class="card"><div class="card-image"><picture><source srcset="assets/max-2900.webp" type="image/webp"><img src="assets/max-2900.jpg" alt="KAISTEEL MAX 2900 mm flip-cover outdoor kitchen" width="2079" height="1535" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">EXTENDED FORMAT</span><h3>MAX</h3><p>Wider flip-cover system with expanded work area and an architectural open-canopy presentation.</p><ul class="specs"><li><span>Length</span><b>2900 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>8 assembled · 16 modular&dagger;</b></li></ul></div></article>
-      <article class="card"><div class="card-image"><picture><source srcset="assets/custom-project.webp" type="image/webp"><img src="assets/custom-project.jpg" alt="KAISTEEL custom outdoor kitchen project" width="1448" height="1086" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">PROJECT PROGRAM</span><h3>CUSTOM</h3><p>Project-specific finishes and dimensions, engineered against approved drawings and full-container quantities.</p><ul class="specs"><li><span>Sink, faucet &amp; worktop</span><b>304 / 316 to order</b></li><li><span>Worktop</span><b>6 / 8 / 10 mm</b></li><li><span>Order basis</span><b>Full-container</b></li><li><span>Packing</span><b>Approved plan</b></li><li><span>Production</span><b>After spec approval</b></li></ul></div></article>
+      <article class="card"><div class="card-image"><picture><source srcset="assets/pro-courtyard-v2.webp" type="image/webp"><img src="assets/pro-courtyard-v2.jpg" alt="KAISTEEL PRO 2300 mm outdoor kitchen" width="1000" height="573" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">COMPACT FORMAT</span><h3>PRO</h3><p>Compact integrated kitchen for residential developments, hospitality terraces and dealer programs.</p><ul class="specs"><li><span>Length</span><b>2300 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Trial order</span><b>1 sample unit</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>13 assembled · 26 modular&dagger;</b></li></ul></div></article>
+      <article class="card"><div class="card-image"><picture><source srcset="assets/max-social-living-20260922.webp" type="image/webp"><img src="assets/max-social-living-20260922.jpg" alt="KAISTEEL MAX 2900 mm flip-cover outdoor kitchen" width="1000" height="573" loading="lazy"></picture></div><div class="card-body"><span class="model-tag">EXTENDED FORMAT</span><h3>MAX</h3><p>Wider flip-cover system with expanded work area and an architectural open-canopy presentation.</p><ul class="specs"><li><span>Length</span><b>2900 mm</b></li><li><span>Material options</span><b>304 / 316 to order</b></li><li><span>Trial order</span><b>1 sample unit</b></li><li><span>Delivery</span><b>Assembled or modular</b></li><li><span>40HQ preliminary basis</span><b>8 assembled · 16 modular&dagger;</b></li></ul></div></article>
+      <article class="card"><div class="custom-states"><figure><picture><source srcset="assets/custom-closed-v3.webp" type="image/webp"><img src="assets/custom-closed-v3.jpg" alt="CUSTOM closed configuration with guests gathered around the bar" width="800" height="711" loading="lazy"></picture><figcaption>Closed · Social bar</figcaption></figure><figure><picture><source srcset="assets/custom-open-v3.webp" type="image/webp"><img src="assets/custom-open-v3.jpg" alt="CUSTOM open configuration with canopy, grill and refrigerator" width="800" height="711" loading="lazy"></picture><figcaption>Open · Outdoor kitchen</figcaption></figure></div><div class="card-body"><span class="model-tag">PROJECT PROGRAM</span><h3>CUSTOM</h3><p>Project-specific dimensions, finishes and appliance integration, engineered against approved drawings. One-unit sample orders are available.</p><ul class="specs"><li><span>Sink, faucet &amp; worktop</span><b>304 / 316 to order</b></li><li><span>Worktop</span><b>6 / 8 / 10 mm</b></li><li><span>Order basis</span><b>1-unit sample available</b></li><li><span>Packing</span><b>Approved plan</b></li><li><span>Production</span><b>After spec approval</b></li></ul></div></article>
     </div>
 
+    <p class="materials-note">Lifestyle scenes on this page are AI-generated concept visualizations, not photographs of a delivered unit; model dimensions and equipment are confirmed in the approved specification.</p>
     <p class="materials-note">Optional casters are available across the KAISTEEL range. All units must be disconnected from water, electricity and gas before moving.</p>
     <div class="compare-table"><h3>Need the full specification comparison?</h3><p class="lead">Dimensions, weights, construction, appliance scope, exclusions and order basis are maintained on the dedicated PRO vs MAX buyer page.</p><div class="btns"><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html">Compare PRO and MAX</a><a class="btn gold" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download>Download Trade Guide</a></div><p class="compare-note">&dagger;Loading quantities are preliminary and confirmed for the approved configuration and packing plan.</p></div>
   </div></section>
 
 
+
+  <section class="finish-section reveal" id="finishes"><div class="wrap">
+    <div class="eyebrow">Frame &amp; exterior finish options</div><h2 class="section-title">Match the kitchen to its setting.</h2>
+    <p class="lead">Specify the frame with a stainless-steel finish, sintered-stone cladding or marble cladding. Available across PRO, MAX and CUSTOM, with the finish and fixing details confirmed for the selected configuration.</p>
+    <div class="path-grid"><article class="path-card"><span class="path-label">Metal finish</span><strong>Stainless steel</strong><p>304 / 316 options and surface treatments selected for the project and destination environment.</p></article><article class="path-card"><span class="path-label">Sintered stone</span><strong>Architectural surface</strong><p>Optional sintered-stone facing for the frame and exterior panels, coordinated with the landscape and surrounding finishes.</p></article><article class="path-card"><span class="path-label">Marble</span><strong>Natural stone character</strong><p>Optional marble facing for a project-specific appearance; confirm the stone selection, panel layout and care requirements.</p></article></div>
+    <p class="materials-note">Cladding is a finish option, not a change to the structural frame material. Weight, fixing method, mobility and packing are reviewed in the approved drawings.</p>
+    <div class="btns"><a class="btn dark" href="#contact">Discuss your finish</a></div>
+  </div></section>
 
   <section class="social-living reveal" id="business"><div class="wrap">
     <div class="eyebrow">A compelling experience. A clear buying path.</div>
@@ -350,9 +372,10 @@
       <article class="path-card"><span class="path-label">Contractors &amp; project buyers</span><strong>Specify the right fit</strong><p>Coordinate dimensions, appliance choices, services and delivery format with the project team before the configuration is approved.</p></article>
       <article class="path-card"><span class="path-label">Outdoor living brands</span><strong>Develop your program</strong><p>Discuss OEM or private-label scope, finishes and packaging against agreed drawings, quantities and commercial terms.</p></article>
     </div>
-    <div class="btns"><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Dealer%20Pricing">Request dealer pricing</a><a class="btn dark" href="assets/KAISTEEL-PRO-MAX-B2B-Guide.pdf" download>Download dealer catalog</a></div>
+    <div class="btns"><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Dealer%20Pricing">Request dealer pricing</a><a class="btn dark" href="australia-outdoor-kitchen-dealers/">Australian dealer program</a></div>
   </div></section>
 
+  <section class="reveal" id="partner-support"><div class="wrap"><div class="eyebrow">From first sample to repeat sales</div><h2 class="section-title">Build your market, one step at a time.</h2><div class="path-grid"><article class="path-card"><span class="path-label">01 / Validate</span><strong>Start with one unit</strong><p>Test the product in your showroom, a customer project or a hospitality setting before planning repeat orders.</p></article><article class="path-card"><span class="path-label">02 / Sell</span><strong>Support your team</strong><p>Product presentations, configuration guidance, image/video assets and quotation support help partners explain the range.</p></article><article class="path-card"><span class="path-label">03 / Grow</span><strong>Plan repeat supply</strong><p>Move to small batches, container planning or project supply as demand develops. Territory arrangements require a separate performance review.</p></article></div><div class="btns"><a class="btn dark" href="#contact">Discuss dealer pricing, support &amp; orders</a></div></div></section>
   <section class="economics reveal" id="shipping"><div class="wrap">
     <div class="eyebrow">Core advantage</div>
     <h2 class="section-title">Preliminary container-loading efficiency.</h2>
@@ -366,13 +389,13 @@
   </div></section>
 
   <section class="paths reveal" id="paths"><div class="wrap">
-    <div class="kicker"><div><div class="eyebrow">Risk-reduced purchasing</div><h2 class="section-title">Three supply paths, matched to your compliance needs.</h2></div><p class="lead">Select the scope that fits local certification, installation capability and project risk. First orders in standard PRO or MAX format start at a single unit — a full-container quantity is not required to place your first order. CUSTOM projects and modular-delivery configurations remain full-container only.</p></div>
+    <div class="kicker"><div><div class="eyebrow">Risk-reduced purchasing</div><h2 class="section-title">Three supply paths, matched to your compliance needs.</h2></div><p class="lead">All products — PRO, MAX and CUSTOM — are available for a one-unit sample or trial order. Choose System Shell, Appliance-Ready or Full Package to suit your local market. Custom engineering, delivery format, packing and logistics are confirmed in the quotation; no full-container opening order is required.</p></div>
     <div class="path-grid">
       <div class="path-card"><span class="path-label">Lowest certification complexity</span><strong>System Shell</strong><p>Structural enclosure, cabinetry and worktop. Cooking, refrigeration and other regulated equipment are sourced locally.</p></div>
       <div class="path-card"><span class="path-label">Recommended for first orders</span><strong>Appliance-Ready</strong><p>Openings and service interfaces are engineered only against the buyer's exact appliance model, manufacturer installation instructions, local requirements and approved drawings; there is no universal fixed cut-out size.</p></div>
       <div class="path-card"><span class="path-label">Project-specific package</span><strong>Full Package</strong><p>Appliances supplied only once exact model, certificate scope, voltage and gas type are confirmed.</p></div>
     </div>
-    <div class="sample"><div class="sample-credit">SAMPLE CREDIT</div><div class="sample-copy"><strong>Pilot with one sample unit</strong><span>Eligible sample product value may be credited against a qualifying full-container order, subject to the written sample quotation. Freight, duties, taxes, custom engineering and installation are excluded unless expressly stated.</span></div><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Sample%20Credit%20Enquiry">Request Sample Terms</a></div>
+    <div class="sample"><div class="sample-credit">SAMPLE CREDIT</div><div class="sample-copy"><strong>Start with one PRO, MAX or CUSTOM sample</strong><span>Sample-credit eligibility is separate from one-unit trial availability. Eligible standard PRO/MAX sample product value may be credited against a qualifying full-container order, subject to the written sample quotation. Freight, duties, taxes, custom engineering and installation are excluded unless expressly stated.</span></div><a class="btn gold" href="mailto:sales@kaisteelkitchen.com?subject=KAISTEEL%20Sample%20Credit%20Enquiry">Request Sample Terms</a></div>
     <div class="oem-panel"><div class="oem-mark">OEM</div><div><h3>OEM &amp; Private Label programs</h3><p>For qualified B2B projects, KAISTEEL can support product configuration, exterior finish, brand identification and packaging customization. All OEM or private-label scope is controlled by approved drawings, technical specifications and order documents before production.</p></div></div>
   </div></section>
 
@@ -382,7 +405,7 @@
     <div><strong>2×</strong><span>Preliminary modular loading target*</span></div>
     <div><strong>15-YR</strong><span>Limited structural warranty &mdash; residential &amp; commercial</span></div>
     <div><strong>30&nbsp;DAYS</strong><span>Target factory lead time*</span></div>
-    <div><strong>1&nbsp;UNIT</strong><span>Standard PRO/MAX first-order sample &mdash; no full container required</span></div>
+    <div><strong>1&nbsp;UNIT</strong><span>All products: PRO / MAX / CUSTOM &mdash; one-unit trial available</span></div>
   </div><p class="wrap lead-note">*Preliminary modular loading target based on current packing engineering; final loading quantities are confirmed in the approved packing plan. Target lead time applies after configuration approval and Technical Freeze; final production and shipment timing is confirmed in the quotation and order documents.</p></div>
 
   <section class="manufacturing reveal" id="manufacturing"><div class="wrap">
@@ -496,6 +519,9 @@
           <label>Destination market<input type="text" name="destinationMarket" placeholder="e.g. Australia / United States"></label>
           <label>Buyer type<span class="req">*</span><select name="buyerType" required><option value="">Select…</option><option>Distributor</option><option>Contractor / installer</option><option>Developer</option><option>Hospitality operator</option><option>Retailer</option><option>Other</option></select></label>
           <label>Model<select name="model"><option value="">Select…</option><option>PRO — 2300 mm</option><option>MAX — 2900 mm</option><option>CUSTOM</option><option>Not yet decided</option></select></label>
+          <label>Frame / exterior finish<select name="frameFinish"><option value="">Select…</option><option>Stainless steel</option><option>Sintered-stone cladding</option><option>Marble cladding</option><option>Other / discuss options</option></select></label>
+          <label>First step<select name="orderIntent"><option value="">Select…</option><option>One-unit sample / trial — any model</option><option>Project quotation</option><option>Repeat / stock order</option></select></label>
+          <label>Supply path<select name="supplyPath"><option value="">Select…</option><option>System Shell</option><option>Appliance-Ready</option><option>Full Package</option></select></label>
           <label>Estimated quantity<input type="text" name="quantity" placeholder="e.g. 1 unit / 20 units / full container"></label>
           <label>Appliance brand<input type="text" name="applianceBrand" placeholder="e.g. buyer-selected local brand"></label>
           <label>Exact appliance model<input type="text" name="applianceModel" placeholder="Model number(s)"></label>
@@ -545,7 +571,7 @@
     <span>International B2B Sales &amp; Brand Management · <a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> · <a href="tel:+8613903030696">+86 139 0303 0696</a> · <a href="https://wa.me/message/Q6ESWYY3IJRWN1?src=qr" target="_blank" rel="noopener">WhatsApp: Message Us</a></span>
     <span>PRO 2300 mm · MAX 2900 mm · CUSTOM</span>
     <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Website Terms</a> · <a href="commercial-terms.html">Commercial Terms</a></span>
-  </div></footer>
+  </div><p class="wrap" style="margin:18px auto 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#7c8b98">Product and lifestyle imagery and the concept animation on this site are AI-generated visualizations created for illustrative purposes and are not photographs of a delivered unit or a recorded mechanism test. Factory production and function-check footage is separately labeled as such. Actual dimensions, finishes, equipment and mechanism operation are confirmed in the approved order specification.</p></footer>
 
   <script>
     const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
@@ -637,6 +663,9 @@
         `Buyer type: ${get('buyerType')}`,
         `Model: ${get('model')}`,
         `Estimated quantity: ${get('quantity')}`,
+        `Frame / exterior finish: ${get('frameFinish')}`,
+        `First step: ${get('orderIntent')}`,
+        `Supply path: ${get('supplyPath')}`,
         `Appliance brand: ${get('applianceBrand')}`,
         `Exact appliance model: ${get('applianceModel')}`,
         `Installation manual / link: ${get('installationManual')}`,
