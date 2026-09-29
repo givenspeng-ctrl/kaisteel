@@ -27,7 +27,19 @@
       var name = arguments[1];
       if (['email_click','whatsapp_click','trade_guide_download','document_download'].indexOf(name) !== -1) return;
       if (name === 'rfq_submit' || name === 'dealer_pack_submit') {
-        emit('generate_lead', {form_id: name === 'rfq_submit' ? 'rfq-form' : 'dealer-form', method: 'contact_form'});
+        // Only called by the form handlers after the submission endpoint succeeds.
+        // Classify from fixed select values; never forward free-text fields or contact data.
+        var submitted = arguments[2] || {};
+        var dealerTypes = ['Dealer', 'Distributor', 'Retailer', 'Outdoor-living dealer', 'Kitchen / appliance retailer', 'Distributor / wholesaler'];
+        var isDealer = dealerTypes.indexOf(submitted.buyer_type) !== -1;
+        var leadParams = {
+          form_id: name === 'rfq_submit' ? 'rfq-form' : 'dealer-form',
+          method: 'contact_form',
+          lead_type: isDealer ? 'dealer' : 'other',
+          page_path: window.location.pathname
+        };
+        emit('generate_lead', leadParams);
+        if (isDealer) emit('dealer_inquiry_submit', leadParams);
         return;
       }
     }
@@ -44,7 +56,15 @@
     // Never send mail subjects/bodies or WhatsApp prefilled messages to Analytics.
     var params = {link_text: label, page_path: window.location.pathname};
     if (url.protocol === 'mailto:') emit('email_click', params);
-    else if (/^(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)$/.test(url.hostname)) emit('whatsapp_click', params);
+    else if (/^(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)$/.test(url.hostname)) {
+      emit('whatsapp_click', params);
+      if (/request dealer information/i.test(label)) {
+        var section = link.closest('section[id]');
+        var placement = link.closest('nav') ? 'navigation' : link.closest('footer') ? 'footer' : section ? section.id : 'page';
+        // A click is intent only: WhatsApp Send/receipt cannot be observed by the website.
+        emit('dealer_whatsapp_click', {method: 'whatsapp', cta_location: placement, page_path: window.location.pathname});
+      }
+    }
     else if (url.origin === window.location.origin && /\.pdf$/i.test(url.pathname)) {
       params.file_name = url.pathname.split('/').pop();
       emit(/PRO-MAX-B2B-Guide|catalog/i.test(params.file_name) ? 'download_catalog' : 'document_download', params);
