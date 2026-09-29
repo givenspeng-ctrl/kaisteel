@@ -144,9 +144,9 @@
   function addStyles() {
     var style = document.createElement('style');
     style.textContent =
-      '#kaisteel-consent-panel{position:fixed;z-index:99999;left:18px;right:18px;bottom:18px;max-width:980px;margin:auto;display:flex;gap:22px;align-items:center;justify-content:space-between;padding:18px 20px;background:#102331;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:0 12px 38px rgba(0,0,0,.3);font:14px/1.5 Arial,sans-serif}' +
-      '#kaisteel-consent-panel strong{font-size:16px}#kaisteel-consent-panel p{margin:5px 0;color:#d7e0e6}#kaisteel-consent-panel a{color:#e8bd68}' +
-      '.kaisteel-consent-actions{display:flex;gap:9px;flex-shrink:0}.kaisteel-consent-actions button,#kaisteel-consent-settings{border:1px solid #c8d1d8;border-radius:7px;padding:9px 13px;background:#fff;color:#102331;cursor:pointer;font-weight:700}.kaisteel-consent-actions .primary{background:#c99535;border-color:#c99535;color:#071722}' +
+      '#kaisteel-consent-panel{position:fixed;z-index:99999;left:18px;right:18px;bottom:18px;max-width:980px;margin:auto;display:flex;gap:22px;align-items:center;justify-content:space-between;padding:18px 20px;background:#24292B;color:#fff;border:1px solid rgba(255,255,255,.18);border-radius:12px;box-shadow:0 12px 38px rgba(0,0,0,.3);font:14px/1.5 Arial,sans-serif}' +
+      '#kaisteel-consent-panel strong{font-size:16px}#kaisteel-consent-panel p{margin:5px 0;color:#d7e0e6}#kaisteel-consent-panel a{color:#C8C0B2}' +
+      '.kaisteel-consent-actions{display:flex;gap:9px;flex-shrink:0}.kaisteel-consent-actions button,#kaisteel-consent-settings{border:1px solid #c8d1d8;border-radius:7px;padding:9px 13px;background:#fff;color:#24292B;cursor:pointer;font-weight:700}.kaisteel-consent-actions .primary{background:#AAA18F;border-color:#AAA18F;color:#071722}' +
       '#kaisteel-consent-settings{position:fixed;z-index:99998;right:12px;bottom:10px;padding:6px 9px;font-size:11px;opacity:.78}' +
       '@media(max-width:700px){#kaisteel-consent-panel{align-items:stretch;flex-direction:column;gap:12px}.kaisteel-consent-actions{display:grid;grid-template-columns:1fr 1fr}.kaisteel-consent-actions button{padding:11px 8px}}';
     document.head.appendChild(style);
