@@ -1,0 +1,70 @@
+name: Deploy KAISTEEL to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: read
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Read Pages configuration
+        uses: actions/configure-pages@v5
+      - name: Prepare static website
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          import subprocess
+
+          destination = Path('_site')
+          destination.mkdir()
+          tracked = subprocess.check_output(['git', 'ls-files', '-z']).decode().split('\0')
+          for name in filter(None, tracked):
+              source = Path(name)
+              # Publish website files only; exclude test runners and workflow documentation.
+              if not (source.parts[0] == 'assets' or source.suffix in {'.html', '.css'} or
+                      name in {'robots.txt', 'sitemap.xml', 'llms.txt', 'CNAME'}):
+                  continue
+              target = destination / source
+              target.parent.mkdir(parents=True, exist_ok=True)
+              shutil.copyfile(source, target)
+          for name in ('index.html', 'assets/inquiry-resilience.js',
+                       'australia-outdoor-kitchen-dealers/index.html', 'robots.txt', 'sitemap.xml'):
+              if not (destination / name).is_file():
+                  raise SystemExit(f'Missing website file: {name}')
+          PY
+      - name: Upload website artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
