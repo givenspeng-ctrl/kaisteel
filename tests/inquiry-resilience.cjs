@@ -22,6 +22,7 @@ async function fill(page, target, noJavaScript) {
     await form.locator('[name="destination"]').selectOption({label: 'Victoria'});
     await form.locator('[name="buyerType"]').selectOption({label: 'Outdoor-living dealer'});
   }
+  await form.locator('.inquiry-details summary').click({force: noJavaScript});
   await form.locator('[name="notes"]').fill('Retain this enquiry');
   await form.locator('[name="consent"]').check({force: noJavaScript});
 }
@@ -33,7 +34,7 @@ async function fill(page, target, noJavaScript) {
       server.once('error', reject);
       let tries = 0;
       const poll = async () => {
-        try { await fetch(origin); resolve(); }
+        try { await new Promise((ready, failed) => {require('node:http').get(origin, response => {response.resume(); response.on('end', ready);}).on('error', failed);}); resolve(); }
         catch (error) { if (++tries > 40) reject(error); else setTimeout(poll, 50); }
       };
       poll();

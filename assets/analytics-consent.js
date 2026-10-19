@@ -15,6 +15,30 @@
   var excluded = !production || (internal && !debug);
   window['ga-disable-' + measurementId] = excluded;
 
+  // Only reviewed campaign tokens may enter Analytics URLs. All other query
+  // parameters (including contact details, mail bodies and arbitrary UTMs) stay out.
+  var campaignValues = {
+    utm_source: ['linkedin', 'facebook', 'instagram'],
+    utm_medium: ['organic_social'],
+    utm_campaign: ['au_dealer_pack'],
+    utm_content: ['week1_production_fitout', 'week1_structural_fabrication', 'week1_appliance_ready']
+  };
+  var analyticsUrl = new URL(window.location.origin + window.location.pathname);
+  Object.keys(campaignValues).forEach(function (key) {
+    var value = controls.get(key);
+    if (campaignValues[key].indexOf(value) !== -1) analyticsUrl.searchParams.set(key, value);
+  });
+  var safeReferrer = '';
+  try { safeReferrer = new URL(document.referrer).origin + '/'; } catch (_error) {}
+  var startedForms = Object.create(null);
+  document.addEventListener('focusin', function (event) {
+    var field = event.target;
+    var form = field.closest && field.closest('#rfq-form, #dealer-form');
+    if (!analyticsActive || !form || !field.matches('input:not([type=hidden]),select,textarea') || startedForms[form.id]) return;
+    startedForms[form.id] = true;
+    emit('form_start', {form_id: form.id, page_path: window.location.pathname});
+  });
+
   window.dataLayer = window.dataLayer || [];
   function queueCommand() { window.dataLayer.push(arguments); }
   function emit(name, params) {
@@ -25,7 +49,7 @@
     // Shared click tracking replaces legacy inline listeners without double counting.
     if (arguments[0] === 'event') {
       var name = arguments[1];
-      if (['email_click','whatsapp_click','trade_guide_download','document_download'].indexOf(name) !== -1) return;
+      if (['email_click','whatsapp_click','trade_guide_download','document_download','rfq_start','dealer_pack_start'].indexOf(name) !== -1) return;
       if (name === 'rfq_submit' || name === 'dealer_pack_submit') {
         // Only called by the form handlers after the submission endpoint succeeds.
         // Classify from fixed select values; never forward free-text fields or contact data.
@@ -39,6 +63,7 @@
           page_path: window.location.pathname
         };
         emit('generate_lead', leadParams);
+        delete startedForms[leadParams.form_id];
         if (isDealer) emit('dealer_inquiry_submit', leadParams);
         return;
       }
@@ -54,7 +79,7 @@
     try { url = new URL(href, window.location.href); } catch (_error) { return; }
     var label = (link.textContent || '').trim().slice(0,100);
     // Never send mail subjects/bodies or WhatsApp prefilled messages to Analytics.
-    var params = {link_text: label, page_path: window.location.pathname};
+    var params = {page_path: window.location.pathname};
     if (url.protocol === 'mailto:') emit('email_click', params);
     else if (/^(wa\.me|api\.whatsapp\.com|web\.whatsapp\.com)$/.test(url.hostname)) {
       emit('whatsapp_click', params);
@@ -84,10 +109,18 @@
     script.src = 'https://www.googletagmanager.com/gtag/js?id=' + encodeURIComponent(measurementId);
     document.head.appendChild(script);
     window.gtag('js', new Date());
-    var config = { anonymize_ip: true };
+    var config = {
+      anonymize_ip: true,
+      page_location: analyticsUrl.href,
+      page_referrer: safeReferrer,
+      send_page_view: false,
+      allow_google_signals: false,
+      allow_ad_personalization_signals: false
+    };
     if (internal || debug) config.traffic_type = 'internal';
     if (debug) config.debug_mode = true;
     window.gtag('config', measurementId, config);
+    emit('page_view', {page_location: analyticsUrl.href, page_referrer: safeReferrer});
   }
 
   function saveChoice(value) {
