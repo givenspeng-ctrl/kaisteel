@@ -1,5 +1,12 @@
 (function () {
   'use strict';
+  document.addEventListener('invalid', function (event) {
+    var details = event.target.closest('.inquiry-details');
+    if (details) details.open = true;
+  }, true);
+  var style = document.createElement('style');
+  style.textContent = '.inquiry-details{margin:20px 0;padding:16px;border:1px solid #aaa18f;border-radius:8px}.inquiry-details summary{cursor:pointer;font-weight:700}.inquiry-details[open] summary{margin-bottom:16px}:focus-visible{outline:3px solid #907342;outline-offset:3px}';
+  document.head.appendChild(style);
   var memory = Object.create(null);
   var storage = {
     get: function (key) {
