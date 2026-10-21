@@ -56,3 +56,7 @@ If real delivery testing becomes necessary, seek separate confirmation for exact
 - `node tests/inquiry-funnel.cjs`: both form routes passed, including minimum five-field submission, dealer versus other classification, repeated enquiry reset, duplicate in-flight requests, mobile primary CTA visibility, keyboard and privacy assertions.
 - `node --check` passed for both shared JavaScript files; `git diff --check` passed. Original field-name sets and Formspree action match; commercial-terms.html has no diff.
 - Screenshots inspected at desktop and mobile widths. All browser test external requests were intercepted; successful mock responses do not prove real email arrival or GA4 ingestion.
+
+
+## 21 October 2026 release
+Both forms now contain only name, email, company and message; only name and email plus the consent checkbox are required. Country, role and all technical inputs have been removed. Attribution metadata and submission recovery remain. A successful generic homepage form produces generate_lead with lead_type general_enquiry. A successful explicit Australian dealer-pack request additionally produces dealer_inquiry_submit with lead_type dealer_information_request. This is a received information request, not proof of a qualified dealer. Qualified dealer counts require sales verification and deduplication; WhatsApp clicks remain intent only.

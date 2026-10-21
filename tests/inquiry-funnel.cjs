@@ -37,27 +37,15 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       await form.locator('[name="company"]').fill('Private Company');
       await form.locator('[name="email"]').fill('secret@example.invalid');
       assert.equal(await events('form_start'), 1);
-      assert.equal(await form.locator('input:visible:not([type=checkbox]):not([aria-hidden=true]), select:visible, textarea:visible').count(), 5);
-      if (pathname === '/') {
-        await form.locator('[name="destination"]').fill('Australia');
-        await form.locator('[name="buyerType"]').selectOption('Dealer');
-      } else {
-        await form.locator('[name="destination"]').selectOption('Victoria');
-        await form.locator('[name="buyerType"]').selectOption('Outdoor-living dealer');
-      }
-      // Keyboard disclosure; preserve technical RFQ and reveal invalid collapsed fields.
-      const summary = form.locator('summary');
-      await summary.focus(); await page.keyboard.press('Enter');
-      assert.equal(await form.locator('details').getAttribute('open'), '');
+      assert.equal(await form.locator('input:visible:not([type=checkbox]):not([aria-hidden=true]), select:visible, textarea:visible').count(), 4);
+      assert.equal(await form.locator('[name="company"]').getAttribute('required'), null);
+      assert.equal(await form.locator('input[required]:not([type=checkbox])').count(), 2);
       await form.locator('[name="notes"]').fill('Private Message');
-      const urlInput = form.locator(pathname === '/' ? '[name="installationManual"]' : '[name="website"]');
-      await urlInput.fill('invalid-url');
-      await summary.press('Enter');
+      await form.locator('[name="email"]').fill('invalid-email');
       await form.locator('[name="consent"]').check();
       await form.locator('[type="submit"]').click();
-      assert.equal(posts, 0);
-      assert.equal(await form.locator('details').getAttribute('open'), '');
-      await urlInput.fill('');
+      assert.equal(posts, 0, 'Invalid email must not submit');
+      await form.locator('[name="email"]').fill('secret@example.invalid');
       await form.locator('[type="submit"]').click();
       await page.waitForFunction(sel => document.querySelector(sel).classList.contains('err'), statusId);
       assert.equal(await events('generate_lead'), 0);
@@ -75,7 +63,7 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       assert.equal(await events('generate_lead'), 0, 'No success before response');
       await held.fulfill({status: 200, contentType: 'application/json', body: '{}'});
       await page.waitForFunction(sel => document.querySelector(sel).classList.contains('ok'), statusId);
-      assert.equal(await events('generate_lead'), 1); assert.equal(await events('dealer_inquiry_submit'), 1);
+      assert.equal(await events('generate_lead'), 1); assert.equal(await events('dealer_inquiry_submit'), pathname === '/' ? 0 : 1);
       const commands = await page.evaluate(() => JSON.stringify(dataLayer));
       assert.doesNotMatch(commands, /Private Name|Private Company|secret@|Private Message|private-message|mailto:|wa\.me/);
       assert.match(commands, /au_dealer_pack/);
@@ -84,21 +72,16 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       await form.locator('[name="name"]').fill('Another Name');
       assert.equal(await events('form_start'), 2);
       assert.equal(await events('generate_lead'), 1);
-      await form.locator('[name="company"]').fill('Other Company');
       await form.locator('[name="email"]').fill('other@example.invalid');
-      if (pathname === '/') await form.locator('[name="destination"]').fill('Australia');
-      else await form.locator('[name="destination"]').selectOption('Victoria');
-      await form.locator('[name="buyerType"]').selectOption('Other');
       await form.locator('[name="consent"]').check();
-      await form.locator('details').evaluate(e => {e.open = false;});
       held = null;
       await form.locator('[type="submit"]').click();
       for (let i = 0; !held && i < 100; i++) await new Promise(r => setTimeout(r, 10));
       assert.ok(held);
       await held.fulfill({status: 200, contentType: 'application/json', body: '{}'});
       await page.waitForFunction(sel => document.querySelector(sel).classList.contains('ok'), statusId);
-      assert.equal(await events('generate_lead'), 2, 'Minimal five-field enquiry succeeds');
-      assert.equal(await events('dealer_inquiry_submit'), 1, 'Other business types are not dealers');
+      assert.equal(await events('generate_lead'), 2, 'Name and email alone, with consent, succeed');
+      assert.equal(await events('dealer_inquiry_submit'), pathname === '/' ? 0 : 2, 'Only explicit dealer-pack requests are dealer information enquiries');
       for (const width of [390, 1440]) {
         await page.setViewportSize({width, height: 900});
         assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
@@ -109,7 +92,7 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
         assert.equal(await page.locator('[name="utm_campaign"]').inputValue(), 'au_dealer_pack');
       }
       await context.close();
-      console.log('PASS', pathname, 'five fields, keyboard, validation, consent, attribution, privacy, clicks, failure and deduplicated success');
+      console.log('PASS', pathname, 'four fields, two required, validation, consent, attribution, privacy, clicks, failure and deduplicated success');
     }
   } finally {await browser.close();}
 })().catch(error => {console.error(error); process.exitCode = 1;});

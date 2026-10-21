@@ -15,19 +15,11 @@ async function fill(page, target, noJavaScript) {
   for (const [name, value] of Object.entries({name: 'Sprint test', company: 'Test company', email: 'audit@example.invalid'})) {
     await form.locator(`[name="${name}"]`).fill(value);
   }
-  if (target.path === '/') {
-    await form.locator('[name="destination"]').fill('United States');
-    await form.locator('[name="buyerType"]').selectOption({label: 'Dealer'});
-  } else {
-    await form.locator('[name="destination"]').selectOption({label: 'Victoria'});
-    await form.locator('[name="buyerType"]').selectOption({label: 'Outdoor-living dealer'});
-  }
-  await form.locator('.inquiry-details summary').click({force: noJavaScript});
   await form.locator('[name="notes"]').fill('Retain this enquiry');
   await form.locator('[name="consent"]').check({force: noJavaScript});
 }
 (async () => {
-  const server = spawn('python3', ['-m', 'http.server', '8127', '--bind', '127.0.0.1', '--directory', root], {stdio: 'ignore'});
+  const server = spawn(process.env.PYTHON_PATH || 'python3', ['-m', 'http.server', '8127', '--bind', '127.0.0.1', '--directory', root], {stdio: 'ignore'});
   let browser;
   try {
     await new Promise((resolve, reject) => {

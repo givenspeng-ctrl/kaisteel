@@ -52,14 +52,13 @@
       if (['email_click','whatsapp_click','trade_guide_download','document_download','rfq_start','dealer_pack_start'].indexOf(name) !== -1) return;
       if (name === 'rfq_submit' || name === 'dealer_pack_submit') {
         // Only called by the form handlers after the submission endpoint succeeds.
-        // Classify from fixed select values; never forward free-text fields or contact data.
-        var submitted = arguments[2] || {};
-        var dealerTypes = ['Dealer', 'Distributor', 'Retailer', 'Outdoor-living dealer', 'Kitchen / appliance retailer', 'Distributor / wholesaler'];
-        var isDealer = dealerTypes.indexOf(submitted.buyer_type) !== -1;
+        // Classify only the explicit dealer-pack request context; never infer a
+        // qualified dealer from a general form or forward contact/message data.
+        var isDealer = name === 'dealer_pack_submit';
         var leadParams = {
           form_id: name === 'rfq_submit' ? 'rfq-form' : 'dealer-form',
           method: 'contact_form',
-          lead_type: isDealer ? 'dealer' : 'other',
+          lead_type: isDealer ? 'dealer_information_request' : 'general_enquiry',
           page_path: window.location.pathname
         };
         emit('generate_lead', leadParams);
