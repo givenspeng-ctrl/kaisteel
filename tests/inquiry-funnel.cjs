@@ -37,7 +37,7 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       await form.locator('[name="company"]').fill('Private Company');
       await form.locator('[name="email"]').fill('secret@example.invalid');
       assert.equal(await events('form_start'), 1);
-      assert.equal(await form.locator('input:visible:not([type=checkbox]):not([aria-hidden=true]), select:visible, textarea:visible').count(), 4);
+      assert.equal(await form.locator('input:visible:not([type=checkbox]):not([aria-hidden=true]), select:visible, textarea:visible').count(), pathname === '/' ? 7 : 4);
       assert.equal(await form.locator('[name="company"]').getAttribute('required'), null);
       assert.equal(await form.locator('input[required]:not([type=checkbox])').count(), 2);
       await form.locator('[name="notes"]').fill('Private Message');
@@ -46,6 +46,13 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       await form.locator('[type="submit"]').click();
       assert.equal(posts, 0, 'Invalid email must not submit');
       await form.locator('[name="email"]').fill('secret@example.invalid');
+      if (pathname === '/') {
+        await form.locator('[type="submit"]').click();
+        assert.equal(posts, 0, 'Market and request fields are required');
+        await form.locator('[name="country"]').fill('Australia');
+        await form.locator('[name="buyer_type"]').selectOption({label: 'Dealer / Distributor'});
+        await form.locator('[name="request_type"]').selectOption('OEM');
+      }
       await form.locator('[type="submit"]').click();
       await page.waitForFunction(sel => document.querySelector(sel).classList.contains('err'), statusId);
       assert.equal(await events('generate_lead'), 0);
@@ -74,13 +81,19 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
       assert.equal(await events('generate_lead'), 1);
       await form.locator('[name="email"]').fill('other@example.invalid');
       await form.locator('[name="consent"]').check();
+      if (pathname === '/') {
+        await form.locator('[name="name"]').fill('');
+        await form.locator('[name="country"]').fill('Australia');
+        await form.locator('[name="buyer_type"]').selectOption({label: 'Dealer / Distributor'});
+        await form.locator('[name="request_type"]').selectOption('Not sure yet');
+      }
       held = null;
       await form.locator('[type="submit"]').click();
       for (let i = 0; !held && i < 100; i++) await new Promise(r => setTimeout(r, 10));
       assert.ok(held);
       await held.fulfill({status: 200, contentType: 'application/json', body: '{}'});
       await page.waitForFunction(sel => document.querySelector(sel).classList.contains('ok'), statusId);
-      assert.equal(await events('generate_lead'), 2, 'Name and email alone, with consent, succeed');
+      assert.equal(await events('generate_lead'), 2, 'Required fields with consent succeed; homepage name is optional');
       assert.equal(await events('dealer_inquiry_submit'), pathname === '/' ? 0 : 2, 'Only explicit dealer-pack requests are dealer information enquiries');
       for (const width of [390, 1440]) {
         await page.setViewportSize({width, height: 900});
@@ -92,7 +105,7 @@ const routes = [['/', '#rfq-form', '#rfq-status'], ['/australia-outdoor-kitchen-
         assert.equal(await page.locator('[name="utm_campaign"]').inputValue(), 'au_dealer_pack');
       }
       await context.close();
-      console.log('PASS', pathname, 'four fields, two required, validation, consent, attribution, privacy, clicks, failure and deduplicated success');
+      console.log('PASS', pathname, 'page-specific required fields, validation, consent, attribution, privacy, clicks, failure and deduplicated success');
     }
   } finally {await browser.close();}
 })().catch(error => {console.error(error); process.exitCode = 1;});

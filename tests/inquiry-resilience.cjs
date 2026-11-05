@@ -15,6 +15,11 @@ async function fill(page, target, noJavaScript) {
   for (const [name, value] of Object.entries({name: 'Sprint test', company: 'Test company', email: 'audit@example.invalid'})) {
     await form.locator(`[name="${name}"]`).fill(value);
   }
+  if (target.path === '/') {
+    await form.locator('[name="country"]').fill('Australia');
+    await form.locator('[name="buyer_type"]').selectOption({label: 'Dealer / Distributor'});
+    await form.locator('[name="request_type"]').selectOption({label: 'Dealer information / Sample'});
+  }
   await form.locator('[name="notes"]').fill('Retain this enquiry');
   await form.locator('[name="consent"]').check({force: noJavaScript});
 }
@@ -80,6 +85,7 @@ async function fill(page, target, noJavaScript) {
             await page.waitForFunction(sel => document.querySelector(sel).classList.contains('ok'), target.status);
             assert.equal(await page.locator(target.form + ' [name="company"]').inputValue(), '');
             assert.match(captured, /sprint-test/);
+            if (target.path === '/') for (const value of ['Australia', 'buyer_type', 'request_type']) assert.ok(captured.includes(value));
             assert.equal(posts, 1);
           } else if (scenario === 'no-javascript') {
             await page.waitForURL('https://formspree.io/**');
@@ -101,6 +107,7 @@ async function fill(page, target, noJavaScript) {
             await page.evaluate(() => Object.defineProperty(navigator, 'clipboard', {configurable: true, value: {writeText: async text => {window.copiedEnquiry = text;}}}));
             await page.getByRole('button', {name: 'Copy enquiry', exact: true}).click();
             assert.match(await page.evaluate(() => window.copiedEnquiry), /Retain this enquiry/);
+            if (target.path === '/') assert.match(await page.evaluate(() => window.copiedEnquiry), /Country: Australia[\s\S]*Buyer type: Dealer \/ Distributor[\s\S]*Request type: Dealer information \/ Sample/);
             await email.evaluate(e => {e.addEventListener('click', ev => ev.preventDefault()); e.click();});
             assert.match(decodeURIComponent(await email.getAttribute('href')), /Edited company/);
             await context.setOffline(false); mode = 'normal';
