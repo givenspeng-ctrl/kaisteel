@@ -131,22 +131,17 @@
     .faq-answer strong{color:var(--ink)}
     .faq-answer a{color:var(--navy);text-decoration:underline}
 
-    .real-footage{margin:34px 0}
-    .real-footage .evidence-video{max-width:820px;margin:18px auto 0}
-    .real-footage video{width:100%;height:auto;object-fit:contain}
     .states{background:#fff}
-    .states .wrap{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
-    .state-imgs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .state-imgs figure{margin:0}
-    .state-imgs img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px}
-    .state-imgs figcaption{margin-top:8px;font-size:12px;color:var(--muted);text-align:center}
-    .evidence-video{margin:30px 0 0;background:var(--navy);border-radius:16px;overflow:hidden;box-shadow:0 22px 58px rgba(36,41,43,.18)}
-    .evidence-video video{display:block;width:100%;height:auto;background:#050e17}
+    .states .wrap{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:56px;align-items:center}
+    .state-imgs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+    .state-imgs figure{margin:0;min-width:0}
+    .state-imgs img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:#e7e3db}
+    .state-imgs figcaption{margin-top:8px;font-size:13px;font-weight:600;line-height:1.4;color:var(--navy);text-align:center}
+    .evidence-video{margin:30px 0 0;background:#24292B;border-radius:16px;overflow:hidden;box-shadow:0 22px 58px rgba(36,41,43,.18)}
+    .evidence-video video{display:block;width:100%;height:auto;background:#24292B}
     .evidence-video figcaption{padding:14px 18px;color:#d9e0e6;text-align:left}
-    .evidence-video figcaption strong{display:block;color:#fff;font-size:14px;margin-bottom:3px}
-    .evidence-video figcaption span{font-size:12px;line-height:1.5}
-    .states .evidence-video{width:min(100%,315px);margin:0;justify-self:center}
-    .states .evidence-video video{width:100%;height:auto;max-height:560px;object-fit:contain}
+    .evidence-video figcaption strong{display:block;color:#fff;font-size:15px;margin-bottom:4px}
+    .evidence-video figcaption span{display:block;font-size:13px;line-height:1.55}
 
     .economics{background:var(--navy);color:#fff}
     .economics .lead{color:#c3cdd6}
@@ -189,13 +184,14 @@
     .oem-panel p{margin:0;color:var(--muted);font-size:14px;max-width:820px}
 
     .manufacturing{background:#fff}
-    .mfg-gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:40px 0}
-    .mfg-photo{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#d9dde1;margin:0}
+    .mfg-gallery{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:40px 0}
+    .mfg-photo{position:relative;aspect-ratio:16/10;border-radius:14px;overflow:hidden;background:#d9dde1;margin:0;min-width:0}
     .mfg-photo img{width:100%;height:100%;object-fit:cover;display:block}
-    .mfg-photo span{position:absolute;left:0;right:0;bottom:0;padding:32px 14px 14px;background:linear-gradient(transparent,rgba(36,41,43,.85));color:#fff;font:600 13px "Barlow Condensed",sans-serif;letter-spacing:.02em}
-    .qa-proof{display:grid;grid-template-columns:minmax(240px,.58fr) 1fr;gap:28px;align-items:center;margin:38px 0}
-    .qa-proof .evidence-video{width:min(100%,315px);margin:0;justify-self:center}
-    .qa-proof-list{display:grid;gap:16px}
+    .mfg-photo span{position:absolute;left:0;right:0;bottom:0;padding:36px 14px 14px;background:linear-gradient(transparent,rgba(36,41,43,.88));color:#fff;font:600 15px/1.25 "Barlow Condensed",sans-serif;letter-spacing:.02em}
+    .qa-proof{display:grid;grid-template-columns:minmax(0,1.35fr) 1fr;gap:28px;align-items:center;margin:38px 0}
+    .qa-proof .evidence-video{width:100%;max-width:none;margin:0}
+    .qa-proof .evidence-video video{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;background:#24292B}
+    .qa-proof-list{display:grid;gap:16px;min-width:0}
     .qa-proof-item{padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:#fff}
     .qa-proof-item strong{display:block;color:var(--navy);margin-bottom:5px}
     .qa-proof-item span{font-size:13px;color:var(--muted)}
@@ -347,15 +343,11 @@
   </div></section>
 
   <section class="states reveal" id="difference"><div class="wrap">
-    <div><div class="eyebrow">See the product difference</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">Explore an animated concept of the transition between an open cooking setting and a closed profile. This visualization illustrates the idea; the mechanism, equipment and layout are confirmed for each project.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
-    <figure class="evidence-video"><video controls muted playsinline preload="none" width="720" height="1278" poster="assets/video/social-living-start-frame-v2.jpg" aria-describedby="showroom-video-caption"><source src="assets/video/social-living-start-frame-v2.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="showroom-video-caption"><strong>Outdoor living concept animation · 5 seconds</strong><span>AI-generated scene animation, not footage of a physical mechanism test. Final operation and configuration are subject to approved specifications. No audio.</span></figcaption></figure>
-  </div></section>
-
-  <section class="real-footage reveal" id="showroom"><div class="wrap">
-    <div class="eyebrow">Real product footage</div>
-    <h2 class="section-title">A closer look in the showroom.</h2>
-    <p class="lead">Explore the display, finishes and fitted details in real showroom footage. Featured layouts and appliances are examples; each order follows its approved configuration.</p>
-    <figure class="evidence-video"><video controls muted playsinline preload="none" width="1280" height="720" poster="assets/video/kaisteel-showroom-walkthrough.jpg" aria-describedby="real-showroom-caption"><source src="assets/video/kaisteel-showroom-walkthrough.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="real-showroom-caption"><strong>Showroom walkthrough · 12 seconds</strong><span>Real showroom footage showing display layout and integrated finishes. Featured appliances are demonstration examples. Audio has been removed.</span></figcaption></figure>
+    <div><div class="eyebrow">See the product difference</div><h2 class="section-title">Open for entertaining. Closed for a clean profile.</h2><p class="lead">Compare the closed patio profile with the open entertaining state. These visualizations illustrate the concept; the mechanism, equipment and layout are confirmed for each project.</p><div class="btns"><a class="btn dark" href="#models">See PRO &amp; MAX specs</a></div></div>
+    <div class="state-imgs">
+      <figure><picture><source srcset="assets/custom-closed-state.webp" type="image/webp"><img src="assets/custom-closed-state.jpg" alt="Closed outdoor kitchen with a clean patio profile" width="718" height="957" loading="lazy"></picture><figcaption>Closed · Clean patio profile</figcaption></figure>
+      <figure><picture><source srcset="assets/custom-open-state.webp" type="image/webp"><img src="assets/custom-open-state.jpg" alt="Open outdoor kitchen set up for entertaining" width="808" height="1078" loading="lazy"></picture><figcaption>Open · Outdoor kitchen</figcaption></figure>
+    </div>
   </div></section>
 
   <section class="models reveal" id="models"><div class="wrap">
@@ -430,12 +422,15 @@
     <div class="eyebrow">Production capability</div>
     <h2 class="section-title">The evidence behind the experience.</h2>
     <p class="lead">KAISTEEL collaborates with independent manufacturing partners in mainland China, integrating flexible manufacturing capabilities under a unified product design approach while coordinating production and quality-control requirements. Products are manufactured according to project-specific technical specifications and KAISTEEL's established quality-control requirements. Final product configurations are reviewed and approved before production begins.</p>
-    <div class="qa-proof">
-      <figure class="evidence-video"><video controls muted playsinline preload="none" width="544" height="960" poster="assets/video/kaisteel-four-unit-function-check-poster.jpg" aria-describedby="factory-video-caption"><source src="assets/video/kaisteel-four-unit-function-check-4x.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="factory-video-caption"><strong>Partner multi-unit function check · 31 seconds (4x speed)</strong><span>Four units cycling open together at an independent manufacturing partner, shown at 4x playback speed. No customer, order or shipment identifiers are shown. Audio has been removed.</span></figcaption></figure>
-      <div class="qa-proof-list"><div class="qa-proof-item"><strong>Specification control</strong><span>Production follows the approved drawings, BOM and order-specific configuration.</span></div><div class="qa-proof-item"><strong>Function checking</strong><span>Movement, fit-out and agreed interfaces are checked before packing.</span></div><div class="qa-proof-item"><strong>Order-linked evidence</strong><span>Inspection and packing records are matched to the approved order rather than presented as blanket claims.</span></div></div>
+    <div class="mfg-gallery" aria-label="Manufacturing process photographs">
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-1-materials.webp" type="image/webp"><img src="assets/manufacturing-step-1-materials.jpg" alt="Materials laid out for a grade check before fabrication" width="1600" height="900" loading="lazy"></picture><span>01 / Materials &amp; Grade Check</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-2-frame-fabrication.webp" type="image/webp"><img src="assets/manufacturing-step-2-frame-fabrication.jpg" alt="Frame and panel fabrication on an outdoor kitchen structure" width="1600" height="900" loading="lazy"></picture><span>02 / Frame &amp; Panel Fabrication</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-3-fitout-inspection.webp" type="image/webp"><img src="assets/manufacturing-step-3-fitout-inspection.jpg" alt="Fit-out and function check of cabinetry and equipment" width="1600" height="900" loading="lazy"></picture><span>03 / Fit-Out &amp; Function Check</span></figure>
+      <figure class="mfg-photo"><picture><source srcset="assets/manufacturing-step-4-export-packing.webp" type="image/webp"><img src="assets/manufacturing-step-4-export-packing.jpg" alt="Export crating before release for shipment" width="1600" height="900" loading="lazy"></picture><span>04 / Export Crating &amp; Release</span></figure>
     </div>
-    <div class="real-footage" id="partner-workshop">
-      <figure class="evidence-video"><video controls muted playsinline preload="none" width="1280" height="720" poster="assets/video/kaisteel-workshop.jpg" aria-describedby="partner-workshop-caption"><source src="assets/video/kaisteel-workshop.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="partner-workshop-caption"><strong>Independent manufacturing partner workshop · 18 seconds</strong><span>Real workshop footage showing units and work areas at our manufacturing partner. Edited excerpts, with audio removed. This is not a KAISTEEL-owned factory or proof of any specific order, shipment or certification.</span></figcaption></figure>
+    <div class="qa-proof">
+      <figure class="evidence-video"><video controls muted playsinline preload="none" width="1280" height="720" poster="assets/video/kaisteel-workshop.jpg" aria-describedby="partner-workshop-caption"><source src="assets/video/kaisteel-workshop.mp4" type="video/mp4">Your browser does not support embedded video.</video><figcaption id="partner-workshop-caption"><strong>Independent manufacturing partner workshop · 18 seconds</strong><span>Workshop footage showing units and work areas at an independent manufacturing partner. Edited excerpts. This is not a KAISTEEL-owned factory or proof of any specific order, shipment or certification. Audio removed.</span></figcaption></figure>
+      <div class="qa-proof-list"><div class="qa-proof-item"><strong>Specification control</strong><span>Production follows the approved drawings, BOM and order-specific configuration.</span></div><div class="qa-proof-item"><strong>Function checking</strong><span>Movement, fit-out and agreed interfaces are checked before packing.</span></div><div class="qa-proof-item"><strong>Order-linked evidence</strong><span>Inspection and packing records are matched to the approved order rather than presented as blanket claims.</span></div></div>
     </div>
     <div class="mfg-stats">
       <div class="mfg-stat"><strong>2001</strong><span>Founder’s professional practice began</span></div>
@@ -444,7 +439,7 @@
       <div class="mfg-stat"><strong>Tested</strong><span>Project-specific test and certification support</span></div>
     </div>
     <p class="materials-note">Catalog PRO/MAX builds use a galvanized steel frame, aluminium cabinetry and panels, and a 304 stainless-steel worktop and sink. Applicable 316 options are recommended for coastal or high-corrosion sites, subject to project review. The complete kitchen is not entirely stainless steel; the approved BOM governs.</p>
-    <div class="btns"><a class="btn gold" href="compliance-dossier.html">Open Compliance Dossier</a><a class="btn dark" href="factory-assembly-validation.html">Review Factory Validation</a></div>
+    <div class="btns"><a class="btn gold" href="compliance-dossier.html">Open Compliance Dossier</a><a class="btn dark" href="factory-assembly-validation.html#video-evidence">Review Factory Validation</a></div>
   </div></section>
 
   <section class="warranty-summary reveal" id="warranty"><div class="wrap"><div class="eyebrow">Defined support</div><h2 class="section-title">Clear coverage. Order-specific support.</h2><p>This policy update takes effect on 11 November 2026, 00:00 HKT (UTC+8). Existing orders retain their agreed terms and statutory rights.</p><p class="lead">Warranty starts on the shipment date. Up to 15-year limited coverage applies to material/workmanship defects in eligible solid SUS304/SUS316 worktops, 304/316 stainless-steel cabinet bodies/doors and structural steel frames only if included in the ordered specification. Eligible factory-applied powder-coat or supplied decorative-panel finishes have up to 5 years, subject to normal-weathering and corrosion exclusions. The 1-year functional tier covers KAISTEEL-supplied electric actuators, canopy motors, switches, controllers and integrated LED lighting identified in the BOM. Aluminium cabinetry, panels and frames are not automatically in the 15-year tier; cabinet hardware is not automatically in the 1-year tier. Third-party appliances follow their manufacturers’ applicable warranties. The approved BOM and product-specific warranty determine eligibility, conditions and exclusions, subject to applicable law.</p><p>Coverage addresses qualifying defects in materials and workmanship, subject to care, exclusions and the applicable certificate. Labor, removal, reinstallation, freight, duties and taxes are excluded unless agreed in writing or required by applicable law.</p><a class="btn dark" href="#contact">Request product-specific warranty</a></div></section><section class="process reveal"><div class="wrap">
