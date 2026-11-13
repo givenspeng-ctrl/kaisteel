@@ -6,7 +6,7 @@ To activate this workflow after reviewing the pull request:
 
 1. In Settings → Pages → Build and deployment, change Source from **Deploy from a branch** to **GitHub Actions**. Preserve the existing custom domain and HTTPS settings.
 2. Merge the workflow pull request into `main`. This triggers the initial deployment. If necessary, use Actions → Deploy KAISTEEL to GitHub Pages → Run workflow, selecting `main`.
-3. Verify the build and deploy jobs succeed. Refresh the homepage and Australian dealer page and verify the inquiry helper is served. Do not send customer inquiries as deployment tests.
+3. Verify the build and deploy jobs succeed. Refresh the global homepage and verify the inquiry helper is served. Check that the former Australian URL redirects to the global website. Do not send customer inquiries as deployment tests.
 
 After activation, pushes to `main` trigger deployments automatically. Other branches and pull requests do not deploy. Concurrent deployments are serialized. The workflow reads Pages configuration; it does not automatically enable Pages or change its domain settings.
 

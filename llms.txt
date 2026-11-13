@@ -1,31 +1,37 @@
 # KAISTEEL
 
-> KAISTEEL creates the Movable Outdoor Social Kitchen for cooking, gathering and entertaining. KAISTEEL LIMITED is the Hong Kong commercial and contracting entity. Production is carried out through an independent manufacturing partner in Guangdong; Guangdong Dingzhi Decoration Design Co., Ltd. provides technical and operational support as a separate legal entity.
+> KAISTEEL creates the Movable Outdoor Social Kitchen. KAISTEEL LIMITED, Hong Kong, is the brand, B2B sales and contracting entity. KAISTEEL collaborates with independent manufacturing partners in mainland China, integrating flexible manufacturing capabilities under a unified product design approach while coordinating production and quality-control requirements. Products are manufactured according to project-specific technical specifications and KAISTEEL's established quality-control requirements. Final product configurations are reviewed and approved before production begins. Products ship from China; no overseas inventory or warehouses.
 
-## Identity and founder
-- Founder Guirong Peng began architectural decoration design and related engineering work in 2001. His Hemei business dates to 2008; Dingzhi was established in 2017. Personal history is not KAISTEEL corporate history.
-- BRN 78595271. KAISTEEL LIMITED was formerly GRACE JEWELRY TECH LIMITED; name changed 17 August 2026, same legal entity. Current BR period 8 August 2026–7 August 2027 does not establish original incorporation date.
-- Factory identity and relevant credentials can be shared under mutual confidentiality and non-circumvention arrangements without a purchase commitment. Video reviews or independent inspections can be arranged.
+## Manufacturing information
+- Relevant partner details may be provided only during due diligence according to the actual order, disclosure authorization and confidentiality requirements; disclosure is not automatic.
 
 ## Products
-- PRO 2300: motorized roller shutter or motorized lift-up; overall planning dimensions 2300 x 880 x 2400 mm.
-- MAX 2900: motorized lift-up, 880 or 960 mm depth, overall height 2400 mm.
-- CUSTOM Compact 2278/2878: manual lift-up reference formats, project engineering and quantity review required.
-- PRO/MAX base: galvanized-steel frame, aluminium cabinetry/panels and 304 stainless worktop/sink. CUSTOM Compact uses an aluminium frame. 316, stainless cabinetry and stone cladding are component-specific quoted options. No whole-unit stainless claim.
-- System Shell, Appliance-Ready and Full Package have distinct scope. Exact appliance model, interfaces, ratings, destination documents and licensed local connections must be confirmed. No blanket whole-system certification.
+- PRO has a fixed standard width of 2300 mm; MAX has a fixed standard width of 2900 mm. All other widths are named CUSTOM followed by the width in millimetres, for example CUSTOM 3500, and quoted per project. Other sizes available as CUSTOM. MAX does not mean the largest available size. Keep the same model name and width across the quotation, PI and drawings. Other dimensions and powered opening and closing arrangements follow the approved configuration.
+- System Shell: main structure, interior and exterior finishes, powered lifting/opening mechanisms, lighting and control systems. Excludes internal cabinetry, worktops, equipment and appliances.
+- Appliance-Ready: System Shell plus internal cabinetry, doors, worktops, sink, faucet and shelving, with interfaces reserved for specified appliance models. Appliances are not automatically included.
+- Full Package: Appliance-Ready plus agreed internal appliances and equipment. Exact models, factory integration and destination applicability require approved BOM and PI.
+- Materials, dimensions, quantities, packing and lead times follow approved BOM, drawings and PI. Appliance certificates do not certify the whole system. Qualified local professionals handle site assembly and utility connections.
 
 ## Commercial and delivery
-- Current product basis: EXW named place, Incoterms 2020; FOB/CIF/DDP quoted separately. Same current EXW reference basis for single units and containers, without an automatic sample surcharge or container discount. Formal quotations control price.
-- Standard payment 50% deposit, 50% before shipment. EXW validity 30 calendar days from email dispatch; DDP has its own 15-day validity and destination conditions.
-- DDP is address-, configuration- and packing-specific, with no universal US$800 delivery rate or fixed tax percentage. The issued scope specifies included clearance, taxes and delivery services. Customer unloading, positioning, assembly and installation are excluded unless expressly included.
-- Target production about 30 days after the agreed payment milestone and written Technical Freeze. Transport time is additional and route-specific.
-- Container quantity only from final configuration, measured packing data and the approved Packing Plan. No generic loading guarantee.
-- Available worldwide for qualifying standard PRO or MAX sample orders placed on or before December 31, 2026, subject to express approval in the quotation/PI. Only applicable equipment value explicitly itemized in the quotation/PI may be credited against the equipment value of a qualifying subsequent full-container order within 6 months after sample shipment. This is non-cash purchase credit, not a refund or free sample. Sample/LCL surcharges, packaging, freight, insurance, clearance, duties/taxes, custom engineering, upgrades and installation are excluded. Qualified new partners may start with one standard sample; CUSTOM requires separate engineering review and written approval.
-- Warranty: eligible primary structures up to 15 years, eligible finishes up to 5 years, specified supplied functional components 1 year. Aluminium cabinets/panels/frames are not automatically in the 15-year tier. Appliances follow manufacturer warranties. The applicable order certificate controls.
+- EXW (Incoterms 2020), named place in the quotation. Other terms including FOB/CIF/DDP require feasible logistics and KAISTEEL written approval per order. DDP is not offered for Australia. Freight, insurance, customs, duties, taxes, importer responsibilities and final-mile delivery are allocated in the approved quotation/PI/contract. Unloading, installation, utility connections and site work are not automatically included.
+- Payment amounts, proportions and milestones are order-specific in the KAISTEEL-approved quotation/PI/contract. Deposit must actually be received before scheduling; final configuration approval precedes production. Deduct eligible sample credit from the pre-shipment balance; pay the remaining balance in full before shipment. Written quotation and applicable terms govern validity.
+- Container quantity requires confirmed configuration, measured packing data and the approved packing plan; no guaranteed loading quantity or 30-day delivery.
+
+## Sample credit
+- Sample PIs and equipment credit are available to registered companies worldwide, without model, equipment-value or intended-use restrictions. The sample-order window is 1 September–31 December 2026, based on actual deposit receipt. A brand or group may receive credit only once globally. Credit represents one equipment unit, averaged for multi-unit first orders, and is limited to the payable pre-shipment balance with no cash value, refund or carry-over. Qualifying orders are one or more full 40HQ containers for one customer (one paying entity); multi-customer consolidation is ineligible. A first-order full 40HQ can use credit against its own pre-shipment balance without POD or a 180-day wait. Otherwise, the subsequent qualifying deposit must actually arrive by Day 180 at 23:59 local time at the sample PI final receiving location; Day 1 is the day after carrier-POD delivery there. Equipment-only credit excludes other charges. Takes effect on 11 November 2026, 00:00 HKT (UTC+8).
+- Identify the first order by the applicant’s first contract and first payment. A full-40HQ first-order credit is first-container equipment value divided by equipment-unit count. No port-arrival substitute or deemed-arrival rule applies.
+- Excluded: sample or LCL surcharges; packaging and packing upgrades; freight, insurance, customs clearance, duties and taxes; custom engineering, upgrades, installation and separately charged services.
+
+## Warranty
+- Warranty starts on the shipment date. Up to 15-year limited coverage applies to material/workmanship defects in eligible solid SUS304/SUS316 worktops, 304/316 stainless-steel cabinet bodies/doors and structural steel frames only if included in the ordered specification. Eligible factory-applied powder-coat or supplied decorative-panel finishes have up to 5 years, subject to normal-weathering and corrosion exclusions. The 1-year functional tier covers KAISTEEL-supplied electric actuators, canopy motors, switches, controllers and integrated LED lighting identified in the BOM. Aluminium cabinetry, panels and frames are not automatically in the 15-year tier; cabinet hardware is not automatically in the 1-year tier. Third-party appliances follow their manufacturers’ applicable warranties. The approved BOM and product-specific warranty determine eligibility, conditions and exclusions, subject to applicable law.
+- Warranty claims: KAISTEEL Warranty Team, sales@kaisteelkitchen.com.
+
+## Policy commencement
+- This policy update takes effect on 11 November 2026, 00:00 HKT (UTC+8). Existing orders remain governed by their agreed documents and applicable statutory rights.
 
 ## Buyer resources
 - Website and enquiry: https://kaisteelkitchen.com/#contact
-- Australian dealers: https://kaisteelkitchen.com/australia-outdoor-kitchen-dealers/
+- Global trade partners: https://kaisteelkitchen.com/#business
 - Product comparison: https://kaisteelkitchen.com/pro-vs-max-outdoor-kitchen.html
 - Commercial terms: https://kaisteelkitchen.com/commercial-terms.html
 - Corporate verification: https://kaisteelkitchen.com/outdoor-kitchen-supplier-due-diligence.html
@@ -33,3 +39,4 @@
 - Compliance: https://kaisteelkitchen.com/compliance-dossier.html
 - Email sales@kaisteelkitchen.com. Founder contact peng@kaisteeloutdoor.com.
 - WhatsApp button: Request Dealer Information on WhatsApp.
+- Customer PDFs: https://kaisteelkitchen.com/resources.html#public-documents
