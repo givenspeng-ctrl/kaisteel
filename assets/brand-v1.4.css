@@ -15,3 +15,10 @@ nav{background:#24292B}.nav-action.wa{white-space:normal;max-width:220px;text-al
 @media(max-width:620px){.mat-table{display:block;max-width:100%;overflow-x:auto}.mat-table th,.mat-table td{min-width:130px}}
 @media(max-width:620px){.mfg-stats{grid-template-columns:1fr}.mfg-stat{min-width:0;overflow-wrap:anywhere}}
 @media(max-width:620px){.title{overflow-wrap:anywhere}}
+
+/* v1.4 small-screen lockup: original master paths, tagline omitted only.
+   224 CSS px includes master clear space; 1025.0608/1140.0608 * 224 = 201.40 px net logo width. */
+.brand img{width:224px;min-width:224px;height:auto;max-height:none}
+@media(max-width:620px){.brand img{width:224px;min-width:224px;height:auto;max-height:none}.nav-actions{display:none}.navlinks{flex-wrap:wrap}nav{gap:12px}.nav .brand{max-width:224px}}
+/* Desktop: keep each nav label on one line beside the 224 px NoTagline lockup. */
+@media(min-width:1181px){nav .navlinks{gap:14px}nav .navlinks a{white-space:nowrap}}
