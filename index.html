@@ -298,6 +298,25 @@
     .hero{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;min-height:0;padding:128px 6% 48px;background:var(--navy2);background-image:none}
     .hero:before{display:none}.hero-copy{position:static;width:auto;max-width:none;text-shadow:none}.hero .title{font-size:clamp(32px,3.5vw,54px);line-height:1.08}.hero-tagline{font-size:18px;line-height:1.6}.hero-features{font-size:13px;line-height:1.8;margin-top:20px;max-width:none}.hero .btn{white-space:normal;height:auto;padding:14px 18px;text-align:center}.hero-proof{margin:0;min-width:0}.hero-proof video{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}.hero-proof figcaption{color:#d9e0e6}.buyer-evidence{padding:36px 0}.contact{scroll-margin-top:90px}
     @media(max-width:760px){.hero{grid-template-columns:1fr;padding:104px 20px 28px;gap:24px}.hero .title{font-size:34px}.hero-tagline{font-size:16px}.hero-copy{width:auto}.hero-features{max-width:none}.hero .btn{font-size:12px}.hero-proof{width:100%}}
+
+    .craft{background:#fff}
+    .craft-facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0 0;padding:0;list-style:none}
+    .craft-facts li{border:1px solid rgba(36,41,43,.12);border-radius:14px;padding:16px;background:#E8E2D6;min-width:0}
+    .craft-facts span{display:block;color:#746B5A;font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+    .craft-facts b{display:block;margin-top:6px;color:var(--navy);font-weight:600;font-size:14.5px;line-height:1.35}
+    .craft-gallery{display:grid;grid-template-columns:minmax(0,1.48fr) minmax(0,1fr);gap:22px;align-items:start;margin-top:36px}
+    .craft-gallery figure{margin:0;min-width:0}
+    .craft-gallery picture{display:block;background:#E8E2D6;border:1px solid rgba(36,41,43,.12);border-radius:14px;overflow:hidden}
+    .craft-gallery img{width:100%;height:auto}
+    .craft-gallery figcaption{margin-top:10px;font-size:13px;line-height:1.5;color:var(--muted)}
+    .craft-gallery figcaption strong{display:block;margin-bottom:2px;color:var(--navy);font-size:14px;font-weight:700}
+    .craft-note{display:block;margin-top:6px}
+    .craft-squares{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;grid-column:1 / -1;min-width:0}
+    .materials-note a{color:var(--navy);font-weight:700}
+    @media(max-width:900px){
+      .craft-facts,.craft-gallery,.craft-squares{grid-template-columns:1fr}
+      .craft-squares{grid-column:auto}
+    }
   </style>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"KAISTEEL","legalName":"KAISTEEL LIMITED","url":"https://kaisteelkitchen.com/","email":"sales@kaisteelkitchen.com","foundingLocation":"Hong Kong","identifier":"78595271","address":{"@type":"PostalAddress","streetAddress":"Room 602, 6/F, Kai Yue Commercial Building, No. 2C, Argyle Street","addressLocality":"Kowloon","addressRegion":"Hong Kong","addressCountry":"HK"}}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Product","name":"KAISTEEL PRO","description":"KAISTEEL PRO has a fixed standard width of 2300 mm. Other sizes available as CUSTOM, named by width, for example CUSTOM 3500. Materials, equipment and supply scope are confirmed for the approved order.","image":"https://kaisteelkitchen.com/assets/pro-courtyard-v2.jpg","brand":{"@type":"Brand","name":"KAISTEEL"},"offers":{"@type":"Offer","priceSpecification":{"@type":"PriceSpecification","description":"Price on request; quoted per approved configuration."},"availability":"https://schema.org/MadeToOrder","businessFunction":"https://schema.org/Sell"},"width":{"@type":"QuantitativeValue","value":2300,"unitCode":"MMT"}}</script>
@@ -370,7 +389,60 @@
     <p class="lead">Specify the frame with a stainless-steel finish, sintered-stone cladding or marble cladding. Available across PRO, MAX and CUSTOM, with the finish and fixing details confirmed for the selected configuration.</p>
     <div class="path-grid"><article class="path-card"><span class="path-label">Metal finish</span><strong>Stainless steel</strong><p>304 / 316 options and surface treatments selected for the project and destination environment.</p></article><article class="path-card"><span class="path-label">Sintered stone</span><strong>Architectural surface</strong><p>Optional sintered-stone facing for the frame and exterior panels, coordinated with the landscape and surrounding finishes.</p></article><article class="path-card"><span class="path-label">Marble</span><strong>Natural stone character</strong><p>Optional marble facing for a project-specific appearance; confirm the stone selection, panel layout and care requirements.</p></article></div>
     <p class="materials-note">Cladding is a finish option, not a change to the structural frame material. Weight, fixing method, mobility and packing are reviewed in the approved drawings.</p>
+    <p class="materials-note"><a href="#worktop">Stainless worktop and integrated sink details</a></p>
     <div class="btns"><a class="btn dark" href="#contact">Discuss your finish</a></div>
+  </div></section>
+
+  <section class="craft reveal" id="worktop" aria-labelledby="worktop-title"><div class="wrap">
+    <div class="eyebrow">Worktop &amp; sink</div>
+    <h2 class="section-title" id="worktop-title">Stainless worktop &amp; integrated sink details</h2>
+    <p class="lead">SUS304 stainless solid worktops, with integrated and welded stainless sink options. Countertop thickness options are 6, 8 and 10&nbsp;mm. Finishes are subject to sample confirmation.</p>
+    <ul class="craft-facts">
+      <li><span>Material</span><b>SUS304 stainless solid worktop</b></li>
+      <li><span>Sink</span><b>Integrated / welded stainless options</b></li>
+      <li><span>Thickness</span><b>6 / 8 / 10 mm</b></li>
+      <li><span>Finish</span><b>Subject to sample confirmation</b></li>
+    </ul>
+    <div class="craft-gallery" aria-label="Stainless worktop and integrated sink details">
+      <figure>
+        <picture>
+          <source srcset="assets/kaisteel-edge-profiles.webp" type="image/webp">
+          <img src="assets/kaisteel-edge-profiles.jpg" alt="Two-by-two grid of stainless countertop edge finishes labeled Brushed Edge, Polished Edge, Polished Diamond Edge and Brushed Diamond Edge" width="1808" height="1358" loading="lazy" decoding="async">
+        </picture>
+        <figcaption><strong>Edge finishes</strong>Brushed Edge, Polished Edge, Polished Diamond Edge and Brushed Diamond Edge. Finishes subject to sample confirmation.</figcaption>
+      </figure>
+      <figure>
+        <picture>
+          <source srcset="assets/kaisteel-worktop-textures.webp" type="image/webp">
+          <img src="assets/kaisteel-worktop-textures.jpg" alt="SUS304 solid stainless worktop texture swatches labeled Sand Time, Floating Light, Cracked Realm, Mystic Engrave and Infinity" width="1793" height="2000" loading="lazy" decoding="async">
+        </picture>
+        <figcaption><strong>Texture options</strong>SUS304 stainless solid worktop: Sand Time, Floating Light, Cracked Realm, Mystic Engrave and Infinity.<span class="craft-note">Texture appearance may vary slightly by batch; physical samples available on request.</span></figcaption>
+      </figure>
+      <div class="craft-squares">
+        <figure>
+          <picture>
+            <source srcset="assets/kaisteel-integrated-sink-drainer.webp" type="image/webp">
+            <img src="assets/kaisteel-integrated-sink-drainer.jpg" alt="Brushed stainless worktop with a welded flush integrated sink, slotted drainer tray and deck-mounted tap" width="1800" height="1800" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Integrated sink</strong>Welded flush stainless sink in a brushed worktop, with drainer tray and tap. Finishes subject to sample confirmation.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="assets/kaisteel-one-piece-sink-worktop.webp" type="image/webp">
+            <img src="assets/kaisteel-one-piece-sink-worktop.jpg" alt="One-piece stainless-steel sink and worktop on a white background" width="1800" height="1800" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>One-piece sink worktop</strong>Integrated stainless sink and SUS304 stainless solid worktop, formed as one piece. Finishes subject to sample confirmation.</figcaption>
+        </figure>
+        <figure>
+          <picture>
+            <source srcset="assets/kaisteel-sink-faucet-corner.webp" type="image/webp">
+            <img src="assets/kaisteel-sink-faucet-corner.jpg" alt="Stainless worktop with an integrated stepped sink and a pull-down faucet" width="1800" height="1800" loading="lazy" decoding="async">
+          </picture>
+          <figcaption><strong>Stepped sink</strong>Integrated stepped stainless sink with a pull-down faucet. Finishes subject to sample confirmation.</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="btns"><a class="btn dark" href="#contact">Discuss worktop options</a></div>
   </div></section>
 
   <section class="social-living reveal" id="business"><div class="wrap">
@@ -438,7 +510,7 @@
       <div class="mfg-stat"><strong>China</strong><span>Products ship from China</span></div>
       <div class="mfg-stat"><strong>Tested</strong><span>Project-specific test and certification support</span></div>
     </div>
-    <p class="materials-note">Catalog PRO/MAX builds use a galvanized steel frame, aluminium cabinetry and panels, and a 304 stainless-steel worktop and sink. Applicable 316 options are recommended for coastal or high-corrosion sites, subject to project review. The complete kitchen is not entirely stainless steel; the approved BOM governs.</p>
+    <p class="materials-note">Catalog PRO/MAX builds use a galvanized steel frame, aluminium cabinetry and panels, and a <a href="#worktop">304 stainless-steel worktop and sink</a>. Applicable 316 options are recommended for coastal or high-corrosion sites, subject to project review. The complete kitchen is not entirely stainless steel; the approved BOM governs.</p>
     <div class="btns"><a class="btn gold" href="compliance-dossier.html">Open Compliance Dossier</a><a class="btn dark" href="factory-assembly-validation.html#video-evidence">Review Factory Validation</a></div>
   </div></section>
 
@@ -543,7 +615,7 @@
     <span>International B2B Sales &amp; Brand Management · <a href="mailto:sales@kaisteelkitchen.com">sales@kaisteelkitchen.com</a> · <a href="tel:+8613903030696">+86 139 0303 0696</a> · <a href="https://wa.me/447926867177?text=Hi%2C%20I%27m%20interested%20in%20becoming%20a%20KAISTEEL%20dealer.%20Could%20you%20send%20me%20your%20dealer%20information%3F" target="_blank" rel="noopener">Request Dealer Information on WhatsApp</a></span>
     <span>PRO 2300 mm · MAX 2900 mm · CUSTOM</span>
     <span><a href="privacy-policy.html">Privacy Policy</a> · <a href="terms.html">Website Terms</a> · <a href="commercial-terms.html">Commercial Terms</a></span>
-  </div><p class="wrap" style="margin:18px auto 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#7c8b98">Product and lifestyle imagery and the concept animation on this site are AI-generated visualizations created for illustrative purposes and are not photographs of a delivered unit or a recorded mechanism test. Real showroom, manufacturing-partner workshop and function-check footage is separately labeled as such. Actual dimensions, finishes, equipment and mechanism operation are confirmed in the approved order specification.</p><p class="wrap" style="padding:16px">Updated customer PDFs are available in <a href="/resources.html#public-documents">Buyer Resources</a>. The policy update takes effect on 11 November 2026, 00:00 HKT (UTC+8). Existing orders remain governed by their agreed documents and applicable statutory rights.</p></footer>
+  </div><p class="wrap" style="margin:18px auto 0;padding-top:14px;border-top:1px solid rgba(255,255,255,.12);font-size:11px;color:#7c8b98">Lifestyle and catalog imagery and the concept animation on this site are AI-generated visualizations created for illustrative purposes and are not photographs of a delivered unit or a recorded mechanism test. The stainless worktop and integrated sink images show named edge, texture and sink options; finishes are subject to sample confirmation and are not a record of a specific delivered order. Real showroom, manufacturing-partner workshop and function-check footage is separately labeled as such. Actual dimensions, finishes, equipment and mechanism operation are confirmed in the approved order specification.</p><p class="wrap" style="padding:16px">Updated customer PDFs are available in <a href="/resources.html#public-documents">Buyer Resources</a>. The policy update takes effect on 11 November 2026, 00:00 HKT (UTC+8). Existing orders remain governed by their agreed documents and applicable statutory rights.</p></footer>
 
   <script src="assets/inquiry-resilience.js"></script>
   <script>
