@@ -170,6 +170,9 @@
 
     .paths{background:var(--paper)}
     .path-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:44px}
+    .terms-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:36px}
+    .supply-terms .docs-note{margin-top:22px}
+
     .path-card{border-radius:16px;padding:26px;background:#fff;box-shadow:var(--shadow)}
     .path-card strong{display:block;color:var(--navy);font:600 24px "Barlow Condensed",sans-serif;text-transform:uppercase;margin-bottom:8px}
     .path-card p{font-size:14px;color:var(--muted);margin:0}
@@ -210,7 +213,7 @@
     .step h3{margin:8px 0;font-size:15px}.step p{font-size:13px;color:var(--muted);margin:0}
 
     .docs{background:#fff}
-    .doc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}.doc-grid.lean-doc-grid{grid-template-columns:repeat(3,1fr)}
+    .doc-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}.doc-grid.lean-doc-grid{grid-template-columns:repeat(4,1fr)}
     .doc-card{display:flex;flex-direction:column;min-height:190px;background:var(--paper);border-radius:15px;padding:22px;text-decoration:none;transition:.2s}
     .doc-card:hover{background:#f0ece3;transform:translateY(-2px)}
     .doc-card b{color:var(--gold);font:600 22px "Barlow Condensed",sans-serif}
@@ -273,6 +276,7 @@
       .states .wrap{grid-template-columns:1fr}
       .econ-compare{grid-template-columns:1fr}
       .path-grid{grid-template-columns:1fr}
+      .terms-grid{grid-template-columns:1fr}
       .sample,.oem-panel{grid-template-columns:1fr}.sample .btn{justify-self:start}
       .mfg-gallery{grid-template-columns:1fr 1fr}
       .qa-proof{grid-template-columns:1fr}
@@ -379,7 +383,7 @@
 
     <div class="catalog-gallery"><figure><img src="assets/catalog-pro-1.jpg" alt="PRO · Motorized roller shutter catalog reference visualization" loading="lazy"><figcaption>PRO · Motorized roller shutter<br>Catalog reference visualization; equipment and finishes follow the approved order.</figcaption></figure><figure><img src="assets/catalog-max-1.jpg" alt="MAX · Motorized lift-up catalog reference visualization" loading="lazy"><figcaption>MAX · Motorized lift-up<br>Catalog reference visualization; equipment and finishes follow the approved order.</figcaption></figure><figure><img src="assets/catalog-custom-1.jpg" alt="CUSTOM · Compact manual lift-up catalog reference visualization" loading="lazy"><figcaption>CUSTOM · Compact manual lift-up<br>Catalog reference visualization; equipment and finishes follow the approved order.</figcaption></figure></div><p class="materials-note">Lifestyle scenes on this page are AI-generated concept visualizations, not photographs of a delivered unit; model dimensions and equipment are confirmed in the approved specification.</p>
     <p class="materials-note">Optional casters are available across the KAISTEEL range. All units must be disconnected from water, electricity and gas before moving.</p>
-    <div class="compare-table"><h3>Choose your model and supply scope</h3><p class="lead">PRO is the fixed 2300 mm standard width; MAX is the fixed 2900 mm standard width. Other sizes available as CUSTOM, named by width and quoted per project. Choose System Shell, Appliance-Ready or Full Package separately. Confirm the same model name and width in the quotation, PI and drawings.</p><div class="btns"><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html#dealer-pack">Request Dealer Pack</a><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html#quotation">Request a Quotation</a><a class="btn gold" href="#contact">Request a project quotation</a></div><p class="compare-note">&dagger;Loading quantities are preliminary and confirmed for the approved configuration and packing plan.</p></div>
+    <div class="compare-table"><h3>Choose your model and supply scope</h3><p class="lead">PRO is the fixed 2300 mm standard width; MAX is the fixed 2900 mm standard width. Other sizes available as CUSTOM, named by width and quoted per project. Choose System Shell, Appliance-Ready or Full Package separately. Confirm the same model name and width in the quotation, PI and drawings.</p><div class="btns"><a class="btn gold" href="assets/KAISTEEL-PRO2300-MAX2900-Cut-Sheet-2026-11.pdf" download>Download PRO / MAX Cut Sheet</a><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html#dealer-pack">Request Dealer Pack</a><a class="btn dark" href="pro-vs-max-outdoor-kitchen.html#quotation">Request a Quotation</a><a class="btn dark" href="#contact">Request a project quotation</a></div><p class="compare-note">&dagger;Loading quantities are preliminary and confirmed for the approved configuration and packing plan.</p></div>
   </div></section>
 
 
@@ -525,6 +529,21 @@
     </div>
   </div></section>
 
+
+  <section class="reveal supply-terms" id="supply-terms"><div class="wrap">
+    <div class="eyebrow">After-sales &amp; sample orders</div>
+    <h2 class="section-title">Warranty, Spares &amp; Sample Terms</h2>
+    <p class="lead">The following terms apply to KAISTEEL PRO and MAX orders unless the written quotation, PI or contract states otherwise.</p>
+    <div class="path-grid terms-grid">
+      <article class="path-card"><span class="path-label">01 / Spares</span><strong>Electrical wear-parts kit</strong><p>One complimentary field-replaceable electrical wear-parts kit is included in each crate. Kit contents are confirmed with the order.</p></article>
+      <article class="path-card"><span class="path-label">02 / Warranty</span><strong>Core electrical replacements</strong><p>Within the warranty period, failed core electrical components are replaced free of charge and shipped from China by express air courier within several days. The buyer pays the air freight.</p></article>
+      <article class="path-card"><span class="path-label">03 / Sample payment</span><strong>50% deposit, 50% before dispatch</strong><p>Sample orders use a default of 50% deposit and 50% balance after pre-shipment inspection, before dispatch.</p></article>
+      <article class="path-card"><span class="path-label">04 / Electrical</span><strong>Voltage by market, IP65</strong><p>Supply voltage is configurable by market: 110V/60Hz or 220V/50Hz. Electrical components are rated IP65.</p></article>
+    </div>
+    <p class="docs-note">Component certificates are available per project. KAISTEEL does not claim whole-system UL, CSA or CE certification. The written quotation, PI or contract governs if it differs from this summary. See also the <a href="assets/KAISTEEL-Limited-Warranty-2026-11.pdf" download>Limited Warranty</a> and <a href="commercial-terms.html">Commercial Terms</a>.</p>
+    <div class="btns"><a class="btn gold" href="assets/KAISTEEL-PRO2300-MAX2900-Cut-Sheet-2026-11.pdf" download>Download PRO / MAX Cut Sheet</a><a class="btn dark" href="assets/KAISTEEL-Limited-Warranty-2026-11.pdf" download>Limited Warranty PDF</a><a class="btn dark" href="commercial-terms.html">Commercial Terms</a></div>
+  </div></section>
+
   <section class="docs reveal" id="documents"><div class="wrap">
     <div class="kicker"><div><div class="eyebrow">Buyer due diligence</div><h2 class="section-title">Trade documents &amp; controlled evidence.</h2></div><p class="lead">Public reference documents are available below, while controlled technical templates are available to qualified buyers on request. Each shipment is supported by an order-specific Compliance Dossier matched to the approved BOM and destination market.</p></div>
     <a class="dossier-cta" href="compliance-dossier.html"><div><span class="tag">For technical due diligence</span><strong>Full Compliance &amp; Manufacturing Dossier</strong><span>Component-by-component material table, the complete certification &amp; compliance policy, evidence chips and the full production photo set — one page, built for buyers who need to verify before they commit.</span></div><span class="arrow">Open Dossier →</span></a>
@@ -532,6 +551,7 @@
       <a class="doc-card" href="assets/KAISTEEL-Limited-Warranty-2026-11.pdf" download><b>01</b><strong>Limited Warranty</strong><span>Coverage, care, registration, claims and applicable exclusions.</span><em>Download PDF</em></a>
       <a class="doc-card" href="assets/KAISTEEL-Technical-Approval-2026-10.pdf" download><b>02</b><strong>Technical Approval Guide</strong><span>Component materials, configuration approval and installation interfaces.</span><em>Download PDF</em></a>
       <a class="doc-card" href="assets/KAISTEEL-Procurement-Guide-2026-11.pdf" download><b>03</b><strong>Procurement Guide</strong><span>Global product selection, order scope and purchasing terms.</span><em>Download PDF</em></a>
+      <a class="doc-card" href="assets/KAISTEEL-PRO2300-MAX2900-Cut-Sheet-2026-11.pdf" download><b>04</b><strong>PRO / MAX Cut Sheet</strong><span>Confirmed dimensions, packing, IP65 electrical rating and market voltage options.</span><em>Download PDF</em></a>
     </div>
     <p class="docs-note">This policy update takes effect on 11 November 2026, 00:00 HKT (UTC+8). Existing orders remain governed by their agreed documents and applicable statutory rights. <a href="resources.html#public-documents">All customer PDFs</a>. Controlled specifications, QC templates and each shipment's order-specific dossier are supplied through the buyer workflow. Appliance or component certificates are matched to the exact model, rating and destination rather than presented as whole-system certification.</p>
     <div class="btns"><a class="btn dark" href="resources.html">Browse all buyer resources</a><a class="btn gold" href="#contact">Request controlled documents</a></div>
