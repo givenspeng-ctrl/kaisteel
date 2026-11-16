@@ -10,7 +10,7 @@ To activate this workflow after reviewing the pull request:
 
 After activation, pushes to `main` trigger deployments automatically. Other branches and pull requests do not deploy. Concurrent deployments are serialized. The workflow reads Pages configuration; it does not automatically enable Pages or change its domain settings.
 
-Only tracked website HTML/CSS, assets, robots.txt, sitemap.xml, llms.txt, and CNAME enter the artifact. Test scripts and workflow documentation are excluded. This serves the existing files directly without Jekyll transformations.
+Only tracked website HTML/CSS, assets, robots.txt, sitemap.xml, llms.txt, favicon.ico, apple-touch-icon.png, and CNAME enter the artifact. Test scripts and workflow documentation are excluded. This serves the existing files directly without Jekyll transformations.
 
 Deployment uses GitHub's `GITHUB_TOKEN` and OIDC authentication. Do not add personal tokens or production secrets. If repository policies require environment approval, approve the `github-pages` deployment using the existing review process.
 
