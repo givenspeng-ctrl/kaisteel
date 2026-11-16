@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
 
+# AI and search crawlers are allowed, including GPTBot, OAI-SearchBot, ClaudeBot and PerplexityBot.
+# Site summary: https://kaisteelkitchen.com/llms.txt
+LLMs: https://kaisteelkitchen.com/llms.txt
+
 Sitemap: https://kaisteelkitchen.com/sitemap.xml

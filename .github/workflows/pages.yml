@@ -40,13 +40,14 @@ jobs:
               source = Path(name)
               # Publish website files only; exclude test runners and workflow documentation.
               if not (source.parts[0] == 'assets' or source.suffix in {'.html', '.css'} or
-                      name in {'robots.txt', 'sitemap.xml', 'llms.txt', 'CNAME'}):
+                      name in {'robots.txt', 'sitemap.xml', 'llms.txt', 'CNAME', 'favicon.ico', 'apple-touch-icon.png'}):
                   continue
               target = destination / source
               target.parent.mkdir(parents=True, exist_ok=True)
               shutil.copyfile(source, target)
           for name in ('index.html', 'assets/inquiry-resilience.js',
-                       'australia-outdoor-kitchen-dealers/index.html', 'robots.txt', 'sitemap.xml'):
+                       'australia-outdoor-kitchen-dealers/index.html', 'robots.txt', 'sitemap.xml',
+                       'favicon.ico', 'apple-touch-icon.png', 'llms.txt'):
               if not (destination / name).is_file():
                   raise SystemExit(f'Missing website file: {name}')
           PY

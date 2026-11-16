@@ -87,7 +87,10 @@ for path in ['assets/analytics-consent.js','assets/inquiry-resilience.js','priva
     prior=subprocess.check_output(['git','show',BASE+':'+path],cwd=ROOT)
     if path.endswith('.html'):
         prior=prior.replace(b'assets/KAISTEEL_Horizontal_White.svg',b'assets/KAISTEEL_Horizontal_White_NoTagline.svg').replace(b'assets/KAISTEEL_Horizontal.svg',b'assets/KAISTEEL_Horizontal_NoTagline.svg')
-    assert prior==(ROOT/path).read_bytes(),path+' changed beyond authorized logo substitution'
+    current=(ROOT/path).read_bytes()
+    if path.endswith('.html'):
+        current=current.replace(b'\n  <link rel="icon" href="/favicon.ico" sizes="any">\n  <link rel="apple-touch-icon" href="/apple-touch-icon.png">', b'')
+    assert prior==current,path+' changed beyond authorized logo substitution'
 redirect=(ROOT/'australia-outdoor-kitchen-dealers/index.html').read_text()
 for expected in ['noindex,follow','rel="canonical" href="https://kaisteelkitchen.com/"','window.location.replace','target.search = window.location.search',"'#dealer-pack' ? 'contact' : 'business'",'<noscript>']:
     assert expected in redirect,expected
