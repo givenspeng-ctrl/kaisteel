@@ -2,6 +2,7 @@
   'use strict';
 
   var measurementId = 'G-CWBQM9Z095';
+  var metricoolHash = '89c402992bdac6a1d5b6d3ec4ffe6b5e';
   var storageKey = 'kaisteel_analytics_consent';
   var analyticsActive = false;
   var controls = new URLSearchParams(window.location.search);
@@ -120,6 +121,21 @@
     if (debug) config.debug_mode = true;
     window.gtag('config', measurementId, config);
     emit('page_view', {page_location: analyticsUrl.href, page_referrer: safeReferrer});
+    loadMetricool();
+  }
+
+  function loadMetricool() {
+    if (document.getElementById('kaisteel-metricool-script')) return;
+    var script = document.createElement('script');
+    script.id = 'kaisteel-metricool-script';
+    script.async = true;
+    script.src = 'https://tracker.metricool.com/resources/be.js';
+    script.onload = function () {
+      if (window.beTracker && analyticsActive) {
+        window.beTracker.t({hash: metricoolHash});
+      }
+    };
+    document.head.appendChild(script);
   }
 
   function saveChoice(value) {
@@ -159,6 +175,8 @@
     analyticsActive = false;
     var script = document.getElementById('kaisteel-ga4-script');
     if (script) script.remove();
+    var metricoolScript = document.getElementById('kaisteel-metricool-script');
+    if (metricoolScript) metricoolScript.remove();
     document.cookie.split(';').forEach(function (item) {
       var name = item.split('=')[0].trim();
       if (name === '_ga' || name.indexOf('_ga_') === 0) {
@@ -177,7 +195,7 @@
     panel.innerHTML =
       '<div class="kaisteel-consent-copy">' +
         '<strong id="kaisteel-consent-title">Analytics choice</strong>' +
-        '<p>We use Google Analytics only with your permission to understand site use and improve our B2B content. Necessary session attribution remains available for RFQ processing.</p>' +
+        '<p>We use Google Analytics and Metricool only with your permission to understand site use and improve our B2B content. Necessary session attribution remains available for RFQ processing.</p>' +
         '<a href="/privacy-policy.html">Privacy Policy</a>' +
       '</div>' +
       '<div class="kaisteel-consent-actions">' +
