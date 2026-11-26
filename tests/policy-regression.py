@@ -123,18 +123,26 @@ mapping={
 'KAISTEEL-Product-Guide-2026-10.pdf':'KAISTEEL-Procurement-Guide-2026-11.pdf',
 'KAISTEEL-Manufacturing-Overview-2026-10.pdf':'KAISTEEL-Manufacturing-Overview-2026-11.pdf',
 'KAISTEEL-MANUFACTURING-CAPABILITY-EN.pdf':'KAISTEEL-Manufacturing-Overview-2026-11.pdf',
-'KAISTEEL-LIMITED-WARRANTY-V1.4.pdf':'KAISTEEL-Limited-Warranty-2026-11.pdf',
-'KAISTEEL-Warranty-V1.3-Brand-v1.4.pdf':'KAISTEEL-Limited-Warranty-2026-11.pdf',
-'KAISTEEL-Limited-Warranty-2026-10.pdf':'KAISTEEL-Limited-Warranty-2026-11.pdf'}
+'KAISTEEL-LIMITED-WARRANTY-V1.4.pdf':'resources.html#limited-warranty-documents',
+'KAISTEEL-Warranty-V1.3-Brand-v1.4.pdf':'resources.html#limited-warranty-documents',
+'KAISTEEL-Limited-Warranty-2026-10.pdf':'resources.html#limited-warranty-documents'}
 for old,new in mapping.items():
     assert old not in allcopy,old+' still linked publicly'
     text=subprocess.check_output(['pdftotext',str(ROOT/'assets'/old),'-'],text=True)
     reader=PdfReader(ROOT/'assets'/old)
     urls=[str(a.get_object().get('/A',{}).get('/URI','')) for page in reader.pages for a in page.get('/Annots',[])]
-    assert 'https://kaisteelkitchen.com/assets/'+new in urls,(old,'missing embedded replacement link')
-    assert 'superseded' in text.lower(),(old,'not a superseded notice')
-    assert (ROOT/'assets'/new).is_file()
-for name in [*set(mapping.values()),'KAISTEEL-Sample-Credit-Policy-2026-11.pdf']:
+    if new.startswith('resources.html#'):
+        assert urls == ['https://kaisteelkitchen.com/'+new],(old,'must lead to current and archived warranty choices')
+        assert 'Warranty document updated' in text,(old,'missing warranty notice')
+        path,anchor=new.split('#',1)
+        resources=(ROOT/path).read_text()
+        assert f'id="{anchor}"' in resources
+        assert 'agreed order terms' in text and 'mandatory statutory rights' in text
+    else:
+        assert 'https://kaisteelkitchen.com/assets/'+new in urls,(old,'missing embedded replacement link')
+        assert 'superseded' in text.lower(),(old,'not a superseded notice')
+        assert (ROOT/'assets'/new).is_file()
+for name in [*{v for v in mapping.values() if v.endswith('.pdf')},'KAISTEEL-Limited-Warranty-2026-11.pdf','KAISTEEL-Sample-Credit-Policy-2026-11.pdf']:
     text=subprocess.check_output(['pdftotext',str(ROOT/'assets'/name),'-'],text=True)
     assert 'DRAFT' not in text and 'REVIEW COPY' not in text,name
     assert '11 November 2026' in text and '00:00' in text,name+' commencement missing'
