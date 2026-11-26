@@ -61,7 +61,7 @@ max_product=next(x for x in products if x.get('@type')=='Product' and x.get('nam
 assert max_product['depth']=={'@type':'QuantitativeValue','value':880,'unitCode':'MMT'}
 for name in ['index.html','outdoor-kitchen-rfq-checklist.html','llms.txt']:
     copy=(ROOT/name).read_text(encoding='utf-8')
-    for expected in ['commercial invoice','aluminium or stainless-steel load-bearing frames','quartz and sintered-stone worktops','Existing signed warranties and mandatory rights remain unchanged']:
+    for expected in ['commercial invoice','aluminium or stainless-steel load-bearing frames','system outer shells (excluding internal cabinetry and cabinet doors) and flip-up lid structures','quartz and sintered-stone worktops','Existing signed warranties and mandatory rights remain unchanged']:
         assert expected in copy,(name,expected)
 for name in ['index.html','commercial-terms.html','llms.txt']:
     copy=(ROOT/name).read_text(encoding='utf-8')
