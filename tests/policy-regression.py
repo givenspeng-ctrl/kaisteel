@@ -49,8 +49,28 @@ for model,width in [('KAISTEEL PRO',2300),('KAISTEEL MAX',2900)]:
     product=next(x for x in products if x.get('@type')=='Product' and x.get('name')==model)
     assert product.get('width')=={'@type':'QuantitativeValue','value':width,'unitCode':'MMT'},model
     assert f'fixed standard width of {width} mm' in product['description'],model
-for expected in ['Warranty starts on the shipment date','solid SUS304/SUS316','up to 5 years','canopy motors','no overseas stock or warehouses','worldwide through one global enquiry']:
+for expected in ['shipment date shown on the commercial invoice','15 years for material and workmanship defects','6–10 mm, no filler core','5 years for specified factory-applied','1 year for specified KAISTEEL-supplied','no overseas stock or warehouses','worldwide through one global enquiry']:
     assert expected in home,expected
+# Preview policy: standard MAX is 880 mm deep, while its 960 mm variant is a CUSTOM project.
+for name in ['index.html','pro-vs-max-outdoor-kitchen.html']:
+    copy=(ROOT/name).read_text(encoding='utf-8')
+    assert 'The only standard MAX depth is 880 mm.' in copy,name
+    assert '2900 × 960 × 2400 mm' not in copy,name
+    assert 'CUSTOM 2900 for a project at 960 mm depth' in copy,name
+max_product=next(x for x in products if x.get('@type')=='Product' and x.get('name')=='KAISTEEL MAX')
+assert max_product['depth']=={'@type':'QuantitativeValue','value':880,'unitCode':'MMT'}
+for name in ['index.html','outdoor-kitchen-rfq-checklist.html','llms.txt']:
+    copy=(ROOT/name).read_text(encoding='utf-8')
+    for expected in ['commercial invoice','aluminium or stainless-steel load-bearing frames','quartz and sintered-stone worktops','Existing signed warranties and mandatory rights remain unchanged']:
+        assert expected in copy,(name,expected)
+for name in ['index.html','commercial-terms.html','llms.txt']:
+    copy=(ROOT/name).read_text(encoding='utf-8')
+    assert 'acknowledge complete warranty claims within five business days' in copy,name
+    assert 'express air courier within several days' not in copy,name
+resources=(ROOT/'resources.html').read_text(encoding='utf-8')
+assert 'Download archived November cut sheet' in resources
+assert 'Download archived November warranty reference' in resources
+assert 'AI CONCEPT IMAGE' in home and 'Recorded showroom demonstration' in home
 before=subprocess.check_output(['git','show',BASE+':index.html'],cwd=ROOT,text=True)
 # 12 November WEB-P1 authorization consolidates homepage lead capture into two product-page forms.
 assert '<form' not in home, 'Legacy homepage form must be retired'
