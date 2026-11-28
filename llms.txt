@@ -6,7 +6,7 @@
 - Relevant partner details may be provided only during due diligence according to the actual order, disclosure authorization and confidentiality requirements; disclosure is not automatic.
 
 ## Products
-- PRO has a fixed standard width of 2300 mm; MAX has a fixed standard width of 2900 mm and only one standard depth, 880 mm. A 960 mm-depth version is CUSTOM and quoted per project. All other widths are named CUSTOM followed by the width in millimetres, for example CUSTOM 3500, and quoted per project. Other sizes available as CUSTOM. MAX does not mean the largest available size. Keep the same model name and width across the quotation, PI and drawings. Other dimensions and powered opening and closing arrangements follow the approved configuration.
+- PRO has a fixed standard width of 2300 mm and an 880 mm reference depth. Approx. 730 mm and 960 mm PRO depths are non-standard and require approved project drawings and BOM; MAX has a fixed standard width of 2900 mm and only one standard depth, 880 mm. A 960 mm-depth version is CUSTOM and quoted per project. All other widths are named CUSTOM followed by the width in millimetres, for example CUSTOM 3500, and quoted per project. Other sizes available as CUSTOM. MAX does not mean the largest available size. Keep the same model name and width across the quotation, PI and drawings. Other dimensions and powered opening and closing arrangements follow the approved configuration.
 - System Shell: main structure, interior and exterior finishes, powered lifting/opening mechanisms, lighting and control systems. Excludes internal cabinetry, worktops, equipment and appliances.
 - Appliance-Ready: System Shell plus internal cabinetry, doors, worktops, sink, faucet and shelving, with interfaces reserved for specified appliance models. Appliances are not automatically included.
 - Full Package: Appliance-Ready plus agreed internal appliances and equipment. Exact models, factory integration and destination applicability require approved BOM and PI.
@@ -38,6 +38,6 @@
 - Corporate verification: https://kaisteelkitchen.com/outdoor-kitchen-supplier-due-diligence.html
 - Sample policy: https://kaisteelkitchen.com/outdoor-kitchen-sample-credit.html
 - Compliance: https://kaisteelkitchen.com/compliance-dossier.html
-- Email sales@kaisteelkitchen.com. Founder contact peng@kaisteeloutdoor.com.
+- Email sales@kaisteelkitchen.com.
 - WhatsApp button: Request Dealer Information on WhatsApp.
 - Customer PDFs: https://kaisteelkitchen.com/resources.html#public-documents
